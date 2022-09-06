@@ -4297,11 +4297,10 @@ length	句子长度<br>
 <p>理想效果图</p>
 <p><img src="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/image-20220906034109271.png" alt="image-20220906034109271"></p>
 <p><s>似乎是环境配置问题，我用虚拟机推送静态文件，就有显示；用真实 win机 推送 就没有锚点，重装 git 也没显示（可能不是 git 的问题）。。。</s></p>
-<p>因为压缩了静态文件，全部注释 或 <code>neat_js: mangle: false</code> 改为 false。<strong>mangle</strong> : 修改文件名<br>
+<p>因为压缩了静态文件，全部注释 <code>hexo-neat</code> 配置。<br>
 参考<br>
 <a href="https://github.com/cofess/hexo-theme-pure#hexo-neat">https://github.com/cofess/hexo-theme-pure#hexo-neat</a><br>
 <a href="https://github.com/rozbo/hexo-neat#options">https://github.com/rozbo/hexo-neat#options</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/image-20220906125959617.png" alt="image-20220906125959617"></p>
 </blockquote>
 </li>
 </ol>
@@ -9601,7 +9600,7 @@ code_test1.txt: ==ISO-8859 text	（注：国标码）==<br>
 <hr>
 <h2 id="三三-ls">三三. ls</h2>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//		ls命令</span><br><span class="line">		用途：列表（List）显示目录内容 </span><br><span class="line">		格式：ls  [选项]...  [目录或文件名]</span><br><span class="line">        常用命令选项</span><br><span class="line">        -l ：以长格式显示</span><br><span class="line">        -d：显示目录本身的属性</span><br><span class="line">        -t： 按文件修改时间进行排序</span><br><span class="line">        -r ：将目录的内容清单以英文字母顺序的逆序显示</span><br><span class="line">        -a：显示所有子目录和文件的信息，包括隐藏文件</span><br><span class="line">        -A：类似于“-a”，但不显示“.”和“..”目录的信息</span><br><span class="line">        -h：以更易读的字节单位（K、M等）显示信息</span><br><span class="line">        	//  必须和 -l 一起用</span><br><span class="line">        	-h, --human-readable</span><br><span class="line">    			with -l and -s, print sizes like 1K 234M 2G etc.</span><br><span class="line">        -R：递归显示内容</span><br><span class="line">        	一层一层显示，作用远远不及 tree好，很繁琐</span><br><span class="line">//		ls	查看当前 目录</span><br><span class="line">        ls  /boot  查看/boot 下目录</span><br><span class="line">        ls  -l  -d  /boot  只显示本身的文件夹信息 ls -ld / ls -dl</span><br><span class="line">        ls  -t  时间  文件修改时间排序</span><br><span class="line">        ls  -r  英文字母 逆序显示</span><br><span class="line">        ls  -l  -h  /boot  显示/boot的各个文件的大小</span><br><span class="line">        		-h  必须和  -l  一起用  显示大小 K M G</span><br></pre></td></tr></table></figure>
-<h3 id="ls-l">\ls -l</h3>
+<h3 id="ls-l-2">\ls -l</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//		\ls  -l  不显示列出的文件类型颜色</span><br></pre></td></tr></table></figure>
 <h3 id="ls-l-grep-“-d”">ls -l |grep “^d”</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//		# ls  -l|grep  &quot;^d&quot;  </span><br><span class="line">		解释如下</span><br><span class="line">//		| 管道符号： 进程和进程之间通信的一种方式</span><br><span class="line">		作用:将前面一个命令的输出送给后面一个命令作为输入</span><br><span class="line">			中间商，借花献佛，提篮子</span><br><span class="line">//		grep ：文本过滤的命令</span><br><span class="line">			会根据匹配的字符串去过滤，显示出匹配内容的行</span><br><span class="line"></span><br><span class="line">//		^d  表示以d开头的行</span><br><span class="line">//		# ll|grep &quot;txt&quot;</span><br><span class="line">        -rw-r--r--. 1 root root  0 9月  17 15:58 a.txt</span><br><span class="line">        -rw-r--r--. 1 root root  0 9月  17 16:02 sc10.txt</span><br><span class="line">        # ll|grep &quot;^d&quot;</span><br><span class="line">        drwxr-xr-x. 5 root root 48 9月  17 09:51 hunantv</span><br><span class="line">        drwxr-xr-x. 4 root root 42 9月  17 09:54 jiangsutv</span><br><span class="line">        # ll|grep &quot;^-&quot;</span><br><span class="line">        -rw-r--r--. 1 root root  0 9月  17 15:58 a.txt</span><br><span class="line">        -rw-r--r--. 1 root root  0 9月  17 16:02 sc10.txt</span><br><span class="line">        # ll|grep &quot;^-&quot;|wc -l</span><br><span class="line">        11</span><br></pre></td></tr></table></figure>
@@ -9666,7 +9665,7 @@ code_test1.txt: ==ISO-8859 text	（注：国标码）==<br>
 <h3 id="ls">ls</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ls --- 查看文件夹内容 ==&gt; list</span><br></pre></td></tr></table></figure>
 <p><img src="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202203061401811.png" alt="image-20220306140133778"></p>
-<h4 id="ls-l-2">ls -l</h4>
+<h4 id="ls-l">ls -l</h4>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//		ls  -l	显示文件的详细信息</span><br></pre></td></tr></table></figure>
 <p><img src="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202203061441930.png" alt="image-20220306144158855"></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//		ls  -l	显示文件的详细信息 (大概能看到文件时间 ，不详细)</span><br><span class="line">		ll	是 ls  -l  的别名</span><br></pre></td></tr></table></figure>
