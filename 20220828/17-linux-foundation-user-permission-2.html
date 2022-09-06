@@ -1,4 +1,1173 @@
-<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="google-site-verification" content="0vSEw-WeA7Q6caMNQWaHaQpXvN95Giznl-CDKPH8VAk"><meta name="google-site-verification" content="5jJNeWCOgSzXuAeGzPNgbyKyTkZhoGh47zpVZciGkrU"><meta name="google-site-verification" content="Wp-oDK8r6lsN6G8D2OnqbGQKhzil08oJIyJFAmn5sSA"><meta name="baidu-site-verification" content="code-Ib5uAxNWgD"><meta name="baidu-site-verification" content="code-ZRr1qxOfs4"><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script"),t=(e.src="https://hm.baidu.com/hm.js?03b05cf1da8eee934a12b53adecf56d8",document.getElementsByTagName("script")[0]);t.parentNode.insertBefore(e,t)}()</script><script>var _hmt2=_hmt2||[];!function(){var e=document.createElement("script"),t=(e.src="https://hm.baidu.com/hm.js?f7e059820ae1b7ff42dd7110eff89f5e",document.getElementsByTagName("script")[0]);t.parentNode.insertBefore(e,t)}()</script><script>var _hmt3=_hmt3||[];!function(){var e=document.createElement("script"),t=(e.src="https://hm.baidu.com/hm.js?f2e1acf51670f04e1ad07d9576ff24bf",document.getElementsByTagName("script")[0]);t.parentNode.insertBefore(e,t)}()</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-YNMXCDY177"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-YNMXCDY177")</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-P406BZNR2D"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-P406BZNR2D")</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-PEMRSX722N"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-PEMRSX722N")</script><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui"><meta name="renderer" content="webkit"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="format-detection" content="telephone=no,email=no,adress=no"><meta name="theme-color" content="#000000"><meta http-equiv="window-target" content="_top"><meta name="google-site-verification" content="google14c1549ee067dc6f.html"><title>17_Linux基础-用户权限2 | Mycpen&#39;s Blog</title><meta name="description" content="摘要：博客迁移 https:&#x2F;&#x2F;blog.csdn.net&#x2F;cpen_web → 本站"><meta property="og:type" content="article"><meta property="og:title" content="17_Linux基础-用户权限2"><meta property="og:url" content="https://mycpen.github.io/20220828/17-linux-foundation-user-permission-2.html"><meta property="og:site_name" content="Mycpen&#39;s Blog"><meta property="og:description" content="摘要：博客迁移 https:&#x2F;&#x2F;blog.csdn.net&#x2F;cpen_web → 本站"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170358168.png"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170416487.png"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170417672.png"><meta property="article:published_time" content="2022-08-28T08:17:00.000Z"><meta property="article:modified_time" content="2022-08-28T08:17:01.000Z"><meta property="article:author" content="Mycpen"><meta property="article:tag" content="Linux"><meta property="article:tag" content="权限"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170358168.png"><link rel="canonical" href="https://mycpen.github.io/20220828/17-linux-foundation-user-permission-2.html"><link rel="alternate" href="true" title="Mycpen&#39;s Blog" type="application/atom+xml"><link rel="icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet"><link href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.css" rel="stylesheet"><meta name="generator" content="Hexo 6.2.0"></head><script src="https://cdn.jsdelivr.net/gh/bobcn/hexo_resize_image.js@master/hexo_resize_image.js"></script><body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="slimContent"><div class="navbar-header"><div class="profile-block text-center"><a id="avatar" href="/" target="_self"><img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200"></a><h2 id="name" class="hidden-xs hidden-sm">Mycpen</h2><h3 id="title" class="hidden-xs hidden-sm hidden-md">SRE</h3><small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> 中国</small></div><div class="search" id="search-form-wrap"><form class="search-form sidebar-form"><div class="input-group"><input type="text" class="search-form-input form-control" placeholder="搜索"> <span class="input-group-btn"><button type="submit" class="search-form-submit btn btn-flat" onclick="return!1"><i class="icon icon-search"></i></button></span></div></form><div class="ins-search"><div class="ins-search-mask"></div><div class="ins-search-container"><div class="ins-input-wrapper"><input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech> <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div><div class="ins-section-wrapper"><div class="ins-section-container"></div></div></div></div></div><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></div><nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation"><ul class="nav navbar-nav main-nav menu-highlight"><li class="menu-item menu-item-home"><a href="/."><i class="icon icon-home-fill"></i> <span class="menu-title">首页</span></a></li><li class="menu-item menu-item-archives"><a href="/archives"><i class="icon icon-archives-fill"></i> <span class="menu-title">归档</span></a></li><li class="menu-item menu-item-categories"><a href="/categories"><i class="icon icon-folder"></i> <span class="menu-title">分类</span></a></li><li class="menu-item menu-item-tags"><a href="/tags"><i class="icon icon-tags"></i> <span class="menu-title">标签</span></a></li><li class="menu-item menu-item-repository"><a href="/repository"><i class="icon icon-project"></i> <span class="menu-title">项目</span></a></li><li class="menu-item menu-item-resources"><a href="/resources"><i class="icon icon-star-fill"></i> <span class="menu-title">资源</span></a></li><li class="menu-item menu-item-gallery"><a href="/gallery"><i class="icon icon-delicious"></i> <span class="menu-title">相册</span></a></li><li class="menu-item menu-item-links"><a href="/links"><i class="icon icon-friendship"></i> <span class="menu-title">友链</span></a></li><li class="menu-item menu-item-about"><a href="/about"><i class="icon icon-cup-fill"></i> <span class="menu-title">关于</span></a></li></ul><ul class="social-links"><li><a href="https://github.com/mycpen" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li><li><a href="https://juejin.cn/user/4007034458485159" target="_blank" title="Juejin" data-toggle="tooltip" data-placement="top"><i class="icon icon-juejin"></i></a></li><li><a href="https://segmentfault.com/u/mycpen" target="_blank" title="Segmentfault" data-toggle="tooltip" data-placement="top"><i class="icon icon-segmentfault"></i></a></li><li><a href="https://stackoverflow.com/users/19841214/mycpen" target="_blank" title="Stackoverflow" data-toggle="tooltip" data-placement="top"><i class="icon icon-stackoverflow"></i></a></li><li><a href="https://gitee.com/mycpen" target="_blank" title="Gitee" data-toggle="tooltip" data-placement="top"><i class="icon icon-gitee"></i></a></li><li><a href="/atom.xml" target="_blank" title="Rss" data-toggle="tooltip" data-placement="top"><i class="icon icon-rss"></i></a></li></ul></nav></div></header><aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar"><div class="slimContent"><div class="widget"><h3 class="widget-title"><i style="color:#9400d3" class="icon icon-stackexchange"></i>公告</h3><div class="widget-body"><div id="board"><div class="content"><p>欢迎来到 <a href="/">Mycpen</a> 的博客!<br>本站使用&nbsp;<u><a target="_blank" rel="noopener" href="https://www.bing.com/search?q=github+%E5%9B%BE%E5%BA%8A" style="color:#e541e5">外网图床</a></u>，直接访问时<br>图片资源存在&nbsp;<b><a style="color:#e541e5">加载过慢</a></b>、<b><a style="color:#e541e5">失败</a></b>&nbsp;的情况。</p></div></div></div></div><div class="widget"><h3 class="widget-title"><i style="color:#9400d3" class="icon icon-folder-open"></i>分类</h3><div class="widget-body"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">10</span></li></ul></div></div><div class="widget"><h3 class="widget-title"><i style="color:#9400d3" class="icon icon-tags"></i>标签云</h3><div class="widget-body tagcloud"><a href="/tags/Django/" style="font-size:18px;color:#fff">Django</a> <a href="/tags/MTV/" style="font-size:14.67px;color:#fff">MTV</a> <a href="/tags/URL/" style="font-size:14.67px;color:#fff">URL</a> <a href="/tags/HTTP/" style="font-size:14.67px;color:#fff">HTTP</a> <a href="/tags/%E7%8A%B6%E6%80%81%E7%A0%81/" style="font-size:13px;color:#fff">状态码</a> <a href="/tags/GET/" style="font-size:13px;color:#fff">GET</a> <a href="/tags/POST/" style="font-size:13px;color:#fff">POST</a> <a href="/tags/MVC/" style="font-size:13px;color:#fff">MVC</a> <a href="/tags/Hexo/" style="font-size:18px;color:#fff">Hexo</a> <a href="/tags/Pure/" style="font-size:13px;color:#fff">Pure</a> <a href="/tags/Troubleshooting/" style="font-size:14.67px;color:#fff">Troubleshooting</a> <a href="/tags/Git/" style="font-size:13px;color:#fff">Git</a> <a href="/tags/Java/" style="font-size:16.33px;color:#fff">Java</a> <a href="/tags/%E7%BC%96%E7%A0%81/" style="font-size:13px;color:#fff">编码</a> <a href="/tags/Python/" style="font-size:21.33px;color:#fff">Python</a> <a href="/tags/%E7%8E%AF%E5%A2%83/" style="font-size:13px;color:#fff">环境</a> <a href="/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/" style="font-size:13px;color:#fff">运算符</a> <a href="/tags/%E8%BF%9B%E5%88%B6/" style="font-size:13px;color:#fff">进制</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" style="font-size:14.67px;color:#fff">数据类型</a> <a href="/tags/%E6%A8%A1%E5%9D%97/" style="font-size:14.67px;color:#fff">模块</a> <a href="/tags/mail/" style="font-size:13px;color:#fff">mail</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size:13px;color:#fff">算法</a> <a href="/tags/psutil/" style="font-size:13px;color:#fff">psutil</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size:13px;color:#fff">函数</a> <a href="/tags/OOP/" style="font-size:13px;color:#fff">OOP</a> <a href="/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8/" style="font-size:13px;color:#fff">上下文管理器</a> <a href="/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" style="font-size:13px;color:#fff">内存管理</a> <a href="/tags/Linux/" style="font-size:23px;color:#fff">Linux</a> <a href="/tags/Nginx/" style="font-size:14.67px;color:#fff">Nginx</a> <a href="/tags/Crontab/" style="font-size:13px;color:#fff">Crontab</a> <a href="/tags/Vim/" style="font-size:13px;color:#fff">Vim</a> <a href="/tags/Shell/" style="font-size:19.67px;color:#fff">Shell</a> <a href="/tags/%E7%94%A8%E6%88%B7%E4%B8%8E%E7%BB%84/" style="font-size:14.67px;color:#fff">用户与组</a> <a href="/tags/%E6%9D%83%E9%99%90/" style="font-size:16.33px;color:#fff">权限</a> <a href="/tags/SSH/" style="font-size:16.33px;color:#fff">SSH</a> <a href="/tags/Ansible/" style="font-size:13px;color:#fff">Ansible</a></div></div><script type="text/javascript">for(var everytag=document.getElementsByClassName("widget-body tagcloud")[0].children,i=everytag.length-1;0<=i;i--){var r=Math.floor(180*Math.random()),g=Math.floor(180*Math.random()),b=Math.floor(180*Math.random());everytag[i].style.background="rgb("+r+","+g+","+b+")"}</script><div class="widget"><h3 class="widget-title"><i style="color:#9400d3" class="icon icon-archives-fill"></i>归档</h3><div class="widget-body"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">43</span></li></ul></div></div><div class="widget"><h3 class="widget-title"><i style="color:#9400d3" class="icon icon-shu-fill"></i>最新文章</h3><div class="widget-body"><ul class="recent-post-list list-unstyled"><li><div class="item-thumb"><a href="/20220901/10-python-csdn-memory-management.html" class="thumb"><span style="background-image:url(/images/logo/python-logo.svg)" alt="10_Python-CSDN_内存管理" class="thumb-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="category-link" href="/categories/Python/">Python</a></p><p class="item-title"><a href="/20220901/10-python-csdn-memory-management.html" class="title">10_Python-CSDN_内存管理</a></p><p class="item-date"><time datetime="2022-09-01T09:10:00.000Z" itemprop="datePublished">2022-09-01</time></p></div></li><li><div class="item-thumb"><a href="/20220901/09-python-csdn-context-manager.html" class="thumb"><span style="background-image:url(/images/logo/python-logo.svg)" alt="09_Python-CSDN_上下文管理器" class="thumb-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="category-link" href="/categories/Python/">Python</a></p><p class="item-title"><a href="/20220901/09-python-csdn-context-manager.html" class="title">09_Python-CSDN_上下文管理器</a></p><p class="item-date"><time datetime="2022-09-01T09:00:00.000Z" itemprop="datePublished">2022-09-01</time></p></div></li><li><div class="item-thumb"><a href="/20220901/08-python-csdn-profom-oriented-practice.html" class="thumb"><span style="background-image:url(/images/logo/python-logo.svg)" alt="08_Python-CSDN_面向对象练习" class="thumb-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="category-link" href="/categories/Python/">Python</a></p><p class="item-title"><a href="/20220901/08-python-csdn-profom-oriented-practice.html" class="title">08_Python-CSDN_面向对象练习</a></p><p class="item-date"><time datetime="2022-09-01T08:50:00.000Z" itemprop="datePublished">2022-09-01</time></p></div></li><li><div class="item-thumb"><a href="/20220901/07-python-csdn-hao-level-function.html" class="thumb"><span style="background-image:url(/images/logo/python-logo.svg)" alt="07_Python-CSDN_高阶函数" class="thumb-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="category-link" href="/categories/Python/">Python</a></p><p class="item-title"><a href="/20220901/07-python-csdn-hao-level-function.html" class="title">07_Python-CSDN_高阶函数</a></p><p class="item-date"><time datetime="2022-09-01T08:40:00.000Z" itemprop="datePublished">2022-09-01</time></p></div></li><li><div class="item-thumb"><a href="/20220901/06-python-csdn-psutil-module.html" class="thumb"><span style="background-image:url(/images/logo/python-logo.svg)" alt="06_Python-CSDN_psutil模块" class="thumb-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="category-link" href="/categories/Python/">Python</a></p><p class="item-title"><a href="/20220901/06-python-csdn-psutil-module.html" class="title">06_Python-CSDN_psutil模块</a></p><p class="item-date"><time datetime="2022-09-01T08:30:00.000Z" itemprop="datePublished">2022-09-01</time></p></div></li></ul></div></div></div></aside><aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar"><div class="slimContent"><nav id="toc" class="article-toc"><h3 class="toc-title">文章目录</h3><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#17-Linux%E5%9F%BA%E7%A1%80-%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%902"><span class="toc-text">17_Linux基础-用户权限2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E7%BB%83%E4%B9%A0%EF%BC%9A%E6%89%B9%E9%87%8F%E5%88%9B%E5%BB%BAn%E4%B8%AA%E7%94%A8%E6%88%B7"><span class="toc-text">一. 练习：批量创建n个用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E4%B8%80%E8%88%AC%E6%83%85%E5%86%B5%E4%B8%8B%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E5%8F%AA%E8%83%BD%E5%9C%A8%E5%AE%B6%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%88%96%E8%80%85-tmp%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E6%88%96%E8%80%85%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">二. 一般情况下普通用户只能在家目录下或者&#x2F;tmp目录下创建文件或者文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-chmod"><span class="toc-text">三. chmod</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6-%E7%9B%AE%E5%BD%95%E7%9A%84%E5%BD%92%E5%B1%9E"><span class="toc-text">四. 设置文件&#x2F;目录的归属</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-chown%E5%91%BD%E4%BB%A4"><span class="toc-text">4.1 chown命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-chgrp%E5%91%BD%E4%BB%A4"><span class="toc-text">4.2 chgrp命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E5%8F%AF%E4%BB%A5%E6%89%A7%E8%A1%8C%E7%9A%84%E7%94%A8%E6%88%B7"><span class="toc-text">4.3 可以执行的用户</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-%E9%BB%98%E8%AE%A4%E6%9D%83%E9%99%90"><span class="toc-text">五. 默认权限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-etc-profile%E4%B8%8B%E9%9D%A2%E6%9C%89umask%E7%9A%84%E8%AE%BE%E7%BD%AE"><span class="toc-text">5.1 &#x2F;etc&#x2F;profile下面有umask的设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD-%E7%BB%83%E4%B9%A0"><span class="toc-text">六. 练习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9-pem%EF%BC%8C%E5%A4%8D%E5%88%B6-etc-hosts%E6%96%87%E4%BB%B6%E5%88%B0pem%E7%9B%AE%E5%BD%95%E4%B8%8B"><span class="toc-text">6.1 新建文件夹&#x2F;pem，复制&#x2F;etc&#x2F;hosts文件到pem目录下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E4%BF%AE%E6%94%B9hosts%E6%96%87%E4%BB%B6%E7%9A%84%E6%9D%83%E9%99%90%E4%B8%BA%EF%BC%8C%E5%B1%9E%E4%B8%BB%E6%9C%89%E8%AF%BB%E5%86%99%E6%89%A7%E8%A1%8C%EF%BC%8C%E7%BB%84%E6%9C%89%E8%AF%BB%E5%86%99%E6%89%A7%E8%A1%8C%EF%BC%8C%E5%85%B6%E4%BB%96%E4%BA%BA%E6%B2%A1%E6%9C%89%E4%BB%BB%E4%BD%95%E6%9D%83%E9%99%90"><span class="toc-text">6.2 修改hosts文件的权限为，属主有读写执行，组有读写执行，其他人没有任何权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E6%96%B0%E5%BB%BA-pem2%E7%9B%AE%E5%BD%95%EF%BC%8C%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90%E4%B8%BA%E4%BB%BB%E4%BD%95%E4%BA%BA%E9%83%BD%E6%9C%89%E8%AF%BB%E5%86%99%E6%89%A7%E8%A1%8C%E7%9A%84%E6%9D%83%E9%99%90"><span class="toc-text">6.3 新建&#x2F;pem2目录，修改权限为任何人都有读写执行的权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-%E4%BF%AE%E6%94%B9-pem2%E7%9B%AE%E5%BD%95%E6%9D%83%E9%99%90%E4%B8%BA%E5%B1%9E%E4%B8%BB%E6%9C%89%E8%AF%BB%E5%86%99%E6%89%A7%E8%A1%8C%E7%9A%84%E6%9D%83%E9%99%90%EF%BC%8C%E5%85%B6%E4%BB%96%E4%BB%BB%E4%BD%95%E4%BA%BA%E9%83%BD%E6%B2%A1%E6%9C%89%E6%9D%83%E9%99%90"><span class="toc-text">6.4 修改&#x2F;pem2目录权限为属主有读写执行的权限，其他任何人都没有权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-5-%E4%BF%AE%E6%94%B9-pem2%E4%BB%BB%E4%BD%95%E4%BA%BA%E9%83%BD%E6%B2%A1%E6%9C%89%E4%BB%BB%E4%BD%95%E6%9D%83%E9%99%90"><span class="toc-text">6.5 修改&#x2F;pem2任何人都没有任何权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-6-%E5%A4%8D%E5%88%B6-etc-passwd%E5%92%8C-etc-shadow%E6%96%87%E4%BB%B6%E5%88%B0-pem%E7%9B%AE%E5%BD%95%E4%B8%8B%EF%BC%8C%E6%9F%A5%E7%9C%8B%E5%A4%8D%E5%88%B6%E4%B9%8B%E5%90%8E%E7%9A%84%E6%9D%83%E9%99%90%E6%98%AF%E5%90%A6%E4%B8%80%E8%87%B4%EF%BC%8C%E5%A6%82%E4%BD%95%E4%BF%9D%E6%8C%81%E6%9D%83%E9%99%90%E4%B8%80%E8%87%B4"><span class="toc-text">6.6 复制&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow文件到&#x2F;pem目录下，查看复制之后的权限是否一致，如何保持权限一致</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-7-cp-a-%E4%BF%9D%E7%95%99%E6%96%87%E4%BB%B6%E7%9A%84%E5%B1%9E%E6%80%A7%EF%BC%88%E5%8C%85%E6%8B%AC%E6%9D%83%E9%99%90%E3%80%81%E6%97%B6%E9%97%B4%E3%80%81%E7%94%A8%E6%88%B7%E3%80%81%E7%BB%84%EF%BC%89"><span class="toc-text">6.7 cp -a 保留文件的属性（包括权限、时间、用户、组）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83-%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%E7%9A%84%E9%9A%90%E8%97%8F%E5%B1%9E%E6%80%A7"><span class="toc-text">七. 文件或目录的隐藏属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-%E6%96%87%E4%BB%B6%E7%9A%84%E6%AD%A3%E5%B8%B8%E6%9D%83%E9%99%90"><span class="toc-text">八. 文件的正常权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D-%E6%96%87%E4%BB%B6%E7%9A%84%E7%89%B9%E5%88%AB%E6%9D%83%E9%99%90"><span class="toc-text">九. 文件的特别权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81-%E7%B2%98%E6%BB%9E%E4%BD%8D%E6%9D%83%E9%99%90%EF%BC%88Sticky%EF%BC%89"><span class="toc-text">十. 粘滞位权限（Sticky）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80-%E8%AE%BE%E7%BD%AESET%E4%BD%8D%E3%80%81%E7%B2%98%E6%BB%9E%E4%BD%8D%E6%9D%83%E9%99%90"><span class="toc-text">十一. 设置SET位、粘滞位权限</span></a></li></ol></li></ol></nav></div></aside><main class="main" role="main"><div class="content"><article id="post-Linux_基础/17_Linux基础-用户权限2" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting"><div class="article-header"><h1 class="article-title" itemprop="name">17_Linux基础-用户权限2</h1><div class="article-meta"><span class="article-date"><i class="icon icon-calendar"></i> <a href="/20220828/17-linux-foundation-user-permission-2.html" class="article-date">发布于<time datetime="2022-08-28T08:17:00.000Z" itemprop="datePublished"> 2022-08-28 </time></a></span><span class="article-date"><i class="icon icon-calendar-check"></i> <a href="/20220828/17-linux-foundation-user-permission-2.html" class="article-date">更新于<time datetime="2022-08-28T08:17:01.000Z" itemprop="dateUpdated"> 2022-08-28 </time></a></span><span class="article-category"><i class="icon icon-folder"></i> <a class="article-category-link" href="/categories/Linux/">Linux</a> </span><span class="article-tag"><i class="icon icon-tags"></i> <a class="article-tag-link-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="article-tag-link-link" href="/tags/%E6%9D%83%E9%99%90/" rel="tag">权限</a> </span><span class="article-read hidden-xs"><i class="icon icon-eye-fill" aria-hidden="true"></i> <span id="/20220828/17-linux-foundation-user-permission-2.html" class="leancloud_visitors" data-flag-title="17_Linux基础-用户权限2"><span class="leancloud-visitors-count">0</span> </span></span><span class="post-comment"><i class="icon icon-comment"></i> <a href="/20220828/17-linux-foundation-user-permission-2.html#comments" class="article-comment-link">评论</a></span> <span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 5.1k(字)</span> <span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 22(分)</span></div></div><div style="background-color:#d7bde2;border:1px solid #d7bde2;border-radius:10px;padding:5px"><b>温馨提示</b>：点击页面此处(或下方)<a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button"> <span style="color:#c71585"><b>[&nbsp;</b></span><span style="color:#c71585"><b>文章目录</b></span> <b><i style="color:red" class="text-collapsed icon icon-anchor"></i></b> <b><i class="text-in icon icon-close"></i></b> <span style="color:#c71585"><b>]</b></span> </a>以展开或折叠目录~</div><br><div class="article-entry marked-body" itemprop="articleBody"><p>摘要：博客迁移 <a target="_blank" rel="noopener" href="https://blog.csdn.net/cpen_web"><code>https://blog.csdn.net/cpen_web</code></a> → 本站<span id="more"></span></p><h1 id="17-Linux基础-用户权限2">17_Linux基础-用户权限2</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/cpen_web">博客🔗：https://blog.csdn.net/cpen_web</a></p><hr><h2 id="一-练习：批量创建n个用户">一. 练习：批量创建n个用户</h2><p>批量创建n个用户</p><p>用户名以sanchuang开头,sanchuang</p><p>指定家目录/lianxi/user</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">示例</span><br><span class="line">---------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">[root@localhost ~]<span class="comment"># seq -w 10			# 注：-w 同等长度输出</span></span><br><span class="line">01</span><br><span class="line">02</span><br><span class="line">………………</span><br><span class="line">09</span><br><span class="line">10</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># vim create_user2.sh</span></span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line">num=<span class="variable">$1</span>          <span class="comment"># 注：$1外面 接收参数，改名字 见名知义</span></span><br><span class="line">[ -d /lianxi/user ] || <span class="built_in">mkdir</span> /lianxi/user      <span class="comment"># 注：-d判断目录是否存在，-f判断普通文件是否存在</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `<span class="built_in">seq</span> -w <span class="variable">$num</span>`						   <span class="comment"># 注：mkdir /lianxi/user 就可以了，不要加上用户名目录</span></span><br><span class="line"><span class="keyword">do</span>				<span class="comment"># 注：判断是否存在，如果前面为真不做任何事情，如果为假就执行mkdir…</span></span><br><span class="line">    useradd -d /lianxi/user/sanchuang<span class="variable">$i</span> sanchuang<span class="variable">$i</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># bash create_user2.sh 12</span></span><br><span class="line">useradd：用户“sanchuang01”已存在</span><br><span class="line">useradd：用户“sanchuang02”已存在</span><br><span class="line">………………</span><br><span class="line">useradd：用户“sanchuang10”已存在</span><br><span class="line">useradd：用户“sanchuang12”已存在</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># cd /lianxi/user</span></span><br><span class="line">[root@sanchuang-linux user]<span class="comment"># ls</span></span><br><span class="line">sanchuang01  …………  sanchuang10  sanchuang12</span><br><span class="line">[root@sanchuang-linux user]<span class="comment"># cd</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># bash create_user2.sh 20</span></span><br><span class="line">useradd：用户“sanchuang01”已存在</span><br><span class="line">useradd：用户“sanchuang02”已存在</span><br><span class="line">………………</span><br><span class="line">useradd：用户“sanchuang12”已存在</span><br><span class="line">useradd：用户“sanchuang13”已存在</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># cd /lianxi/user</span></span><br><span class="line">[root@sanchuang-linux user]<span class="comment"># ls</span></span><br><span class="line">sanchuang01  …………  sanchuang18  sanchuang20</span><br></pre></td></tr></table></figure><hr><h2 id="二-一般情况下普通用户只能在家目录下或者-tmp目录下创建文件或者文件夹">二. 一般情况下普通用户只能在家目录下或者/tmp目录下创建文件或者文件夹</h2><p><strong>一般情况下普通用户只能在家目录下或者/tmp目录下创建文件或者文件夹</strong></p><p>#注：/tmp目录是一个临时目录，一般存放临时性的东西</p><p>#注：（如：程序运行中需要记录的一些东西，程序结束后把/tmp目录下的东西删掉）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@sanchuang-linux ~]<span class="comment"># su - sanchuang</span></span><br><span class="line">上一次登录：五 11月  6 17:09:41 CST 2020pts/2 上</span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">ls</span> -ld /</span><br><span class="line">dr-xr-xr-x. 38 root root 4096 11月  5 15:12 /</span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">ls</span> -ld /etc</span><br><span class="line">drwxr-xr-x. 90 root root 8192 11月  7 15:00 /etc</span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">ls</span> -ld ./				<span class="comment"># 注：家目录下 创建文件或者文件夹</span></span><br><span class="line">drwxrwxrwx. 4 sanchuang sanchuang 122 11月  6 17:10 ./</span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">ls</span> -ld /tmp			<span class="comment"># 注：/tmp目录下 创建文件或者文件夹</span></span><br><span class="line">drwxrwxrwt. 12 root root 264 11月  7 10:36 /tmp</span><br><span class="line"></span><br><span class="line"><span class="comment">#注：chmod  自己是属主的时候，才可以修改权限</span></span><br></pre></td></tr></table></figure><hr><h2 id="三-chmod">三. chmod</h2><p><strong>chmod使用，必须是文件的属主，才能改动文件的读写执行权限（root除外）</strong></p><p>#注：chmod使用 用户必须是文件的属主才能修改（即使是文件属组里的成员也没有权限去修改文件）</p><p>#注：root用户除外</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">示例：su切换用户时 加- 不加- 区别</span><br><span class="line">[root@sanchuang-linux chenpeng]<span class="comment"># su - sanchuang11		# 注：加 - 会自动切换到到家目录下</span></span><br><span class="line">上一次登录：六 11月  7 15:10:51 CST 2020pts/0 上</span><br><span class="line">[sanchuang11@sanchuang-linux ~]$ <span class="built_in">exit</span></span><br><span class="line">注销</span><br><span class="line">[root@sanchuang-linux chenpeng]<span class="comment"># su sanchuang11			# 注：不加 - 会在当前目录下</span></span><br><span class="line">[sanchuang11@sanchuang-linux chenpeng]$ </span><br></pre></td></tr></table></figure><hr><h2 id="四-设置文件-目录的归属">四. 设置文件/目录的归属</h2><p><strong>设置文件/目录的归属</strong></p><h3 id="4-1-chown命令">4.1 chown命令</h3><p><strong>chown命令</strong> # 注：用来改变文件的属主和属组</p><ul><li>必须是<strong>root</strong> # 注：chown 只能root去更改</li><li>用户和组必须存在</li><li>格式：	<code>chown 属主 文件</code><br><code>chown :属组 文件</code><br><code>chown 属主:属组 文件</code></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">示例：<span class="built_in">chown</span> 修改文件的属主和属组</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -al sanchuang_log 						# 注：属主 sanchuang ; 属组 sanchuang</span></span><br><span class="line">-rw-rw-r-- 1 sanchuang sanchuang 673 11月  7 15:19 sanchuang_log</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># chown sanchuang10 sanchuang_log 			# 注：修改属主 sanchuang10</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -al sanchuang_log </span></span><br><span class="line">-rw-rw-r-- 1 sanchuang10 sanchuang 673 11月  7 15:19 sanchuang_log</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># chown :sanchuang9 sanchuang_log 			# 注：修改属组 sanchuang9</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -al sanchuang_log </span></span><br><span class="line">-rw-rw-r-- 1 sanchuang10 sanchuang9 673 11月  7 15:19 sanchuang_log</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># chown sanchuang2:sanchuang sanchuang_log 	# 注：即改属主又改属组</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -al sanchuang_log </span></span><br><span class="line">-rw-rw-r-- 1 sanchuang2 sanchuang 673 11月  7 15:19 sanchuang_log</span><br><span class="line"></span><br><span class="line"><span class="comment">#注：属主和属组不可以随便更改</span></span><br><span class="line"><span class="comment">#注：数字随便改，没有限制 没有强制性的检查</span></span><br><span class="line"><span class="comment">#注：改字符串形式的名字 会检查一下</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># chown xixi:haha sanchuang_log 		# 注：修改 字符串会检查</span></span><br><span class="line"><span class="built_in">chown</span>: 无效的用户: “xixi:haha”</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># chown 6666:6666 sanchuang_log 		# 注：数字没有限制</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -al sanchuang_log </span></span><br><span class="line">-rw-rw-r-- 1 6666 6666 673 11月  7 15:19 sanchuang_log</span><br></pre></td></tr></table></figure><h3 id="4-2-chgrp命令">4.2 chgrp命令</h3><p><strong>chgrp命令</strong> <strong># 注：修改属组（不常用）</strong></p><ul><li>格式：	<code>chgrp 属组 文件</code></li><li>必须是root或者是文件的所有者</li><li>必须是新组的成员</li></ul><p><strong>常用命令选项</strong></p><ul><li><code>-R</code>：递归修改指定目录下所有文件、子目录的归属</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">示例：<span class="built_in">chgrp</span>命令 修改属组</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># chgrp sanchuang5 sanchuang_log 		# 注:只修改属组</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -al sanchuang_log </span></span><br><span class="line">-rw-rw-r-- 1 6666 sanchuang5 673 11月  7 15:19 sanchuang_log</span><br></pre></td></tr></table></figure><h3 id="4-3-可以执行的用户">4.3 可以执行的用户</h3><p><strong>可以执行的用户</strong></p><blockquote><p><img src="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170358168.png" alt="image-20220817035817124"></p></blockquote><p>操作 可以执行的用户</p><p>chmod root和文件所有者</p><p>chgrp root和文件所有者（必须是组成员）</p><p>chown 只有root</p><p>#注：chgrp修改属组 文件所有者 必须是想要<strong>修改的组</strong>里的<strong>组成员</strong></p><hr><h2 id="五-默认权限">五. 默认权限</h2><ul><li>在内核级别，文件的初始权限666</li><li>在内核级别，文件夹的初始权限777</li><li>用umask命令控制默认权限，临时有效</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># umask  0022</span></span><br><span class="line">[root@localhost ~]<span class="comment"># umask -S  u=rwx,g=rx,o=rx  </span></span><br><span class="line">[root@localhost ~]<span class="comment"># umask 077  </span></span><br><span class="line">[root@localhost ~]<span class="comment"># umask  0077</span></span><br><span class="line">不推荐修改系统默认<span class="built_in">umask</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 注：umask规定默认创建文件或者文件夹的权限有多大</span></span><br><span class="line">============================================================================================</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">ls</span> -ld <span class="built_in">dd</span>					 <span class="comment"># 注：新建的文件dd</span></span><br><span class="line">-rw-rw-r-- 1 sanchuang9 sanchuang9 0 11月  7 15:48 <span class="built_in">dd</span>		<span class="comment"># 注：权限644</span></span><br><span class="line">============================================================================================</span><br></pre></td></tr></table></figure><h3 id="5-1-etc-profile下面有umask的设置">5.1 /etc/profile下面有umask的设置</h3><p><strong>/etc/profile下面有<code>umask</code>的设置</strong></p><p><strong>系统环境设置 /etc/profile</strong> # 注：<strong>/etc/profile下面有umask的设置</strong></p><p>#注：判断uid是否大于199，并且当前用户的 用户名和组名 相等的时候 umask 是 002</p><p>#注：用户名和组名不一样时 umask 是022</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">[sanchuang9@sanchuang-linux ~]$ less /etc/profile	<span class="comment"># 注：/etc/profile下面有umask的设置</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$UID</span> -gt 199 ] &amp;&amp; [ <span class="string">&quot;`/usr/bin/id -gn`&quot;</span> = <span class="string">&quot;`/usr/bin/id -un`&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">umask</span> 002			<span class="comment"># 注：如果uid大于199 执行 id -gn 命令  group_name  ;id -un user_name</span></span><br><span class="line"><span class="keyword">else</span>					<span class="comment"># 注：判定uid是否大于199，并且group_name=user_name</span></span><br><span class="line">    <span class="built_in">umask</span> 022			<span class="comment"># 注：用户名和组名一样时 umask 是002 ； 用户名和组名不一样时 是 002</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line"><span class="comment">#注：新建文件的权限是666-umask，新建目录的权限是777-umask</span></span><br><span class="line"><span class="comment">#注：使用umask设置文件的权限，因为每次登陆shell都会加载系统的环境，会运行/etc/profile，所以会设置它的umask</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#注：id -gn 获取当前用户组名</span></span><br><span class="line"><span class="comment">#注：id -un 获取当前用户名</span></span><br><span class="line"><span class="comment">#uid大于199，并且当前用户的group_name和user_name名字相同的时候 umask是002</span></span><br><span class="line"><span class="comment">#剩下的时候 umask是022</span></span><br><span class="line"></span><br><span class="line">·在内核级别，文件的初始权限666  </span><br><span class="line">·在内核级别，文件夹的初始权限777</span><br><span class="line">·用<span class="built_in">umask</span>命令控制默认权限，临时有效</span><br><span class="line"></span><br><span class="line"><span class="built_in">umask</span>为002 则表示新建文件的默认权限为664，新建文件的文件夹权限为775</span><br><span class="line"><span class="built_in">umask</span>为022 则表示新建文件的默认权限为644，新建文件的文件夹权限为755</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注：666 - umask</span></span><br><span class="line">	 777 - <span class="built_in">umask</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例：<span class="built_in">id</span> -gn 获取当前用户组名; <span class="built_in">id</span> -un 获取当前用户名</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># /usr/bin/id -gn</span></span><br><span class="line">root</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># /usr/bin/id -un</span></span><br><span class="line">root</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># id -gn			# 注：当前所在用户组名</span></span><br><span class="line">root</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># id -un			# 注：当前所在用户名</span></span><br><span class="line">root</span><br><span class="line">============================================================================================</span><br><span class="line">示例：判断2个字符串是否相等 可以用1个等号</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># [ &quot;a&quot; = &quot;b&quot; ] || echo &quot;ok&quot;		# 注：判断字符串相同 可以用一个等于号</span></span><br><span class="line">ok															<span class="comment"># 注：条件为假 输出ok</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># [ &quot;a&quot; = &quot;b&quot; ] &amp;&amp; echo &quot;ok&quot;		# 注：条件为真 输出ok</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># [ &quot;a&quot; = &quot;a&quot; ] &amp;&amp; echo &quot;ok&quot;</span></span><br><span class="line">ok</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># su - sanchuang	# 注：用户名和组名一样时</span></span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">umask</span> </span><br><span class="line">0002									<span class="comment"># 注：用户名和组名一样时 umask 是002</span></span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">id</span> -gn	<span class="comment"># 注：第一位0是粘滞位  002是umask</span></span><br><span class="line">sanchuang</span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">id</span> -un</span><br><span class="line">sanchuang</span><br><span class="line"></span><br><span class="line">[root@localhost ~]<span class="comment"># su - b1				# 注：用户名 和 组名不一样时</span></span><br><span class="line">[b1@localhost ~]$ <span class="built_in">id</span></span><br><span class="line">uid=1204(b1) gid=1001(cali) 组=1001(cali),200(tech)</span><br><span class="line">[b1@localhost ~]$ <span class="built_in">id</span> -un</span><br><span class="line">b1</span><br><span class="line">[b1@localhost ~]$ <span class="built_in">id</span> -gn</span><br><span class="line">cali</span><br><span class="line">[b1@localhost ~]$ <span class="built_in">umask</span> 				<span class="comment"># 注：用户名和组名不一样时 umask是022</span></span><br><span class="line">0022</span><br><span class="line">[b1@localhost ~]$ <span class="built_in">touch</span> gg</span><br><span class="line">[b1@localhost ~]$ <span class="built_in">ls</span> -ld gg				<span class="comment"># 注：新建文件的权限是644权限</span></span><br><span class="line">-rw-r--r--. 1 b1 cali 0 11月  8 16:27 gg</span><br><span class="line">[b1@localhost ~]$ <span class="built_in">umask</span> 422				<span class="comment"># 注：临时设置umask为422	（临时修改）</span></span><br><span class="line">[b1@localhost ~]$ <span class="built_in">mkdir</span> <span class="built_in">test</span>			<span class="comment"># 注：新建文件夹的权限是 355（777-umask）</span></span><br><span class="line">[b1@localhost ~]$ <span class="built_in">ls</span> -ld <span class="built_in">test</span>/</span><br><span class="line">d-wxr-xr-x. 2 b1 cali 6 11月  8 16:49 <span class="built_in">test</span>/	<span class="comment"># 注：目录权限355 写执行 读执行 读执行</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例：临时设置<span class="built_in">umask</span></span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># umask 422			# 注：临时更改umask</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># touch hh</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -ld hh</span></span><br><span class="line">--w-r--r-- 1 root root 0 11月  7 16:02 hh	   <span class="comment"># 注：文件 权限是244 写读读</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例：<span class="built_in">umask</span> -S 查看文件目前默认权限是多少</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">umask</span> -S		<span class="comment"># 注：查看文件目前默认权限是多少</span></span><br><span class="line">u=rwx,g=rwx,o=rx		</span><br><span class="line">============================================================================================</span><br><span class="line">示例：想要修改某个用户的<span class="built_in">umask</span>，永久修改</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line"><span class="comment">#注：在家目录下的.bashrc下添加umask设置		永久修改</span></span><br><span class="line"><span class="comment">#注：/etc/profile,/etc/bashrc系统配置 基本上不要更改（不要想着改全局配置）</span></span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ vim /home/sanchuang9/.bashrc</span><br><span class="line"><span class="built_in">umask</span>=002</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">exit</span></span><br><span class="line">注销</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># su - sanchuang9</span></span><br><span class="line">上一次登录：六 11月  7 16:07:40 CST 2020pts/0 上</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">umask</span>		<span class="comment"># 注：umask变成002了</span></span><br><span class="line">0002</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ bash		<span class="comment"># 注：执行到新bash里面去 umask也是002</span></span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">umask</span></span><br><span class="line">0002</span><br></pre></td></tr></table></figure><hr><h2 id="六-练习">六. 练习</h2><h3 id="6-1-新建文件夹-pem，复制-etc-hosts文件到pem目录下">6.1 新建文件夹/pem，复制/etc/hosts文件到pem目录下</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、新建文件夹/pem，复制/etc/hosts文件到pem目录下</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># mkdir /pem</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># cp /etc/hosts /pem</span></span><br></pre></td></tr></table></figure><h3 id="6-2-修改hosts文件的权限为，属主有读写执行，组有读写执行，其他人没有任何权限">6.2 修改hosts文件的权限为，属主有读写执行，组有读写执行，其他人没有任何权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2、修改hosts文件的权限为，属主有读写执行，组有读写执行，其他人没有任何权限</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chmod 750 /pem/hosts </span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -al /pem/hosts </span></span><br><span class="line">-rwxr-x--- 1 root root 158 11月  7 16:20 /pem/hosts</span><br></pre></td></tr></table></figure><h3 id="6-3-新建-pem2目录，修改权限为任何人都有读写执行的权限">6.3 新建/pem2目录，修改权限为任何人都有读写执行的权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3、新建/pem2目录，修改权限为任何人都有读写执行的权限</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># mkdir /pem2</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chmod 777 /pem2</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chmod 777 /pem2 -R		# 注：连带下面所有的子文件</span></span><br></pre></td></tr></table></figure><h3 id="6-4-修改-pem2目录权限为属主有读写执行的权限，其他任何人都没有权限">6.4 修改/pem2目录权限为属主有读写执行的权限，其他任何人都没有权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4、修改/pem2目录权限为属主有读写执行的权限，其他任何人都没有权限</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chmod 700 /pem2 </span></span><br></pre></td></tr></table></figure><h3 id="6-5-修改-pem2任何人都没有任何权限">6.5 修改/pem2任何人都没有任何权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5、修改/pem2任何人都没有任何权限</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chmod 000 /pem2 </span></span><br></pre></td></tr></table></figure><h3 id="6-6-复制-etc-passwd和-etc-shadow文件到-pem目录下，查看复制之后的权限是否一致，如何保持权限一致">6.6 复制/etc/passwd和/etc/shadow文件到/pem目录下，查看复制之后的权限是否一致，如何保持权限一致</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">6、复制/etc/passwd和/etc/shadow文件到/pem目录下，查看复制之后的权限是否一致，如何保持权限一致</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># cp /etc/&#123;passwd,shadow&#125; /pem</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -al /pem</span></span><br><span class="line">--w-r--r--   1 root root 3964 11月  7 16:23 passwd</span><br><span class="line">----------   1 root root 4201 11月  7 16:23 shadow</span><br></pre></td></tr></table></figure><h3 id="6-7-cp-a-保留文件的属性（包括权限、时间、用户、组）">6.7 cp -a 保留文件的属性（包括权限、时间、用户、组）</h3><p><strong><code>cp -a</code> 保留文件的属性（包括权限、时间、用户、组）</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@sanchuang-linux pem]<span class="comment"># cp /home/sanchuang9/.viminfo /tmp/viminfo	# 注：cp过来 属主、属组发生改变</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -al /tmp/viminfo </span></span><br><span class="line">--w------- 1 root root 1622 11月  7 16:30 /tmp/viminfo</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -al /tmp/viminfo 						# 注：cp-a选项 属主、属组、权限、创建时间都没变</span></span><br><span class="line">-rw------- 1 sanchuang9 sanchuang9 1622 11月  7 16:11 /tmp/viminfo</span><br></pre></td></tr></table></figure><hr><h2 id="七-文件或目录的隐藏属性">七. 文件或目录的隐藏属性</h2><p><strong>chattr命令：设置文件的隐藏属性</strong></p><ul><li>格式：<code>chattr [+-=] [ai] 文件或目录</code> # 注：+、-、= 分别表示 增加、去除、设置参数</li></ul><p><strong>常用命令选项</strong></p><ul><li><code>-R</code>：递归修改</li><li><code>-a</code>：可以增加文件内容，但不能修改和删除</li><li><code>-i</code>：锁定保护文件</li></ul><p><strong>lsattr命令：查看文件的隐藏属性</strong></p><ul><li>格式：lsattr [Rda] 文件或目录</li></ul><p><strong>常用命令选项</strong></p><ul><li><code>-R</code>：递归修改</li><li><code>-d</code>：查看目录</li></ul><p>#注：<strong>普通用户设置不了文件的隐藏属性；root用户才能设置</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">示例1：chattr +i hosts 锁定保护文件</span><br><span class="line"><span class="comment"># 注：root用户也不能去修改它</span></span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line"><span class="comment">#注：不能更改文件（不能删 不能加 不能移动）</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chattr +i hosts		# 注：设置锁定保护文件；将它不能更改</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># mv hosts&#123;,.bak&#125;		# 注：不能移动（即使是root用户）</span></span><br><span class="line"><span class="built_in">mv</span>: 无法将<span class="string">&#x27;hosts&#x27;</span> 移动至<span class="string">&#x27;hosts.bak&#x27;</span>: 不允许的操作	</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -al hosts 		# 注：ls -al命令 无法查看隐藏属性</span></span><br><span class="line">-rwxr-x--- 1 root root 158 11月  7 16:20 hosts</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># lsattr hosts		# 注：lsattr 才能 查看文件隐藏属性 i</span></span><br><span class="line">----i--------------- hosts						<span class="comment"># 注：多了1个i属性</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chattr -i hosts		# 注：去除属性 去除锁定</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># lsattr hosts</span></span><br><span class="line">-------------------- hosts						<span class="comment"># 注：i隐藏属性没了</span></span><br><span class="line"><span class="comment">#注：不能删，加，移动（root用户也不能）</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例2：chattr +a hosts 可以增加文件内容，但不能修改和删除</span><br><span class="line"><span class="comment"># 注：可以使用重定向去增加文件内容，但不能去修改和删除</span></span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chattr +a hosts		# 注：可以增加文件内容，但是无法修改和删除</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># lsattr hosts</span></span><br><span class="line">-----a-------------- hosts						<span class="comment"># 注：多了a属性</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># vim hosts 			# 注：不可以修改</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># echo &quot;aaaa&quot; &gt;&gt; hosts 	# 注：可以追加</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># cat hosts </span></span><br><span class="line">127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4</span><br><span class="line">aaaa</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># rm -rf hosts 			# 注：不可以删除</span></span><br><span class="line"><span class="built_in">rm</span>: 无法删除<span class="string">&#x27;hosts&#x27;</span>: 不允许的操作</span><br><span class="line"><span class="comment">#注：不能修改，只能追加，不能删除</span></span><br><span class="line"><span class="comment">#注：有时候无论什么情况都不想让它更改 +a属性</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例3：chattr +i /etc/passwd</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chattr +i /etc/passwd		# 注：设置以后就创建不了用户</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># lsattr /etc/passwd			# 注：查看隐藏属性</span></span><br><span class="line">----i--------------- /etc/passwd						<span class="comment"># 注：隐藏属性i</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># useradd sanchuang21			# 注：无论什么用户，设置了隐藏属性，基本没戏了</span></span><br><span class="line">useradd：无法打开 /etc/passwd</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chattr -i /etc/passwd		# 注：解锁</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例4：普通用户设置不了文件的隐藏属性</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@localhost ~]<span class="comment"># su - sanchuang</span></span><br><span class="line">[sanchuang@localhost ~]$ <span class="built_in">touch</span> aa</span><br><span class="line">[sanchuang@localhost ~]$ chattr +i aa					<span class="comment"># 注：普通用户设置不了文件的隐藏属性</span></span><br><span class="line">chattr: 不允许的操作 <span class="keyword">while</span> setting flags on aa</span><br></pre></td></tr></table></figure><hr><h2 id="八-文件的正常权限">八. 文件的正常权限</h2><blockquote><p><img src="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170416487.png" alt="image-20220817041614445"></p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#注：正常文件的权限是读写执行</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -ld /tmp</span></span><br><span class="line">drwxrwxrwt. 12 root root 4096 11月  7 16:30 /tmp		<span class="comment"># 注：t 文件的特殊权限</span></span><br></pre></td></tr></table></figure><hr><h2 id="九-文件的特别权限">九. 文件的特别权限</h2><p>#注：<strong>set位权限设置</strong></p><blockquote><p><img src="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170417672.png" alt="image-20220817041733623"></p></blockquote><p><strong>SET位权限</strong></p><p><strong>主要用途：</strong></p><ul><li>为<strong>可执行</strong>（有 x 权限的）文件设置，权限字符为“s” # 注：<strong>以前的x位变成s位</strong></li><li>其他用户执行该文件时，将拥有属主或属组用户的权限</li></ul><p><strong>SET位权限类型</strong>：</p><ul><li>SUID：表示对属主用户增加SET位权限</li><li>SGID：表示对属组内的用户增加SET位权限</li></ul><p># 注：用在可执行文件<br># 注：suid sgid 对应文件而言</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">示例：/bin/passwd</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@localhost ~]<span class="comment"># which passwd</span></span><br><span class="line">/bin/passwd</span><br><span class="line">[root@localhost ~]<span class="comment"># ls -ld /bin/passwd </span></span><br><span class="line">-rwsr-xr-x. 1 root root 27856 4月   1 2020 /bin/passwd</span><br><span class="line"><span class="comment">#注：普通用户以root用户的身份，间接更新了shadow文件中自己的密码</span></span><br><span class="line">[root@localhost ~]<span class="comment"># su - sanchuang</span></span><br><span class="line">[sanchuang@localhost ~]$ passwd sanchuang				<span class="comment"># 注：不能更改密码  其他权限没到位</span></span><br><span class="line">passwd：只有根用户才能指定用户名。</span><br><span class="line"></span><br><span class="line"><span class="comment">#注：s位 这个权限基本不会颁布，必须在有可执行文件下才能生效</span></span><br><span class="line"><span class="comment">#注：这个权限设置 所有人全部给，不能精确到某个用户</span></span><br><span class="line"></span><br><span class="line">示例：SET位权限设置</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -ld /pem</span></span><br><span class="line">d-wxr-xr-x 2 root root 47 11月  7 16:42 /pem				<span class="comment"># 注：只有root用户有写的权限</span></span><br><span class="line"><span class="comment">#注：让/pem有普通用户创建、写入的权限？</span></span><br><span class="line">1.设置/pem的权限为777</span><br><span class="line">2.设置<span class="built_in">mkdir</span> SUID的权限</span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># which mkdir</span></span><br><span class="line">/usr/bin/mkdir</span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># ls -ld /usr/bin/mkdir 		</span></span><br><span class="line">-rwxr-xr-x. 1 root root 195192 4月  10 2020 /usr/bin/mkdir	<span class="comment"># 注：没有设置s属性</span></span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># chmod u+s /bin/mkdir	 	# 注：让普通用户执行mkdir时以root（属主）权限去运行</span></span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># ls -ld /usr/bin/mkdir 		# 注：变成s位了</span></span><br><span class="line">-rwsr-xr-x. 1 root root 195192 4月  10 2020 /usr/bin/mkdir</span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># su - sanchuang9</span></span><br><span class="line">上一次登录：六 11月  7 16:09:48 CST 2020pts/0 上</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">cd</span> /pem</span><br><span class="line">[sanchuang9@sanchuang-linux pem]$ <span class="built_in">ls</span></span><br><span class="line">hosts  passwd  shadow</span><br><span class="line">[sanchuang9@sanchuang-linux pem]$ <span class="built_in">mkdir</span> aa 				<span class="comment"># 注：普通用户有写的权限了</span></span><br><span class="line">[sanchuang9@sanchuang-linux pem]$ <span class="built_in">ls</span> -ld /pem</span><br><span class="line">d-wxr-xr-x 3 root root 57 11月  7 16:59 /pem</span><br><span class="line">[sanchuang9@sanchuang-linux pem]$ <span class="built_in">touch</span> <span class="built_in">dd</span>				<span class="comment"># 注：touch没有这个权限</span></span><br><span class="line"><span class="built_in">touch</span>: 无法创建 <span class="string">&#x27;dd&#x27;</span>: 权限不够</span><br><span class="line">[sanchuang9@sanchuang-linux pem]$ <span class="built_in">exit</span></span><br><span class="line">注销</span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># chmod u-s /bin/mkdir</span></span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># ls -ld /bin/mkdir </span></span><br><span class="line">-rwxr-xr-x. 1 root root 195192 4月  10 2020 /bin/mkdir</span><br><span class="line"><span class="comment"># 注：s位基本不会给</span></span><br><span class="line"><span class="comment"># 注：s位不要轻易的颁布它，会对用户进行影响</span></span><br></pre></td></tr></table></figure><hr><h2 id="十-粘滞位权限（Sticky）">十. 粘滞位权限（Sticky）</h2><p><strong>粘滞位权限（Sticky）</strong></p><p><strong>主要用途：</strong></p><ul><li>为公共目录（例如，权限为777的）设置，权限字符为“<code>t</code>” # 注：<strong>t 粘滞位标记字符</strong></li><li>用户不能删除该目录中其他用户的文件</li></ul><p># 注：一般作用于文件夹<br># 注：粘滞位对于文件夹而言</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">示例1</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># ls -ld /tmp</span></span><br><span class="line">drwxrwxrwt. 12 root root 4096 11月  7 16:30 /tmp	<span class="comment"># 注：/tmp目录 任何用户 都有读写执行权限</span></span><br><span class="line"><span class="comment">#注：因为粘滞位权限，用户在/tmp目录下只能创建自己的，删除自己的</span></span><br><span class="line"><span class="comment">#注：一般作用于文件夹</span></span><br><span class="line"><span class="comment">#注：sanchuang10用户不能删除sanchuang用户创建的文件</span></span><br><span class="line">==============================================================================================================</span><br><span class="line">示例2：<span class="built_in">chmod</span> 777 /pem 普通用户可以操作/pem这一层目录下的文件或者文件夹及子文件</span><br><span class="line"><span class="comment"># 注：777权限，不同用户可以相互删除文件</span></span><br><span class="line"><span class="comment"># 注：设置粘滞位后，只能删除自己创建的文件</span></span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># chmod 777 /pem				# 注：把/pem文件夹权限改为777</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># ls -ld /pem					# 注：所有用户都有对/pem读写执行的权限 包括创建、删除</span></span><br><span class="line">drwxrwxrwx 3 root root 74 11月  7 17:10 /pem</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># su - sanchuang9				# 注：普通用户有创建的权限</span></span><br><span class="line">上一次登录：六 11月  7 17:07:17 CST 2020pts/2 上</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">touch</span> /pem/sanchuang9	<span class="comment"># 注：普通用户有创建的权限</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># su - sanchuang</span></span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">rm</span> -rf /pem/sanchuang9	<span class="comment"># 注：普通用户有删除的权限</span></span><br><span class="line"><span class="comment">#注：用户可以删除其他用户创建的文件</span></span><br><span class="line">==============================================================================================================</span><br><span class="line">示例3：粘滞位 t</span><br><span class="line"><span class="comment"># 注：设置粘滞位后，只能删除自己创建的文件</span></span><br><span class="line">[sanchuang9@sanchuang-linux tmp]$ <span class="built_in">ls</span> -ld /tmp</span><br><span class="line">drwxrwxrwt. 13 root root 4096 11月  7 17:07 /tmp			<span class="comment"># 注：/tmp目录设置了1个粘滞位</span></span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">touch</span> /tmp/sanchuang9</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">exit</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># su - sanchuang</span></span><br><span class="line">上一次登录：日 11月  8 19:05:55 CST 2020pts/3 上</span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">rm</span> -rf /tmp/sanchuang9	<span class="comment"># 注：因为设置了1个粘滞位</span></span><br><span class="line"><span class="built_in">rm</span>: 无法删除<span class="string">&#x27;/tmp/sanchuang9&#x27;</span>: 不允许的操作				<span class="comment"># 注：用户只能在/tmp目录下创建 删除自己的</span></span><br><span class="line"><span class="comment">#注：粘滞位的作用</span></span><br><span class="line"><span class="comment">#注：·为公共目录（例如，权限为777的）设置，权限字符为“t”</span></span><br><span class="line"><span class="comment">#注：·用户不能删除该目录中其他用户的文件</span></span><br><span class="line"><span class="comment">#注：一般作用于文件夹</span></span><br></pre></td></tr></table></figure><hr><h2 id="十一-设置SET位、粘滞位权限">十一. 设置SET位、粘滞位权限</h2><p><strong>设置SET位、粘滞位权限</strong></p><p><strong>使用权限字符</strong></p><ul><li><code>chmod ug±s 可执行文件...</code> # 注：设置set位</li><li><code>chmod o±t 目录名...</code> # 注：设置粘滞位</li></ul><p><strong>使用权限数字</strong></p><ul><li><code>chmod mnnn 可执行文件...</code></li><li><strong>m为4时，对应SUID，2对应SGID，1对应粘滞位，可叠加</strong> # 注：m为4 为2 set位</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">示例</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># ls -ld /tmp</span></span><br><span class="line">drwxrwxrwt. 13 root root 4096 11月  7 17:07 /tmp		<span class="comment"># 注：/tmp目录设置了粘滞位，权限为1777</span></span><br><span class="line"><span class="comment">#注：/tmp目录设置了粘滞位，第1位是1</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例：设置粘滞位</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># chmod 1777 /pem</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># ls -ld /pem</span></span><br><span class="line">drwxrwxrwt 3 root root 74 11月  7 17:10 /pem			<span class="comment"># 注：粘滞位 t 之前 x 的位置</span></span><br><span class="line"><span class="comment">#注：普通情况下不需要使用粘滞位、set位的时候，用3个数字就可以了</span></span><br><span class="line">-----------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># ls -ld /bin/mkdir </span></span><br><span class="line">-rwxr-xr-x. 1 root root 195192 4月  10 2020 /bin/mkdir</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># chmod 4755 /bin/mkdir		# 注：设置为SET位SUID权限</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># ls -ld /bin/mkdir </span></span><br><span class="line">-rwsr-xr-x. 1 root root 195192 4月  10 2020 /bin/mkdir</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># chmod 755 /bin/mkdir		# 注：改回来</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># ls -ld /bin/mkdir </span></span><br><span class="line">-rwxr-xr-x. 1 root root 195192 4月  10 2020 /bin/mkdir</span><br></pre></td></tr></table></figure><hr></div><div class="article-footer"><blockquote class="mt-2x"><ul class="post-copyright list-unstyled"><li class="post-copyright-license"><strong>文章作者： </strong><a href="/about/" style="color:#e541e5">Mycpen</a></li><li class="post-copyright-link hidden-xs"><strong>本文链接：</strong> <a href="https://mycpen.github.io/20220828/17-linux-foundation-user-permission-2.html" title="17_Linux基础-用户权限2" target="_blank" rel="external" style="color:#e541e5">https://mycpen.github.io/20220828/17-linux-foundation-user-permission-2.html</a></li><li class="post-copyright-license"><strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！</li></ul></blockquote><div class="panel panel-default panel-badger"><div class="panel-body"><figure class="media"><div class="media-left"><a href="/" target="_blank" class="img-burn thumb-sm visible-lg"><img src="/images/avatar.jpg" class="img-rounded w-full" alt=""></a></div><div class="media-body"><h3 class="media-heading"><a href="/" target="_blank"><span class="text-dark">Mycpen</span><small class="ml-1x">SRE</small></a></h3><div>&#34; 我之所以想变强，是为了活得轻松写意。&#34;__一拳超人</div></div></figure></div></div></div></article><section id="comments"><div id="vcomments"></div></section></div><nav class="bar bar-footer clearfix" data-stick-bottom><div class="bar-inner"><ul class="pager pull-left"><li class="prev"><a href="/20220828/18-linux-foundation-user-permissions-3.html" title="18_Linux基础-用户权限3"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a></li><li class="next"><a href="/20220828/16-linux-foundation-file-directory-authority-and-belonging.html" title="16_Linux基础-文件&amp;目录权限及归属"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a></li><li class="toggle-toc"><a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button"><span style="color:#c71585"><b>[&nbsp;</b></span><span style="color:#c71585"><b>文章目录</b></span> <b><i style="color:red" class="text-collapsed icon icon-anchor"></i></b> <b><i class="text-in icon icon-close"></i></b> <span style="color:#c71585"><b>]</b></span></a></li></ul><div class="bar-right"><div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq"></div></div></div></nav></main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><footer class="footer" itemscope itemtype="http://schema.org/WPFooter"><ul class="social-links"><li><a href="https://github.com/mycpen" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li><li><a href="https://juejin.cn/user/4007034458485159" target="_blank" title="Juejin" data-toggle="tooltip" data-placement="top"><i class="icon icon-juejin"></i></a></li><li><a href="https://segmentfault.com/u/mycpen" target="_blank" title="Segmentfault" data-toggle="tooltip" data-placement="top"><i class="icon icon-segmentfault"></i></a></li><li><a href="https://stackoverflow.com/users/19841214/mycpen" target="_blank" title="Stackoverflow" data-toggle="tooltip" data-placement="top"><i class="icon icon-stackoverflow"></i></a></li><li><a href="https://gitee.com/mycpen" target="_blank" title="Gitee" data-toggle="tooltip" data-placement="top"><i class="icon icon-gitee"></i></a></li><li><a href="/atom.xml" target="_blank" title="Rss" data-toggle="tooltip" data-placement="top"><i class="icon icon-rss"></i></a></li></ul><div class="copyright"><b>&copy; &nbsp;2022 Mycpen</b><br><i class="icon icon-hezuo">&nbsp;&nbsp;</i><b>Powered by&nbsp;</b><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;&nbsp;<b>Theme&nbsp;</b><a target="_blank" rel="noopener" href="https://github.com/cofess/hexo-theme-pure">Pure</a><div class="publishby" style="font-family:Courier"><span id="busuanzi_container_site_pv"><i class="icon icon-eye">&nbsp;&nbsp;</i><span id="busuanzi_value_site_pv" style="font-family:Courier"></span>&nbsp; <i class="icon icon-users">&nbsp;&nbsp;</i><span id="busuanzi_value_site_uv" style="font-family:Courier"></span></span><br><i class="icon icon-clock"></i>&nbsp;<span id="sitetime" style="font-family:Courier"></span></div><div class="publishby">备案号：<a href="http://beian.miit.gov.cn" target="_blank">苏ICP备2020069048号-1</a></div></div></footer><script>function siteTime(){window.setTimeout("siteTime()",1e3);var t=36e5,e=24*t,o=new Date,a=o.getFullYear(),i=o.getMonth()+1,r=o.getDate(),n=o.getHours(),g=o.getMinutes(),o=o.getSeconds(),S=Date.UTC(2022,8,28,0,0,0),a=Date.UTC(a,i,r,n,g,o)-S,i=Math.floor(a/31536e6),r=Math.floor(a/e-365*i),n=Math.floor((a-(365*i+r)*e)/t),g=Math.floor((a-(365*i+r)*e-n*t)/6e4),o=Math.floor((a-(365*i+r)*e-n*t-6e4*g)/1e3),S=i.toString(),a=r.toString().padStart(3,"0"),e=n.toString().padStart(2,"0"),t=g.toString().padStart(2,"0"),i=o.toString().padStart(2,"0");document.getElementById("sitetime").innerHTML=S+":"+a+":"+e+":"+t+":"+i}siteTime()</script><script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script><script>window.jQuery||document.write('<script src="js/jquery.min.js"><\/script>')</script><script src="/js/plugin.min.js"></script><script src="/js/application.js"></script><script>window.INSIGHT_CONFIG={TRANSLATION:{POSTS:"文章",PAGES:"页面",CATEGORIES:"分类",TAGS:"标签",UNTITLED:"(未命名)"},ROOT_URL:"/",CONTENT_URL:"/content.json"}</script><script src="/js/insight.js"></script><script src="//code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script src="//cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><script type="text/javascript">var GUEST=["nick","mail","link"],meta=(meta="nick,mail,link").split(",").filter(function(e){return-1<GUEST.indexOf(e)}),requiredFields=(requiredFields="mail").split(",");new Valine({el:"#vcomments",appId:"xq9WWLj240CudNDG1pxmHepA-gzGzoHsz",appKey:"IMUHid08Bv4OWOIwT8ueGjrq",verify:!0,notify:!0,placeholder:"",avatar:"robohash",meta:meta,pageSize:"10",enableQQ:"true",recordIP:"true",requiredFields:requiredFields,visitor:!0,master:"1000b2475c5eaaef39376cab396fbc91",friends:["1725648a3566b8841f19423519e0a36e","87b6f0e96e63727d889bb3653fb5867c","b7c8e70dc5b2bbbdbdeca1fc0e71b919"],tagMeta:["博主","",""],metaPlaceholder:{nick:"昵称/QQ号",mail:"邮箱(必填)",link:"网址(http://)"},emojiCDN:"//i0.hdslb.com/bfs/emote/",emojiMaps:{tv_doge:"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_亲亲":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再见":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_发怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_发财":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可爱":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_呕吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_坏笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尴尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_惊吓":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"}}),fetch("https://v1.hitokoto.cn/?c=b").then(e=>e.json()).then(e=>{document.getElementById("veditor").setAttribute("placeholder",e.hitokoto+"__"+e.from)}).catch(console.error)</script><script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.js"></script><script>$(document).ready(function(){$("article img").not("[hidden]").not(".panel-body img").each(function(){var a,t,n=$(this),e=n.attr("alt"),r=n.parent("a");r.length<1&&(-1!=(t=(a=this.getAttribute("src")).lastIndexOf("?"))&&(a=a.substring(0,t)),r=n.wrap('<a href="'+a+'"></a>').parent("a")),r.attr("data-fancybox","images"),e&&r.attr("data-caption",e)}),$().fancybox({selector:'[data-fancybox="images"]',hash:!1,loop:!1})})</script><script defer type="text/javascript">!function(e,a,t,n,g,c){e.GoogleAnalyticsObject=n,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=+new Date,g=a.createElement(t),c=a.getElementsByTagName(t)[0],g.async=1,g.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(g,c)}(window,document,"script","ga"),ga("create","G-YNMXCDY177","auto"),ga("send","pageview")</script><script defer>var _hmt=_hmt||[];!function(){var e=document.createElement("script"),t=(e.src="//hm.baidu.com/hm.js?03b05cf1da8eee934a12b53adecf56d8",document.getElementsByTagName("script")[0]);t.parentNode.insertBefore(e,t)}()</script><div id="go-top"></div><style type="text/css">#go-top{width:40px;height:40px;background-color:plum;position:relative;border-radius:20px;position:fixed;right:20px;bottom:50px;cursor:pointer;display:none}#go-top:after{content:" ";position:absolute;left:14px;top:14px;border-top:2px solid #fff;border-right:2px solid #fff;width:12px;height:12px;transform:rotate(-45deg)}#go-top:hover{background-color:#8a2be2}</style><script>$(function(){var o=$("#go-top");$(window).scroll(function(){300<$(window).scrollTop()?o.show(300):o.hide(200),$("#go-top").click(function(){return $("body,html").animate({scrollTop:0}),(!1)()})})})</script><style>.copy-btn{display:inline-block;padding:6px 12px;font-size:13px;font-weight:700;line-height:20px;color:#333;white-space:nowrap;vertical-align:middle;cursor:pointer;background-color:#eee;background-image:linear-gradient(#fcfcfc,#eee);border:1px solid #d5d5d5;border-radius:3px;user-select:none;outline:0}.highlight-wrap .copy-btn{transition:opacity .3s ease-in-out;opacity:0;padding:2px 6px;position:absolute;right:4px;top:8px;z-index:2}.highlight-wrap .copy-btn:focus,.highlight-wrap:hover .copy-btn{opacity:1}.highlight-wrap{position:relative}</style><script>addLoadEvent(()=>{$(".highlight").each(function(t,e){var n=$("<div>").addClass("highlight-wrap");$(e).after(n),n.append($("<button>").addClass("copy-btn").append("一键复制").on("click",function(t){var e=$(this).parent().find(".code")[0].innerText,n=(e+="",document.createElement("textarea")),e=(document.body.appendChild(n),n.style.position="absolute",n.style.top="0px",n.style.left="0px",n.value=e,n.select(),n.focus(),document.execCommand("copy"));document.body.removeChild(n),e?$(this).text("复制成功"):$(this).text("复制失败"),$(this).blur()})).on("mouseleave",function(t){var e=$(this).find(".copy-btn");setTimeout(function(){e.text("一键复制")},300)}).append(e)})})</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  <!-- 谷歌收录 -->
+  <meta name="google-site-verification" content="0vSEw-WeA7Q6caMNQWaHaQpXvN95Giznl-CDKPH8VAk" />
+  <meta name="google-site-verification" content="5jJNeWCOgSzXuAeGzPNgbyKyTkZhoGh47zpVZciGkrU" />
+  <meta name="google-site-verification" content="Wp-oDK8r6lsN6G8D2OnqbGQKhzil08oJIyJFAmn5sSA" />
+  <!-- 百度收录 -->
+  <meta name="baidu-site-verification" content="code-Ib5uAxNWgD" />
+  <meta name="baidu-site-verification" content="code-ZRr1qxOfs4" />
+
+
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?03b05cf1da8eee934a12b53adecf56d8";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+
+  <script>
+  var _hmt2 = _hmt2 || [];
+  (function() {
+    var hm2 = document.createElement("script");
+    hm2.src = "https://hm.baidu.com/hm.js?f7e059820ae1b7ff42dd7110eff89f5e";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm2, s);
+  })();
+  </script>
+
+  <script>
+  var _hmt3 = _hmt3 || [];
+  (function() {
+    var hm3 = document.createElement("script");
+    hm3.src = "https://hm.baidu.com/hm.js?f2e1acf51670f04e1ad07d9576ff24bf";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm3, s);
+  })();
+  </script>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNMXCDY177"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YNMXCDY177');
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P406BZNR2D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P406BZNR2D');
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PEMRSX722N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PEMRSX722N');
+  </script>
+
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  <meta name="google-site-verification" content="google14c1549ee067dc6f.html" />
+  
+  
+  <title>17_Linux基础-用户权限2 | Mycpen&#39;s Blog</title>
+  <meta name="description" content="摘要：博客迁移 https:&#x2F;&#x2F;blog.csdn.net&#x2F;cpen_web → 本站">
+<meta property="og:type" content="article">
+<meta property="og:title" content="17_Linux基础-用户权限2">
+<meta property="og:url" content="https://mycpen.github.io/20220828/17-linux-foundation-user-permission-2.html">
+<meta property="og:site_name" content="Mycpen&#39;s Blog">
+<meta property="og:description" content="摘要：博客迁移 https:&#x2F;&#x2F;blog.csdn.net&#x2F;cpen_web → 本站">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170358168.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170416487.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170417672.png">
+<meta property="article:published_time" content="2022-08-28T08:17:00.000Z">
+<meta property="article:modified_time" content="2022-08-28T08:17:01.000Z">
+<meta property="article:author" content="Mycpen">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="权限">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170358168.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://mycpen.github.io/20220828/17-linux-foundation-user-permission-2.html">
+  
+    <link rel="alternate" href="true" title="Mycpen&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
+  
+  
+  
+    <link href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.css" rel="stylesheet">
+  
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<script src="https://cdn.jsdelivr.net/gh/bobcn/hexo_resize_image.js@master/hexo_resize_image.js"></script>
+<body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="/" target="_self">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">Mycpen</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">SRE</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> 中国</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-resources">
+          <a href="/resources">
+            
+            <i class="icon icon-star-fill"></i>
+            
+            <span class="menu-title">资源</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-gallery">
+          <a href="/gallery">
+            
+            <i class="icon icon-delicious"></i>
+            
+            <span class="menu-title">相册</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/mycpen" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://juejin.cn/user/4007034458485159" target="_blank" title="Juejin" data-toggle=tooltip data-placement=top><i class="icon icon-juejin"></i></a></li>
+        
+        <li><a href="https://segmentfault.com/u/mycpen" target="_blank" title="Segmentfault" data-toggle=tooltip data-placement=top><i class="icon icon-segmentfault"></i></a></li>
+        
+        <li><a href="https://stackoverflow.com/users/19841214/mycpen" target="_blank" title="Stackoverflow" data-toggle=tooltip data-placement=top><i class="icon icon-stackoverflow"></i></a></li>
+        
+        <li><a href="https://gitee.com/mycpen" target="_blank" title="Gitee" data-toggle=tooltip data-placement=top><i class="icon icon-gitee"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"><i style="color:#9400D3" class="icon icon-stackexchange"></i>公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎来到 <a href="/">Mycpen</a> 的博客!<br>本站使用&nbsp;<u><a target="_blank" rel="noopener" href="https://www.bing.com/search?q=github+%E5%9B%BE%E5%BA%8A" style="color:#E541E5;">外网图床</a></u>，直接访问时<br>图片资源存在&nbsp;<b><a style="color:#E541E5;">加载过慢</a></b>、<b><a style="color:#E541E5;">失败</a></b>&nbsp;的情况。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title"><i style="color:#9400D3" class="icon icon-folder-open"></i>分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">10</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title"><i style="color:#9400D3" class="icon icon-tags"></i>标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 18px; color: #fff">Hexo</a> <a href="/tags/Troubleshooting/" style="font-size: 14.67px; color: #fff">Troubleshooting</a> <a href="/tags/Pure/" style="font-size: 13px; color: #fff">Pure</a> <a href="/tags/Git/" style="font-size: 13px; color: #fff">Git</a> <a href="/tags/Django/" style="font-size: 18px; color: #fff">Django</a> <a href="/tags/MTV/" style="font-size: 14.67px; color: #fff">MTV</a> <a href="/tags/URL/" style="font-size: 14.67px; color: #fff">URL</a> <a href="/tags/Java/" style="font-size: 16.33px; color: #fff">Java</a> <a href="/tags/HTTP/" style="font-size: 14.67px; color: #fff">HTTP</a> <a href="/tags/%E7%8A%B6%E6%80%81%E7%A0%81/" style="font-size: 13px; color: #fff">状态码</a> <a href="/tags/GET/" style="font-size: 13px; color: #fff">GET</a> <a href="/tags/POST/" style="font-size: 13px; color: #fff">POST</a> <a href="/tags/MVC/" style="font-size: 13px; color: #fff">MVC</a> <a href="/tags/%E7%BC%96%E7%A0%81/" style="font-size: 13px; color: #fff">编码</a> <a href="/tags/Linux/" style="font-size: 23px; color: #fff">Linux</a> <a href="/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/" style="font-size: 13px; color: #fff">运算符</a> <a href="/tags/%E8%BF%9B%E5%88%B6/" style="font-size: 13px; color: #fff">进制</a> <a href="/tags/Nginx/" style="font-size: 14.67px; color: #fff">Nginx</a> <a href="/tags/Crontab/" style="font-size: 13px; color: #fff">Crontab</a> <a href="/tags/Shell/" style="font-size: 19.67px; color: #fff">Shell</a> <a href="/tags/Vim/" style="font-size: 13px; color: #fff">Vim</a> <a href="/tags/%E7%94%A8%E6%88%B7%E4%B8%8E%E7%BB%84/" style="font-size: 14.67px; color: #fff">用户与组</a> <a href="/tags/%E6%9D%83%E9%99%90/" style="font-size: 16.33px; color: #fff">权限</a> <a href="/tags/Python/" style="font-size: 21.33px; color: #fff">Python</a> <a href="/tags/%E7%8E%AF%E5%A2%83/" style="font-size: 13px; color: #fff">环境</a> <a href="/tags/SSH/" style="font-size: 16.33px; color: #fff">SSH</a> <a href="/tags/Ansible/" style="font-size: 13px; color: #fff">Ansible</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" style="font-size: 14.67px; color: #fff">数据类型</a> <a href="/tags/%E6%A8%A1%E5%9D%97/" style="font-size: 14.67px; color: #fff">模块</a> <a href="/tags/mail/" style="font-size: 13px; color: #fff">mail</a> <a href="/tags/psutil/" style="font-size: 13px; color: #fff">psutil</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 13px; color: #fff">函数</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 13px; color: #fff">算法</a> <a href="/tags/OOP/" style="font-size: 13px; color: #fff">OOP</a> <a href="/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8/" style="font-size: 13px; color: #fff">上下文管理器</a> <a href="/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" style="font-size: 13px; color: #fff">内存管理</a>
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+    var everytag=document.getElementsByClassName("widget-body tagcloud")[0].children;
+    for (var i = everytag.length - 1; i >= 0; i--) {
+      var r=Math.floor(Math.random()*180);
+        var g=Math.floor(Math.random()*180);
+        var b=Math.floor(Math.random()*180);
+        everytag[i].style.background = "rgb("+r+","+g+","+b+")";
+    }
+</script>
+    
+      
+  <div class="widget">
+    <h3 class="widget-title"><i style="color:#9400D3" class="icon icon-archives-fill"></i>归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">43</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title"><i style="color:#9400D3" class="icon icon-shu-fill"></i>最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled ">
+        <!-- site.posts.sort('date', -1).limit(5).each(function(post){ ... 删除 5 的限制，与首页 最新文章 有关 -->
+        
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/20220901/10-python-csdn-memory-management.html" class="thumb">
+    
+    
+        <span style="background-image:url(/images/logo/python-logo.svg)" alt="10_Python-CSDN_内存管理" class="thumb-image"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Python/">Python</a>
+              </p>
+              <p class="item-title">
+                <a href="/20220901/10-python-csdn-memory-management.html" class="title">10_Python-CSDN_内存管理</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-01T09:10:00.000Z" itemprop="datePublished">2022-09-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/20220901/09-python-csdn-context-manager.html" class="thumb">
+    
+    
+        <span style="background-image:url(/images/logo/python-logo.svg)" alt="09_Python-CSDN_上下文管理器" class="thumb-image"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Python/">Python</a>
+              </p>
+              <p class="item-title">
+                <a href="/20220901/09-python-csdn-context-manager.html" class="title">09_Python-CSDN_上下文管理器</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-01T09:00:00.000Z" itemprop="datePublished">2022-09-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/20220901/08-python-csdn-profom-oriented-practice.html" class="thumb">
+    
+    
+        <span style="background-image:url(/images/logo/python-logo.svg)" alt="08_Python-CSDN_面向对象练习" class="thumb-image"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Python/">Python</a>
+              </p>
+              <p class="item-title">
+                <a href="/20220901/08-python-csdn-profom-oriented-practice.html" class="title">08_Python-CSDN_面向对象练习</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-01T08:50:00.000Z" itemprop="datePublished">2022-09-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/20220901/07-python-csdn-hao-level-function.html" class="thumb">
+    
+    
+        <span style="background-image:url(/images/logo/python-logo.svg)" alt="07_Python-CSDN_高阶函数" class="thumb-image"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Python/">Python</a>
+              </p>
+              <p class="item-title">
+                <a href="/20220901/07-python-csdn-hao-level-function.html" class="title">07_Python-CSDN_高阶函数</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-01T08:40:00.000Z" itemprop="datePublished">2022-09-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/20220901/06-python-csdn-psutil-module.html" class="thumb">
+    
+    
+        <span style="background-image:url(/images/logo/python-logo.svg)" alt="06_Python-CSDN_psutil模块" class="thumb-image"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Python/">Python</a>
+              </p>
+              <p class="item-title">
+                <a href="/20220901/06-python-csdn-psutil-module.html" class="title">06_Python-CSDN_psutil模块</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-01T08:30:00.000Z" itemprop="datePublished">2022-09-01</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#17-Linux%E5%9F%BA%E7%A1%80-%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%902"><span class="toc-text">17_Linux基础-用户权限2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E7%BB%83%E4%B9%A0%EF%BC%9A%E6%89%B9%E9%87%8F%E5%88%9B%E5%BB%BAn%E4%B8%AA%E7%94%A8%E6%88%B7"><span class="toc-text">一. 练习：批量创建n个用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E4%B8%80%E8%88%AC%E6%83%85%E5%86%B5%E4%B8%8B%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E5%8F%AA%E8%83%BD%E5%9C%A8%E5%AE%B6%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%88%96%E8%80%85-tmp%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E6%88%96%E8%80%85%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">二. 一般情况下普通用户只能在家目录下或者&#x2F;tmp目录下创建文件或者文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-chmod"><span class="toc-text">三. chmod</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6-%E7%9B%AE%E5%BD%95%E7%9A%84%E5%BD%92%E5%B1%9E"><span class="toc-text">四. 设置文件&#x2F;目录的归属</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-chown%E5%91%BD%E4%BB%A4"><span class="toc-text">4.1 chown命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-chgrp%E5%91%BD%E4%BB%A4"><span class="toc-text">4.2 chgrp命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E5%8F%AF%E4%BB%A5%E6%89%A7%E8%A1%8C%E7%9A%84%E7%94%A8%E6%88%B7"><span class="toc-text">4.3 可以执行的用户</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-%E9%BB%98%E8%AE%A4%E6%9D%83%E9%99%90"><span class="toc-text">五. 默认权限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-etc-profile%E4%B8%8B%E9%9D%A2%E6%9C%89umask%E7%9A%84%E8%AE%BE%E7%BD%AE"><span class="toc-text">5.1 &#x2F;etc&#x2F;profile下面有umask的设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD-%E7%BB%83%E4%B9%A0"><span class="toc-text">六. 练习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9-pem%EF%BC%8C%E5%A4%8D%E5%88%B6-etc-hosts%E6%96%87%E4%BB%B6%E5%88%B0pem%E7%9B%AE%E5%BD%95%E4%B8%8B"><span class="toc-text">6.1 新建文件夹&#x2F;pem，复制&#x2F;etc&#x2F;hosts文件到pem目录下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E4%BF%AE%E6%94%B9hosts%E6%96%87%E4%BB%B6%E7%9A%84%E6%9D%83%E9%99%90%E4%B8%BA%EF%BC%8C%E5%B1%9E%E4%B8%BB%E6%9C%89%E8%AF%BB%E5%86%99%E6%89%A7%E8%A1%8C%EF%BC%8C%E7%BB%84%E6%9C%89%E8%AF%BB%E5%86%99%E6%89%A7%E8%A1%8C%EF%BC%8C%E5%85%B6%E4%BB%96%E4%BA%BA%E6%B2%A1%E6%9C%89%E4%BB%BB%E4%BD%95%E6%9D%83%E9%99%90"><span class="toc-text">6.2 修改hosts文件的权限为，属主有读写执行，组有读写执行，其他人没有任何权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E6%96%B0%E5%BB%BA-pem2%E7%9B%AE%E5%BD%95%EF%BC%8C%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90%E4%B8%BA%E4%BB%BB%E4%BD%95%E4%BA%BA%E9%83%BD%E6%9C%89%E8%AF%BB%E5%86%99%E6%89%A7%E8%A1%8C%E7%9A%84%E6%9D%83%E9%99%90"><span class="toc-text">6.3 新建&#x2F;pem2目录，修改权限为任何人都有读写执行的权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-%E4%BF%AE%E6%94%B9-pem2%E7%9B%AE%E5%BD%95%E6%9D%83%E9%99%90%E4%B8%BA%E5%B1%9E%E4%B8%BB%E6%9C%89%E8%AF%BB%E5%86%99%E6%89%A7%E8%A1%8C%E7%9A%84%E6%9D%83%E9%99%90%EF%BC%8C%E5%85%B6%E4%BB%96%E4%BB%BB%E4%BD%95%E4%BA%BA%E9%83%BD%E6%B2%A1%E6%9C%89%E6%9D%83%E9%99%90"><span class="toc-text">6.4 修改&#x2F;pem2目录权限为属主有读写执行的权限，其他任何人都没有权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-5-%E4%BF%AE%E6%94%B9-pem2%E4%BB%BB%E4%BD%95%E4%BA%BA%E9%83%BD%E6%B2%A1%E6%9C%89%E4%BB%BB%E4%BD%95%E6%9D%83%E9%99%90"><span class="toc-text">6.5 修改&#x2F;pem2任何人都没有任何权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-6-%E5%A4%8D%E5%88%B6-etc-passwd%E5%92%8C-etc-shadow%E6%96%87%E4%BB%B6%E5%88%B0-pem%E7%9B%AE%E5%BD%95%E4%B8%8B%EF%BC%8C%E6%9F%A5%E7%9C%8B%E5%A4%8D%E5%88%B6%E4%B9%8B%E5%90%8E%E7%9A%84%E6%9D%83%E9%99%90%E6%98%AF%E5%90%A6%E4%B8%80%E8%87%B4%EF%BC%8C%E5%A6%82%E4%BD%95%E4%BF%9D%E6%8C%81%E6%9D%83%E9%99%90%E4%B8%80%E8%87%B4"><span class="toc-text">6.6 复制&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow文件到&#x2F;pem目录下，查看复制之后的权限是否一致，如何保持权限一致</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-7-cp-a-%E4%BF%9D%E7%95%99%E6%96%87%E4%BB%B6%E7%9A%84%E5%B1%9E%E6%80%A7%EF%BC%88%E5%8C%85%E6%8B%AC%E6%9D%83%E9%99%90%E3%80%81%E6%97%B6%E9%97%B4%E3%80%81%E7%94%A8%E6%88%B7%E3%80%81%E7%BB%84%EF%BC%89"><span class="toc-text">6.7 cp -a 保留文件的属性（包括权限、时间、用户、组）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83-%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%E7%9A%84%E9%9A%90%E8%97%8F%E5%B1%9E%E6%80%A7"><span class="toc-text">七. 文件或目录的隐藏属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%EF%BC%9A%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E8%AE%BE%E7%BD%AE%E4%B8%8D%E4%BA%86%E6%96%87%E4%BB%B6%E7%9A%84%E9%9A%90%E8%97%8F%E5%B1%9E%E6%80%A7%EF%BC%9Broot%E7%94%A8%E6%88%B7%E6%89%8D%E8%83%BD%E8%AE%BE%E7%BD%AE"><span class="toc-text">注：普通用户设置不了文件的隐藏属性；root用户才能设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-%E6%96%87%E4%BB%B6%E7%9A%84%E6%AD%A3%E5%B8%B8%E6%9D%83%E9%99%90"><span class="toc-text">八. 文件的正常权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D-%E6%96%87%E4%BB%B6%E7%9A%84%E7%89%B9%E5%88%AB%E6%9D%83%E9%99%90"><span class="toc-text">九. 文件的特别权限</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%EF%BC%9Aset%E4%BD%8D%E6%9D%83%E9%99%90%E8%AE%BE%E7%BD%AE"><span class="toc-text">注：set位权限设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81-%E7%B2%98%E6%BB%9E%E4%BD%8D%E6%9D%83%E9%99%90%EF%BC%88Sticky%EF%BC%89"><span class="toc-text">十. 粘滞位权限（Sticky）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80-%E8%AE%BE%E7%BD%AESET%E4%BD%8D%E3%80%81%E7%B2%98%E6%BB%9E%E4%BD%8D%E6%9D%83%E9%99%90"><span class="toc-text">十一. 设置SET位、粘滞位权限</span></a></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-Linux_基础/17_Linux基础-用户权限2" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      17_Linux基础-用户权限2
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar"></i>
+    <a href="/20220828/17-linux-foundation-user-permission-2.html" class="article-date">
+        发布于<time datetime="2022-08-28T08:17:00.000Z" itemprop="datePublished">
+            2022-08-28
+        </time>
+    </a>
+</span>
+
+
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+    <a href="/20220828/17-linux-foundation-user-permission-2.html" class="article-date">
+        更新于<time datetime="2022-08-28T08:17:01.000Z" itemprop="dateUpdated">
+            2022-08-28
+        </time>
+    </a>
+</span>
+
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="article-tag-link-link" href="/tags/%E6%9D%83%E9%99%90/" rel="tag">权限</a>
+  </span>
+
+
+        
+
+	<span class="article-read hidden-xs">
+    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
+    	<span id="/20220828/17-linux-foundation-user-permission-2.html" class="leancloud_visitors"  data-flag-title="17_Linux基础-用户权限2">
+			<span class="leancloud-visitors-count">0</span>
+		</span>
+    </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/20220828/17-linux-foundation-user-permission-2.html#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 5k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 22(分)</span>
+	
+
+      </div>
+    </div>
+    <div style="background-color:#D7BDE2;border:1px solid #D7BDE2;border-radius:10px;padding:5px">
+      <b>温馨提示</b>：点击页面此处(或下方)<a class="toggle-btn   collapsed  " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span style="color:#C71585"><b>[&nbsp;</b></span><span style="color:#C71585"><b>文章目录</b></span>
+      <b><i style="color:red" class="text-collapsed icon icon-anchor"></i></b>
+      <b><i class="text-in icon icon-close"></i></b>
+      <span style="color:#C71585"><b>]</b></span>
+    </a>以展开或折叠目录~
+    </div><br>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>摘要：博客迁移 <a target="_blank" rel="noopener" href="https://blog.csdn.net/cpen_web"><code>https://blog.csdn.net/cpen_web</code></a> → 本站<span id="more"></span></p>
+<h1 id="17-Linux基础-用户权限2"><a href="#17-Linux基础-用户权限2" class="headerlink" title="17_Linux基础-用户权限2"></a>17_Linux基础-用户权限2</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/cpen_web">博客🔗：https://blog.csdn.net/cpen_web</a></p>
+<hr>
+<h2 id="一-练习：批量创建n个用户"><a href="#一-练习：批量创建n个用户" class="headerlink" title="一. 练习：批量创建n个用户"></a>一. 练习：批量创建n个用户</h2><p>批量创建n个用户</p>
+<p>用户名以sanchuang开头,sanchuang</p>
+<p>指定家目录/lianxi/user</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">示例</span><br><span class="line">---------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">[root@localhost ~]<span class="comment"># seq -w 10			# 注：-w 同等长度输出</span></span><br><span class="line">01</span><br><span class="line">02</span><br><span class="line">………………</span><br><span class="line">09</span><br><span class="line">10</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># vim create_user2.sh</span></span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line">num=<span class="variable">$1</span>          <span class="comment"># 注：$1外面 接收参数，改名字 见名知义</span></span><br><span class="line">[ -d /lianxi/user ] || <span class="built_in">mkdir</span> /lianxi/user      <span class="comment"># 注：-d判断目录是否存在，-f判断普通文件是否存在</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `<span class="built_in">seq</span> -w <span class="variable">$num</span>`						   <span class="comment"># 注：mkdir /lianxi/user 就可以了，不要加上用户名目录</span></span><br><span class="line"><span class="keyword">do</span>				<span class="comment"># 注：判断是否存在，如果前面为真不做任何事情，如果为假就执行mkdir…</span></span><br><span class="line">    useradd -d /lianxi/user/sanchuang<span class="variable">$i</span> sanchuang<span class="variable">$i</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># bash create_user2.sh 12</span></span><br><span class="line">useradd：用户“sanchuang01”已存在</span><br><span class="line">useradd：用户“sanchuang02”已存在</span><br><span class="line">………………</span><br><span class="line">useradd：用户“sanchuang10”已存在</span><br><span class="line">useradd：用户“sanchuang12”已存在</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># cd /lianxi/user</span></span><br><span class="line">[root@sanchuang-linux user]<span class="comment"># ls</span></span><br><span class="line">sanchuang01  …………  sanchuang10  sanchuang12</span><br><span class="line">[root@sanchuang-linux user]<span class="comment"># cd</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># bash create_user2.sh 20</span></span><br><span class="line">useradd：用户“sanchuang01”已存在</span><br><span class="line">useradd：用户“sanchuang02”已存在</span><br><span class="line">………………</span><br><span class="line">useradd：用户“sanchuang12”已存在</span><br><span class="line">useradd：用户“sanchuang13”已存在</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># cd /lianxi/user</span></span><br><span class="line">[root@sanchuang-linux user]<span class="comment"># ls</span></span><br><span class="line">sanchuang01  …………  sanchuang18  sanchuang20</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="二-一般情况下普通用户只能在家目录下或者-tmp目录下创建文件或者文件夹"><a href="#二-一般情况下普通用户只能在家目录下或者-tmp目录下创建文件或者文件夹" class="headerlink" title="二. 一般情况下普通用户只能在家目录下或者/tmp目录下创建文件或者文件夹"></a>二. 一般情况下普通用户只能在家目录下或者/tmp目录下创建文件或者文件夹</h2><p><strong>一般情况下普通用户只能在家目录下或者/tmp目录下创建文件或者文件夹</strong></p>
+<p>#注：/tmp目录是一个临时目录，一般存放临时性的东西</p>
+<p>#注：（如：程序运行中需要记录的一些东西，程序结束后把/tmp目录下的东西删掉）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@sanchuang-linux ~]<span class="comment"># su - sanchuang</span></span><br><span class="line">上一次登录：五 11月  6 17:09:41 CST 2020pts/2 上</span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">ls</span> -ld /</span><br><span class="line">dr-xr-xr-x. 38 root root 4096 11月  5 15:12 /</span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">ls</span> -ld /etc</span><br><span class="line">drwxr-xr-x. 90 root root 8192 11月  7 15:00 /etc</span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">ls</span> -ld ./				<span class="comment"># 注：家目录下 创建文件或者文件夹</span></span><br><span class="line">drwxrwxrwx. 4 sanchuang sanchuang 122 11月  6 17:10 ./</span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">ls</span> -ld /tmp			<span class="comment"># 注：/tmp目录下 创建文件或者文件夹</span></span><br><span class="line">drwxrwxrwt. 12 root root 264 11月  7 10:36 /tmp</span><br><span class="line"></span><br><span class="line"><span class="comment">#注：chmod  自己是属主的时候，才可以修改权限</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="三-chmod"><a href="#三-chmod" class="headerlink" title="三. chmod"></a>三. chmod</h2><p><strong>chmod使用，必须是文件的属主，才能改动文件的读写执行权限（root除外）</strong></p>
+<p>#注：chmod使用 用户必须是文件的属主才能修改（即使是文件属组里的成员也没有权限去修改文件）</p>
+<p>#注：root用户除外</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">示例：su切换用户时 加- 不加- 区别</span><br><span class="line">[root@sanchuang-linux chenpeng]<span class="comment"># su - sanchuang11		# 注：加 - 会自动切换到到家目录下</span></span><br><span class="line">上一次登录：六 11月  7 15:10:51 CST 2020pts/0 上</span><br><span class="line">[sanchuang11@sanchuang-linux ~]$ <span class="built_in">exit</span></span><br><span class="line">注销</span><br><span class="line">[root@sanchuang-linux chenpeng]<span class="comment"># su sanchuang11			# 注：不加 - 会在当前目录下</span></span><br><span class="line">[sanchuang11@sanchuang-linux chenpeng]$ </span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="四-设置文件-目录的归属"><a href="#四-设置文件-目录的归属" class="headerlink" title="四. 设置文件/目录的归属"></a>四. 设置文件/目录的归属</h2><p><strong>设置文件/目录的归属</strong></p>
+<h3 id="4-1-chown命令"><a href="#4-1-chown命令" class="headerlink" title="4.1 chown命令"></a>4.1 chown命令</h3><p><strong>chown命令</strong>                      # 注：用来改变文件的属主和属组</p>
+<ul>
+<li>必须是<strong>root</strong>                # 注：chown 只能root去更改</li>
+<li>用户和组必须存在</li>
+<li>格式：    <code>chown  属主  文件</code><pre><code>            `chown :属组  文件 `
+            `chown  属主:属组 文件`
+</code></pre></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">示例：<span class="built_in">chown</span> 修改文件的属主和属组</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -al sanchuang_log 						# 注：属主 sanchuang ; 属组 sanchuang</span></span><br><span class="line">-rw-rw-r-- 1 sanchuang sanchuang 673 11月  7 15:19 sanchuang_log</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># chown sanchuang10 sanchuang_log 			# 注：修改属主 sanchuang10</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -al sanchuang_log </span></span><br><span class="line">-rw-rw-r-- 1 sanchuang10 sanchuang 673 11月  7 15:19 sanchuang_log</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># chown :sanchuang9 sanchuang_log 			# 注：修改属组 sanchuang9</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -al sanchuang_log </span></span><br><span class="line">-rw-rw-r-- 1 sanchuang10 sanchuang9 673 11月  7 15:19 sanchuang_log</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># chown sanchuang2:sanchuang sanchuang_log 	# 注：即改属主又改属组</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -al sanchuang_log </span></span><br><span class="line">-rw-rw-r-- 1 sanchuang2 sanchuang 673 11月  7 15:19 sanchuang_log</span><br><span class="line"></span><br><span class="line"><span class="comment">#注：属主和属组不可以随便更改</span></span><br><span class="line"><span class="comment">#注：数字随便改，没有限制 没有强制性的检查</span></span><br><span class="line"><span class="comment">#注：改字符串形式的名字 会检查一下</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># chown xixi:haha sanchuang_log 		# 注：修改 字符串会检查</span></span><br><span class="line"><span class="built_in">chown</span>: 无效的用户: “xixi:haha”</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># chown 6666:6666 sanchuang_log 		# 注：数字没有限制</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -al sanchuang_log </span></span><br><span class="line">-rw-rw-r-- 1 6666 6666 673 11月  7 15:19 sanchuang_log</span><br></pre></td></tr></table></figure>
+<h3 id="4-2-chgrp命令"><a href="#4-2-chgrp命令" class="headerlink" title="4.2 chgrp命令"></a>4.2 chgrp命令</h3><p><strong>chgrp命令</strong>                <strong># 注：修改属组（不常用）</strong></p>
+<ul>
+<li>格式：    <code>chgrp  属组  文件</code></li>
+<li>必须是root或者是文件的所有者 </li>
+<li>必须是新组的成员</li>
+</ul>
+<p><strong>常用命令选项</strong></p>
+<ul>
+<li><code>-R</code>：递归修改指定目录下所有文件、子目录的归属</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">示例：<span class="built_in">chgrp</span>命令 修改属组</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># chgrp sanchuang5 sanchuang_log 		# 注:只修改属组</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -al sanchuang_log </span></span><br><span class="line">-rw-rw-r-- 1 6666 sanchuang5 673 11月  7 15:19 sanchuang_log</span><br></pre></td></tr></table></figure>
+<h3 id="4-3-可以执行的用户"><a href="#4-3-可以执行的用户" class="headerlink" title="4.3 可以执行的用户"></a>4.3 可以执行的用户</h3><p><strong>可以执行的用户</strong></p>
+<blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170358168.png" alt="image-20220817035817124"></p>
+</blockquote>
+<p>操作               可以执行的用户</p>
+<p>chmod          root和文件所有者</p>
+<p>chgrp            root和文件所有者（必须是组成员）</p>
+<p>chown           只有root</p>
+<p>#注：chgrp修改属组  文件所有者 必须是想要<strong>修改的组</strong>里的<strong>组成员</strong></p>
+<hr>
+<h2 id="五-默认权限"><a href="#五-默认权限" class="headerlink" title="五. 默认权限"></a>五. 默认权限</h2><ul>
+<li>在内核级别，文件的初始权限666  </li>
+<li>在内核级别，文件夹的初始权限777</li>
+<li>用umask命令控制默认权限，临时有效</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># umask  0022</span></span><br><span class="line">[root@localhost ~]<span class="comment"># umask -S  u=rwx,g=rx,o=rx  </span></span><br><span class="line">[root@localhost ~]<span class="comment"># umask 077  </span></span><br><span class="line">[root@localhost ~]<span class="comment"># umask  0077</span></span><br><span class="line">不推荐修改系统默认<span class="built_in">umask</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 注：umask规定默认创建文件或者文件夹的权限有多大</span></span><br><span class="line">============================================================================================</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">ls</span> -ld <span class="built_in">dd</span>					 <span class="comment"># 注：新建的文件dd</span></span><br><span class="line">-rw-rw-r-- 1 sanchuang9 sanchuang9 0 11月  7 15:48 <span class="built_in">dd</span>		<span class="comment"># 注：权限644</span></span><br><span class="line">============================================================================================</span><br></pre></td></tr></table></figure>
+<h3 id="5-1-etc-profile下面有umask的设置"><a href="#5-1-etc-profile下面有umask的设置" class="headerlink" title="5.1 /etc/profile下面有umask的设置"></a>5.1 /etc/profile下面有umask的设置</h3><p><strong>/etc/profile下面有<code>umask</code>的设置</strong></p>
+<p><strong>系统环境设置 /etc/profile</strong>                # 注：<strong>/etc/profile下面有umask的设置</strong></p>
+<p>#注：判断uid是否大于199，并且当前用户的 用户名和组名 相等的时候 umask 是 002</p>
+<p>#注：用户名和组名不一样时 umask 是022</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">[sanchuang9@sanchuang-linux ~]$ less /etc/profile	<span class="comment"># 注：/etc/profile下面有umask的设置</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$UID</span> -gt 199 ] &amp;&amp; [ <span class="string">&quot;`/usr/bin/id -gn`&quot;</span> = <span class="string">&quot;`/usr/bin/id -un`&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">umask</span> 002			<span class="comment"># 注：如果uid大于199 执行 id -gn 命令  group_name  ;id -un user_name</span></span><br><span class="line"><span class="keyword">else</span>					<span class="comment"># 注：判定uid是否大于199，并且group_name=user_name</span></span><br><span class="line">    <span class="built_in">umask</span> 022			<span class="comment"># 注：用户名和组名一样时 umask 是002 ； 用户名和组名不一样时 是 002</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line"><span class="comment">#注：新建文件的权限是666-umask，新建目录的权限是777-umask</span></span><br><span class="line"><span class="comment">#注：使用umask设置文件的权限，因为每次登陆shell都会加载系统的环境，会运行/etc/profile，所以会设置它的umask</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#注：id -gn 获取当前用户组名</span></span><br><span class="line"><span class="comment">#注：id -un 获取当前用户名</span></span><br><span class="line"><span class="comment">#uid大于199，并且当前用户的group_name和user_name名字相同的时候 umask是002</span></span><br><span class="line"><span class="comment">#剩下的时候 umask是022</span></span><br><span class="line"></span><br><span class="line">·在内核级别，文件的初始权限666  </span><br><span class="line">·在内核级别，文件夹的初始权限777</span><br><span class="line">·用<span class="built_in">umask</span>命令控制默认权限，临时有效</span><br><span class="line"></span><br><span class="line"><span class="built_in">umask</span>为002 则表示新建文件的默认权限为664，新建文件的文件夹权限为775</span><br><span class="line"><span class="built_in">umask</span>为022 则表示新建文件的默认权限为644，新建文件的文件夹权限为755</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注：666 - umask</span></span><br><span class="line">	 777 - <span class="built_in">umask</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例：<span class="built_in">id</span> -gn 获取当前用户组名; <span class="built_in">id</span> -un 获取当前用户名</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># /usr/bin/id -gn</span></span><br><span class="line">root</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># /usr/bin/id -un</span></span><br><span class="line">root</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># id -gn			# 注：当前所在用户组名</span></span><br><span class="line">root</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># id -un			# 注：当前所在用户名</span></span><br><span class="line">root</span><br><span class="line">============================================================================================</span><br><span class="line">示例：判断2个字符串是否相等 可以用1个等号</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># [ &quot;a&quot; = &quot;b&quot; ] || echo &quot;ok&quot;		# 注：判断字符串相同 可以用一个等于号</span></span><br><span class="line">ok															<span class="comment"># 注：条件为假 输出ok</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># [ &quot;a&quot; = &quot;b&quot; ] &amp;&amp; echo &quot;ok&quot;		# 注：条件为真 输出ok</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># [ &quot;a&quot; = &quot;a&quot; ] &amp;&amp; echo &quot;ok&quot;</span></span><br><span class="line">ok</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># su - sanchuang	# 注：用户名和组名一样时</span></span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">umask</span> </span><br><span class="line">0002									<span class="comment"># 注：用户名和组名一样时 umask 是002</span></span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">id</span> -gn	<span class="comment"># 注：第一位0是粘滞位  002是umask</span></span><br><span class="line">sanchuang</span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">id</span> -un</span><br><span class="line">sanchuang</span><br><span class="line"></span><br><span class="line">[root@localhost ~]<span class="comment"># su - b1				# 注：用户名 和 组名不一样时</span></span><br><span class="line">[b1@localhost ~]$ <span class="built_in">id</span></span><br><span class="line">uid=1204(b1) gid=1001(cali) 组=1001(cali),200(tech)</span><br><span class="line">[b1@localhost ~]$ <span class="built_in">id</span> -un</span><br><span class="line">b1</span><br><span class="line">[b1@localhost ~]$ <span class="built_in">id</span> -gn</span><br><span class="line">cali</span><br><span class="line">[b1@localhost ~]$ <span class="built_in">umask</span> 				<span class="comment"># 注：用户名和组名不一样时 umask是022</span></span><br><span class="line">0022</span><br><span class="line">[b1@localhost ~]$ <span class="built_in">touch</span> gg</span><br><span class="line">[b1@localhost ~]$ <span class="built_in">ls</span> -ld gg				<span class="comment"># 注：新建文件的权限是644权限</span></span><br><span class="line">-rw-r--r--. 1 b1 cali 0 11月  8 16:27 gg</span><br><span class="line">[b1@localhost ~]$ <span class="built_in">umask</span> 422				<span class="comment"># 注：临时设置umask为422	（临时修改）</span></span><br><span class="line">[b1@localhost ~]$ <span class="built_in">mkdir</span> <span class="built_in">test</span>			<span class="comment"># 注：新建文件夹的权限是 355（777-umask）</span></span><br><span class="line">[b1@localhost ~]$ <span class="built_in">ls</span> -ld <span class="built_in">test</span>/</span><br><span class="line">d-wxr-xr-x. 2 b1 cali 6 11月  8 16:49 <span class="built_in">test</span>/	<span class="comment"># 注：目录权限355 写执行 读执行 读执行</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例：临时设置<span class="built_in">umask</span></span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># umask 422			# 注：临时更改umask</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># touch hh</span></span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># ls -ld hh</span></span><br><span class="line">--w-r--r-- 1 root root 0 11月  7 16:02 hh	   <span class="comment"># 注：文件 权限是244 写读读</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例：<span class="built_in">umask</span> -S 查看文件目前默认权限是多少</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">umask</span> -S		<span class="comment"># 注：查看文件目前默认权限是多少</span></span><br><span class="line">u=rwx,g=rwx,o=rx		</span><br><span class="line">============================================================================================</span><br><span class="line">示例：想要修改某个用户的<span class="built_in">umask</span>，永久修改</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line"><span class="comment">#注：在家目录下的.bashrc下添加umask设置		永久修改</span></span><br><span class="line"><span class="comment">#注：/etc/profile,/etc/bashrc系统配置 基本上不要更改（不要想着改全局配置）</span></span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ vim /home/sanchuang9/.bashrc</span><br><span class="line"><span class="built_in">umask</span>=002</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">exit</span></span><br><span class="line">注销</span><br><span class="line">[root@sanchuang-linux tmp]<span class="comment"># su - sanchuang9</span></span><br><span class="line">上一次登录：六 11月  7 16:07:40 CST 2020pts/0 上</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">umask</span>		<span class="comment"># 注：umask变成002了</span></span><br><span class="line">0002</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ bash		<span class="comment"># 注：执行到新bash里面去 umask也是002</span></span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">umask</span></span><br><span class="line">0002</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="六-练习"><a href="#六-练习" class="headerlink" title="六. 练习"></a>六. 练习</h2><h3 id="6-1-新建文件夹-pem，复制-etc-hosts文件到pem目录下"><a href="#6-1-新建文件夹-pem，复制-etc-hosts文件到pem目录下" class="headerlink" title="6.1 新建文件夹/pem，复制/etc/hosts文件到pem目录下"></a>6.1 新建文件夹/pem，复制/etc/hosts文件到pem目录下</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、新建文件夹/pem，复制/etc/hosts文件到pem目录下</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># mkdir /pem</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># cp /etc/hosts /pem</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-2-修改hosts文件的权限为，属主有读写执行，组有读写执行，其他人没有任何权限"><a href="#6-2-修改hosts文件的权限为，属主有读写执行，组有读写执行，其他人没有任何权限" class="headerlink" title="6.2 修改hosts文件的权限为，属主有读写执行，组有读写执行，其他人没有任何权限"></a>6.2 修改hosts文件的权限为，属主有读写执行，组有读写执行，其他人没有任何权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2、修改hosts文件的权限为，属主有读写执行，组有读写执行，其他人没有任何权限</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chmod 750 /pem/hosts </span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -al /pem/hosts </span></span><br><span class="line">-rwxr-x--- 1 root root 158 11月  7 16:20 /pem/hosts</span><br></pre></td></tr></table></figure>
+<h3 id="6-3-新建-pem2目录，修改权限为任何人都有读写执行的权限"><a href="#6-3-新建-pem2目录，修改权限为任何人都有读写执行的权限" class="headerlink" title="6.3 新建/pem2目录，修改权限为任何人都有读写执行的权限"></a>6.3 新建/pem2目录，修改权限为任何人都有读写执行的权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3、新建/pem2目录，修改权限为任何人都有读写执行的权限</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># mkdir /pem2</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chmod 777 /pem2</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chmod 777 /pem2 -R		# 注：连带下面所有的子文件</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-4-修改-pem2目录权限为属主有读写执行的权限，其他任何人都没有权限"><a href="#6-4-修改-pem2目录权限为属主有读写执行的权限，其他任何人都没有权限" class="headerlink" title="6.4 修改/pem2目录权限为属主有读写执行的权限，其他任何人都没有权限"></a>6.4 修改/pem2目录权限为属主有读写执行的权限，其他任何人都没有权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4、修改/pem2目录权限为属主有读写执行的权限，其他任何人都没有权限</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chmod 700 /pem2 </span></span><br></pre></td></tr></table></figure>
+<h3 id="6-5-修改-pem2任何人都没有任何权限"><a href="#6-5-修改-pem2任何人都没有任何权限" class="headerlink" title="6.5 修改/pem2任何人都没有任何权限"></a>6.5 修改/pem2任何人都没有任何权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5、修改/pem2任何人都没有任何权限</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chmod 000 /pem2 </span></span><br></pre></td></tr></table></figure>
+<h3 id="6-6-复制-etc-passwd和-etc-shadow文件到-pem目录下，查看复制之后的权限是否一致，如何保持权限一致"><a href="#6-6-复制-etc-passwd和-etc-shadow文件到-pem目录下，查看复制之后的权限是否一致，如何保持权限一致" class="headerlink" title="6.6 复制/etc/passwd和/etc/shadow文件到/pem目录下，查看复制之后的权限是否一致，如何保持权限一致"></a>6.6 复制/etc/passwd和/etc/shadow文件到/pem目录下，查看复制之后的权限是否一致，如何保持权限一致</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">6、复制/etc/passwd和/etc/shadow文件到/pem目录下，查看复制之后的权限是否一致，如何保持权限一致</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># cp /etc/&#123;passwd,shadow&#125; /pem</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -al /pem</span></span><br><span class="line">--w-r--r--   1 root root 3964 11月  7 16:23 passwd</span><br><span class="line">----------   1 root root 4201 11月  7 16:23 shadow</span><br></pre></td></tr></table></figure>
+<h3 id="6-7-cp-a-保留文件的属性（包括权限、时间、用户、组）"><a href="#6-7-cp-a-保留文件的属性（包括权限、时间、用户、组）" class="headerlink" title="6.7 cp -a 保留文件的属性（包括权限、时间、用户、组）"></a>6.7 cp -a 保留文件的属性（包括权限、时间、用户、组）</h3><p><strong><code>cp -a</code> 保留文件的属性（包括权限、时间、用户、组）</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@sanchuang-linux pem]<span class="comment"># cp /home/sanchuang9/.viminfo /tmp/viminfo	# 注：cp过来 属主、属组发生改变</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -al /tmp/viminfo </span></span><br><span class="line">--w------- 1 root root 1622 11月  7 16:30 /tmp/viminfo</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -al /tmp/viminfo 						# 注：cp-a选项 属主、属组、权限、创建时间都没变</span></span><br><span class="line">-rw------- 1 sanchuang9 sanchuang9 1622 11月  7 16:11 /tmp/viminfo</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="七-文件或目录的隐藏属性"><a href="#七-文件或目录的隐藏属性" class="headerlink" title="七. 文件或目录的隐藏属性"></a>七. 文件或目录的隐藏属性</h2><p><strong>chattr命令：设置文件的隐藏属性</strong></p>
+<ul>
+<li>格式：<code>chattr  [+-=] [ai] 文件或目录</code>        # 注：+、-、= 分别表示 增加、去除、设置参数</li>
+</ul>
+<p><strong>常用命令选项</strong></p>
+<ul>
+<li><code>-R</code>：递归修改</li>
+<li><code>-a</code>：可以增加文件内容，但不能修改和删除</li>
+<li><code>-i</code>：锁定保护文件</li>
+</ul>
+<p><strong>lsattr命令：查看文件的隐藏属性</strong></p>
+<ul>
+<li>格式：lsattr [Rda] 文件或目录</li>
+</ul>
+<p><strong>常用命令选项</strong></p>
+<ul>
+<li><code>-R</code>：递归修改</li>
+<li><code>-d</code>：查看目录</li>
+</ul>
+<h1 id="注：普通用户设置不了文件的隐藏属性；root用户才能设置"><a href="#注：普通用户设置不了文件的隐藏属性；root用户才能设置" class="headerlink" title="注：普通用户设置不了文件的隐藏属性；root用户才能设置"></a>注：<strong>普通用户设置不了文件的隐藏属性；root用户才能设置</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">示例1：chattr +i hosts 锁定保护文件</span><br><span class="line"><span class="comment"># 注：root用户也不能去修改它</span></span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line"><span class="comment">#注：不能更改文件（不能删 不能加 不能移动）</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chattr +i hosts		# 注：设置锁定保护文件；将它不能更改</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># mv hosts&#123;,.bak&#125;		# 注：不能移动（即使是root用户）</span></span><br><span class="line"><span class="built_in">mv</span>: 无法将<span class="string">&#x27;hosts&#x27;</span> 移动至<span class="string">&#x27;hosts.bak&#x27;</span>: 不允许的操作	</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -al hosts 		# 注：ls -al命令 无法查看隐藏属性</span></span><br><span class="line">-rwxr-x--- 1 root root 158 11月  7 16:20 hosts</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># lsattr hosts		# 注：lsattr 才能 查看文件隐藏属性 i</span></span><br><span class="line">----i--------------- hosts						<span class="comment"># 注：多了1个i属性</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chattr -i hosts		# 注：去除属性 去除锁定</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># lsattr hosts</span></span><br><span class="line">-------------------- hosts						<span class="comment"># 注：i隐藏属性没了</span></span><br><span class="line"><span class="comment">#注：不能删，加，移动（root用户也不能）</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例2：chattr +a hosts 可以增加文件内容，但不能修改和删除</span><br><span class="line"><span class="comment"># 注：可以使用重定向去增加文件内容，但不能去修改和删除</span></span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chattr +a hosts		# 注：可以增加文件内容，但是无法修改和删除</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># lsattr hosts</span></span><br><span class="line">-----a-------------- hosts						<span class="comment"># 注：多了a属性</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># vim hosts 			# 注：不可以修改</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># echo &quot;aaaa&quot; &gt;&gt; hosts 	# 注：可以追加</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># cat hosts </span></span><br><span class="line">127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4</span><br><span class="line">aaaa</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># rm -rf hosts 			# 注：不可以删除</span></span><br><span class="line"><span class="built_in">rm</span>: 无法删除<span class="string">&#x27;hosts&#x27;</span>: 不允许的操作</span><br><span class="line"><span class="comment">#注：不能修改，只能追加，不能删除</span></span><br><span class="line"><span class="comment">#注：有时候无论什么情况都不想让它更改 +a属性</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例3：chattr +i /etc/passwd</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chattr +i /etc/passwd		# 注：设置以后就创建不了用户</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># lsattr /etc/passwd			# 注：查看隐藏属性</span></span><br><span class="line">----i--------------- /etc/passwd						<span class="comment"># 注：隐藏属性i</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># useradd sanchuang21			# 注：无论什么用户，设置了隐藏属性，基本没戏了</span></span><br><span class="line">useradd：无法打开 /etc/passwd</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># chattr -i /etc/passwd		# 注：解锁</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例4：普通用户设置不了文件的隐藏属性</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@localhost ~]<span class="comment"># su - sanchuang</span></span><br><span class="line">[sanchuang@localhost ~]$ <span class="built_in">touch</span> aa</span><br><span class="line">[sanchuang@localhost ~]$ chattr +i aa					<span class="comment"># 注：普通用户设置不了文件的隐藏属性</span></span><br><span class="line">chattr: 不允许的操作 <span class="keyword">while</span> setting flags on aa</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="八-文件的正常权限"><a href="#八-文件的正常权限" class="headerlink" title="八. 文件的正常权限"></a>八. 文件的正常权限</h2><blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170416487.png" alt="image-20220817041614445"></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#注：正常文件的权限是读写执行</span></span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -ld /tmp</span></span><br><span class="line">drwxrwxrwt. 12 root root 4096 11月  7 16:30 /tmp		<span class="comment"># 注：t 文件的特殊权限</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="九-文件的特别权限"><a href="#九-文件的特别权限" class="headerlink" title="九. 文件的特别权限"></a>九. 文件的特别权限</h2><h1 id="注：set位权限设置"><a href="#注：set位权限设置" class="headerlink" title="注：set位权限设置"></a>注：<strong>set位权限设置</strong></h1><blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202208170417672.png" alt="image-20220817041733623"></p>
+</blockquote>
+<p><strong>SET位权限</strong></p>
+<p><strong>主要用途：</strong></p>
+<ul>
+<li>为<strong>可执行</strong>（有 x 权限的）文件设置，权限字符为“s”        # 注：<strong>以前的x位变成s位</strong></li>
+<li>其他用户执行该文件时，将拥有属主或属组用户的权限</li>
+</ul>
+<p><strong>SET位权限类型</strong>：</p>
+<ul>
+<li>SUID：表示对属主用户增加SET位权限</li>
+<li>SGID：表示对属组内的用户增加SET位权限</li>
+</ul>
+<p># 注：用在可执行文件<br># 注：suid  sgid  对应文件而言</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">示例：/bin/passwd</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@localhost ~]<span class="comment"># which passwd</span></span><br><span class="line">/bin/passwd</span><br><span class="line">[root@localhost ~]<span class="comment"># ls -ld /bin/passwd </span></span><br><span class="line">-rwsr-xr-x. 1 root root 27856 4月   1 2020 /bin/passwd</span><br><span class="line"><span class="comment">#注：普通用户以root用户的身份，间接更新了shadow文件中自己的密码</span></span><br><span class="line">[root@localhost ~]<span class="comment"># su - sanchuang</span></span><br><span class="line">[sanchuang@localhost ~]$ passwd sanchuang				<span class="comment"># 注：不能更改密码  其他权限没到位</span></span><br><span class="line">passwd：只有根用户才能指定用户名。</span><br><span class="line"></span><br><span class="line"><span class="comment">#注：s位 这个权限基本不会颁布，必须在有可执行文件下才能生效</span></span><br><span class="line"><span class="comment">#注：这个权限设置 所有人全部给，不能精确到某个用户</span></span><br><span class="line"></span><br><span class="line">示例：SET位权限设置</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux pem]<span class="comment"># ls -ld /pem</span></span><br><span class="line">d-wxr-xr-x 2 root root 47 11月  7 16:42 /pem				<span class="comment"># 注：只有root用户有写的权限</span></span><br><span class="line"><span class="comment">#注：让/pem有普通用户创建、写入的权限？</span></span><br><span class="line">1.设置/pem的权限为777</span><br><span class="line">2.设置<span class="built_in">mkdir</span> SUID的权限</span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># which mkdir</span></span><br><span class="line">/usr/bin/mkdir</span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># ls -ld /usr/bin/mkdir 		</span></span><br><span class="line">-rwxr-xr-x. 1 root root 195192 4月  10 2020 /usr/bin/mkdir	<span class="comment"># 注：没有设置s属性</span></span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># chmod u+s /bin/mkdir	 	# 注：让普通用户执行mkdir时以root（属主）权限去运行</span></span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># ls -ld /usr/bin/mkdir 		# 注：变成s位了</span></span><br><span class="line">-rwsr-xr-x. 1 root root 195192 4月  10 2020 /usr/bin/mkdir</span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># su - sanchuang9</span></span><br><span class="line">上一次登录：六 11月  7 16:09:48 CST 2020pts/0 上</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">cd</span> /pem</span><br><span class="line">[sanchuang9@sanchuang-linux pem]$ <span class="built_in">ls</span></span><br><span class="line">hosts  passwd  shadow</span><br><span class="line">[sanchuang9@sanchuang-linux pem]$ <span class="built_in">mkdir</span> aa 				<span class="comment"># 注：普通用户有写的权限了</span></span><br><span class="line">[sanchuang9@sanchuang-linux pem]$ <span class="built_in">ls</span> -ld /pem</span><br><span class="line">d-wxr-xr-x 3 root root 57 11月  7 16:59 /pem</span><br><span class="line">[sanchuang9@sanchuang-linux pem]$ <span class="built_in">touch</span> <span class="built_in">dd</span>				<span class="comment"># 注：touch没有这个权限</span></span><br><span class="line"><span class="built_in">touch</span>: 无法创建 <span class="string">&#x27;dd&#x27;</span>: 权限不够</span><br><span class="line">[sanchuang9@sanchuang-linux pem]$ <span class="built_in">exit</span></span><br><span class="line">注销</span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># chmod u-s /bin/mkdir</span></span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># ls -ld /bin/mkdir </span></span><br><span class="line">-rwxr-xr-x. 1 root root 195192 4月  10 2020 /bin/mkdir</span><br><span class="line"><span class="comment"># 注：s位基本不会给</span></span><br><span class="line"><span class="comment"># 注：s位不要轻易的颁布它，会对用户进行影响</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="十-粘滞位权限（Sticky）"><a href="#十-粘滞位权限（Sticky）" class="headerlink" title="十. 粘滞位权限（Sticky）"></a>十. 粘滞位权限（Sticky）</h2><p><strong>粘滞位权限（Sticky）</strong></p>
+<p><strong>主要用途：</strong></p>
+<ul>
+<li>为公共目录（例如，权限为777的）设置，权限字符为“<code>t</code>”        # 注：<strong>t 粘滞位标记字符</strong></li>
+<li>用户不能删除该目录中其他用户的文件</li>
+</ul>
+<p># 注：一般作用于文件夹<br># 注：粘滞位对于文件夹而言</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">示例1</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux sbin]<span class="comment"># ls -ld /tmp</span></span><br><span class="line">drwxrwxrwt. 12 root root 4096 11月  7 16:30 /tmp	<span class="comment"># 注：/tmp目录 任何用户 都有读写执行权限</span></span><br><span class="line"><span class="comment">#注：因为粘滞位权限，用户在/tmp目录下只能创建自己的，删除自己的</span></span><br><span class="line"><span class="comment">#注：一般作用于文件夹</span></span><br><span class="line"><span class="comment">#注：sanchuang10用户不能删除sanchuang用户创建的文件</span></span><br><span class="line">==============================================================================================================</span><br><span class="line">示例2：<span class="built_in">chmod</span> 777 /pem 普通用户可以操作/pem这一层目录下的文件或者文件夹及子文件</span><br><span class="line"><span class="comment"># 注：777权限，不同用户可以相互删除文件</span></span><br><span class="line"><span class="comment"># 注：设置粘滞位后，只能删除自己创建的文件</span></span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># chmod 777 /pem				# 注：把/pem文件夹权限改为777</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># ls -ld /pem					# 注：所有用户都有对/pem读写执行的权限 包括创建、删除</span></span><br><span class="line">drwxrwxrwx 3 root root 74 11月  7 17:10 /pem</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># su - sanchuang9				# 注：普通用户有创建的权限</span></span><br><span class="line">上一次登录：六 11月  7 17:07:17 CST 2020pts/2 上</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">touch</span> /pem/sanchuang9	<span class="comment"># 注：普通用户有创建的权限</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># su - sanchuang</span></span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">rm</span> -rf /pem/sanchuang9	<span class="comment"># 注：普通用户有删除的权限</span></span><br><span class="line"><span class="comment">#注：用户可以删除其他用户创建的文件</span></span><br><span class="line">==============================================================================================================</span><br><span class="line">示例3：粘滞位 t</span><br><span class="line"><span class="comment"># 注：设置粘滞位后，只能删除自己创建的文件</span></span><br><span class="line">[sanchuang9@sanchuang-linux tmp]$ <span class="built_in">ls</span> -ld /tmp</span><br><span class="line">drwxrwxrwt. 13 root root 4096 11月  7 17:07 /tmp			<span class="comment"># 注：/tmp目录设置了1个粘滞位</span></span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">touch</span> /tmp/sanchuang9</span><br><span class="line">[sanchuang9@sanchuang-linux ~]$ <span class="built_in">exit</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># su - sanchuang</span></span><br><span class="line">上一次登录：日 11月  8 19:05:55 CST 2020pts/3 上</span><br><span class="line">[sanchuang@sanchuang-linux ~]$ <span class="built_in">rm</span> -rf /tmp/sanchuang9	<span class="comment"># 注：因为设置了1个粘滞位</span></span><br><span class="line"><span class="built_in">rm</span>: 无法删除<span class="string">&#x27;/tmp/sanchuang9&#x27;</span>: 不允许的操作				<span class="comment"># 注：用户只能在/tmp目录下创建 删除自己的</span></span><br><span class="line"><span class="comment">#注：粘滞位的作用</span></span><br><span class="line"><span class="comment">#注：·为公共目录（例如，权限为777的）设置，权限字符为“t”</span></span><br><span class="line"><span class="comment">#注：·用户不能删除该目录中其他用户的文件</span></span><br><span class="line"><span class="comment">#注：一般作用于文件夹</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="十一-设置SET位、粘滞位权限"><a href="#十一-设置SET位、粘滞位权限" class="headerlink" title="十一. 设置SET位、粘滞位权限"></a>十一. 设置SET位、粘滞位权限</h2><p><strong>设置SET位、粘滞位权限</strong></p>
+<p><strong>使用权限字符</strong></p>
+<ul>
+<li><code>chmod  ug±s  可执行文件...</code>            # 注：设置set位</li>
+<li><code>chmod  o±t   目录名...</code>                     # 注：设置粘滞位</li>
+</ul>
+<p><strong>使用权限数字</strong></p>
+<ul>
+<li><code>chmod  mnnn   可执行文件...</code></li>
+<li><strong>m为4时，对应SUID，2对应SGID，1对应粘滞位，可叠加</strong>        # 注：m为4 为2 set位</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">示例</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># ls -ld /tmp</span></span><br><span class="line">drwxrwxrwt. 13 root root 4096 11月  7 17:07 /tmp		<span class="comment"># 注：/tmp目录设置了粘滞位，权限为1777</span></span><br><span class="line"><span class="comment">#注：/tmp目录设置了粘滞位，第1位是1</span></span><br><span class="line">============================================================================================</span><br><span class="line">示例：设置粘滞位</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># chmod 1777 /pem</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># ls -ld /pem</span></span><br><span class="line">drwxrwxrwt 3 root root 74 11月  7 17:10 /pem			<span class="comment"># 注：粘滞位 t 之前 x 的位置</span></span><br><span class="line"><span class="comment">#注：普通情况下不需要使用粘滞位、set位的时候，用3个数字就可以了</span></span><br><span class="line">-----------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># ls -ld /bin/mkdir </span></span><br><span class="line">-rwxr-xr-x. 1 root root 195192 4月  10 2020 /bin/mkdir</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># chmod 4755 /bin/mkdir		# 注：设置为SET位SUID权限</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># ls -ld /bin/mkdir </span></span><br><span class="line">-rwsr-xr-x. 1 root root 195192 4月  10 2020 /bin/mkdir</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># chmod 755 /bin/mkdir		# 注：改回来</span></span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># ls -ld /bin/mkdir </span></span><br><span class="line">-rwxr-xr-x. 1 root root 195192 4月  10 2020 /bin/mkdir</span><br></pre></td></tr></table></figure>
+<hr>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-license">
+      <strong>文章作者： </strong><a href="/about/" style="color:#E541E5;"> Mycpen</a>
+    </li>
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://mycpen.github.io/20220828/17-linux-foundation-user-permission-2.html" title="17_Linux基础-用户权限2" target="_blank" rel="external" style="color:#E541E5;">https://mycpen.github.io/20220828/17-linux-foundation-user-permission-2.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="/" target="_blank"><span class="text-dark">Mycpen</span><small class="ml-1x">SRE</small></a></h3>
+        <div>&#34; 我之所以想变强，是为了活得轻松写意。&#34;__一拳超人</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/20220828/18-linux-foundation-user-permissions-3.html" title="18_Linux基础-用户权限3"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/20220828/16-linux-foundation-file-directory-authority-and-belonging.html" title="16_Linux基础-文件&amp;目录权限及归属"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn   collapsed  " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span style="color:#C71585"><b>[&nbsp;</b></span><span style="color:#C71585"><b>文章目录</b></span>
+        <b><i style="color:red" class="text-collapsed icon icon-anchor"></i></b>
+        <b><i class="text-in icon icon-close"></i></b>
+        <span style="color:#C71585"><b>]</b></span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+    
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/mycpen" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://juejin.cn/user/4007034458485159" target="_blank" title="Juejin" data-toggle=tooltip data-placement=top><i class="icon icon-juejin"></i></a></li>
+        
+        <li><a href="https://segmentfault.com/u/mycpen" target="_blank" title="Segmentfault" data-toggle=tooltip data-placement=top><i class="icon icon-segmentfault"></i></a></li>
+        
+        <li><a href="https://stackoverflow.com/users/19841214/mycpen" target="_blank" title="Stackoverflow" data-toggle=tooltip data-placement=top><i class="icon icon-stackoverflow"></i></a></li>
+        
+        <li><a href="https://gitee.com/mycpen" target="_blank" title="Gitee" data-toggle=tooltip data-placement=top><i class="icon icon-gitee"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+        <b>
+        &copy; &nbsp;2022 Mycpen
+        </b>
+        <br><i class="icon icon-hezuo">&nbsp;&nbsp;</i><b>Powered by&nbsp;</b><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;&nbsp;<b>Theme&nbsp;</b><a target="_blank" rel="noopener" href="https://github.com/cofess/hexo-theme-pure">Pure</a>
+        <div class="publishby" style="font-family:Courier">
+            <span id="busuanzi_container_site_pv">
+                <i class="icon icon-eye">&nbsp;&nbsp;</i><span id="busuanzi_value_site_pv" style="font-family:Courier"></span>&nbsp;
+                <i class="icon icon-users">&nbsp;&nbsp;</i><span id="busuanzi_value_site_uv" style="font-family:Courier"></span>
+            </span>
+            <br><i class="icon icon-clock"></i>&nbsp;<span id="sitetime" style="font-family:Courier"></span>
+        </div>
+        <!-- -->
+        <div class="publishby">
+            备案号：<a href="http://beian.miit.gov.cn" target="_blank">苏ICP备2020069048号-1</a>
+        </div>
+        <!-- -->
+    </div>
+</footer>
+<script>function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+       year - 作为date对象的年份，为4位年份值
+       month - 0-11之间的整数，做为date对象的月份
+       day - 1-31之间的整数，做为date对象的天数
+       hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+       minutes - 0-59之间的整数，做为date对象的分钟数
+       seconds - 0-59之间的整数，做为date对象的秒数
+       microseconds - 0-999之间的整数，做为date对象的毫秒数
+    */
+    var t1 = Date.UTC(2022,08,28,00,00,00); //t1为建站时间
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    // 将「数字」转「补零字符串」
+    var y = diffYears.toString()
+    var d = diffDays.toString().padStart(3, '0')
+    var h = diffHours.toString().padStart(2, '0')
+    var m = diffMinutes.toString().padStart(2, '0')
+    var s = diffSeconds.toString().padStart(2, '0')
+    document.getElementById("sitetime").innerHTML=y+":"+d+":"+h+":"+m+":"+s;
+    }
+    siteTime();
+</script>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+    
+    <script src="//code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" />
+    <script type="text/javascript">
+    var GUEST = ['nick', 'mail', 'link'];
+    var meta = 'nick,mail,link';
+    meta = meta.split(',').filter(function(item) {
+        return GUEST.indexOf(item) > -1;
+    });
+    var requiredFields = 'mail';
+    requiredFields = requiredFields.split(',');
+
+    new Valine({
+        el: '#vcomments',
+        appId: 'xq9WWLj240CudNDG1pxmHepA-gzGzoHsz',
+        appKey: 'IMUHid08Bv4OWOIwT8ueGjrq',
+        verify: true,
+        notify: true,
+        placeholder: '',
+        avatar: 'robohash',
+        meta: meta,
+        pageSize: '10' || 10,
+        enableQQ: 'true',
+        recordIP: 'true',
+        requiredFields: requiredFields,
+        visitor: true,
+        master: '1000b2475c5eaaef39376cab396fbc91',
+        friends: ['1725648a3566b8841f19423519e0a36e', '87b6f0e96e63727d889bb3653fb5867c', 'b7c8e70dc5b2bbbdbdeca1fc0e71b919'],
+        tagMeta: ['博主', '', ''],
+        metaPlaceholder: {"nick":"昵称/QQ号","mail":"邮箱(必填)","link":"网址(http://)"},
+        // 设置Bilibili表情包地址
+        emojiCDN: '//i0.hdslb.com/bfs/emote/', 
+        // 表情title和图片映射
+        emojiMaps: {
+            "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+            "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
+            "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",
+            "tv_再见": "180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
+            "tv_冷漠": "b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
+            "tv_发怒": "34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
+            "tv_发财": "34db290afd2963723c6eb3c4560667db7253a21a.png",
+            "tv_可爱": "9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
+            "tv_吐血": "09dd16a7aa59b77baa1155d47484409624470c77.png",
+            "tv_呆": "fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+            "tv_呕吐": "9f996894a39e282ccf5e66856af49483f81870f3.png",
+            "tv_困": "241ee304e44c0af029adceb294399391e4737ef2.png",
+            "tv_坏笑": "1f0b87f731a671079842116e0991c91c2c88645a.png",
+            "tv_大佬": "093c1e2c490161aca397afc45573c877cdead616.png",
+            "tv_大哭": "23269aeb35f99daee28dda129676f6e9ea87934f.png",
+            "tv_委屈": "d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+            "tv_害羞": "a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
+            "tv_尴尬": "7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+            "tv_微笑": "70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
+            "tv_思考": "90cf159733e558137ed20aa04d09964436f618a1.png",
+            "tv_惊吓": "0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
+            // ... 更多表情
+        },
+    });
+
+    fetch('https://v1.hitokoto.cn/?c=b')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+
+    </script>
+
+
+     
+
+
+
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.js"></script>
+  <script>
+  //利用 FancyBox 实现点击图片放大
+  $(document).ready(function() {
+    $('article img').not('[hidden]').not('.panel-body img').each(function() {
+      var $image = $(this);
+      var imageCaption = $image.attr('alt');
+      var $imageWrapLink = $image.parent('a');
+      if ($imageWrapLink.length < 1) {
+        var src = this.getAttribute('src');
+        var idx = src.lastIndexOf('?');
+        if (idx != -1) {
+          src = src.substring(0, idx);
+        }
+        $imageWrapLink = $image.wrap('<a href="' + src + '"></a>').parent('a');
+      }
+      $imageWrapLink.attr('data-fancybox', 'images');
+      if (imageCaption) {
+        $imageWrapLink.attr('data-caption', imageCaption);
+      }
+    });
+    $().fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+    });
+  });
+  </script>
+
+
+
+    <script defer type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'G-YNMXCDY177', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+    <script defer>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?03b05cf1da8eee934a12b53adecf56d8";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<div id="go-top"></div>
+<style type="text/css">
+#go-top {
+ width:40px;height:40px;
+ background-color:#DDA0DD;
+ position:relative;
+ border-radius:20px;
+ position:fixed;right:20px;bottom:50px;
+ cursor:pointer;display:none;
+}
+#go-top:after {
+ content:" ";
+ position:absolute;left:14px;top:14px;
+ border-top:2px solid #fff;border-right:2px solid #fff;
+ width:12px;height:12px;
+ transform:rotate(-45deg);
+}
+#go-top:hover {
+ background-color:#8A2BE2;
+}
+</style>
+<script>
+$(function () {
+  var top=$("#go-top");
+  $(window).scroll(function () {
+    ($(window).scrollTop() > 300) ? top.show(300) : top.hide(200);
+    $("#go-top").click(function () {
+      $('body,html').animate({scrollTop:0});
+      return false();
+    })
+  });
+});
+</script>
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+      z-index: 2;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+        .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  
+  <script>
+    addLoadEvent(()=>{
+      $('.highlight').each(function (i, e) {
+        var $wrap = $('<div>').addClass('highlight-wrap')
+        $(e).after($wrap)
+        $wrap.append($('<button>').addClass('copy-btn').append('一键复制').on('click', function (e) {
+          var code = $(this).parent().find(".code")[0].innerText
+          
+              code += ""
+          
+          var ta = document.createElement('textarea')
+          document.body.appendChild(ta)
+          ta.style.position = 'absolute'
+          ta.style.top = '0px'
+          ta.style.left = '0px'
+          ta.value = code
+          ta.select()
+          ta.focus()
+          var result = document.execCommand('copy')
+          document.body.removeChild(ta)
+          
+            if(result)$(this).text('复制成功')
+            else $(this).text('复制失败')
+          
+          $(this).blur()
+        })).on('mouseleave', function (e) {
+          var $b = $(this).find('.copy-btn')
+          setTimeout(function () {
+            $b.text('一键复制')
+          }, 300)
+        }).append(e)
+      })
+    })
+  </script>
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ["$","$"], ["\\(","\\)"] ],
             skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
@@ -9,4 +1178,9 @@
         var all = MathJax.Hub.getAllJax();
         for (var i = 0; i < all.length; ++i)
             all[i].SourceElement().parentNode.className += ' has-jax';
-    });</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>
