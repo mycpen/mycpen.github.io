@@ -638,14 +638,14 @@
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/tags/Python/</loc>
+    <loc>https://mycpen.github.io/tags/Ansible/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/tags/%E7%8E%AF%E5%A2%83/</loc>
+    <loc>https://mycpen.github.io/tags/Python/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -659,7 +659,7 @@
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/tags/Ansible/</loc>
+    <loc>https://mycpen.github.io/tags/%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -701,14 +701,14 @@
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
+    <loc>https://mycpen.github.io/tags/OOP/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/tags/OOP/</loc>
+    <loc>https://mycpen.github.io/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
