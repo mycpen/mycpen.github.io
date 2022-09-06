@@ -331,9 +331,9 @@
     
     <category term="Django" scheme="https://mycpen.github.io/tags/Django/"/>
     
-    <category term="HTTP" scheme="https://mycpen.github.io/tags/HTTP/"/>
-    
     <category term="MTV" scheme="https://mycpen.github.io/tags/MTV/"/>
+    
+    <category term="HTTP" scheme="https://mycpen.github.io/tags/HTTP/"/>
     
     <category term="GET" scheme="https://mycpen.github.io/tags/GET/"/>
     
