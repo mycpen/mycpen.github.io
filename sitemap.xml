@@ -526,14 +526,14 @@
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/tags/Hexo/</loc>
+    <loc>https://mycpen.github.io/tags/Python/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/tags/Pure/</loc>
+    <loc>https://mycpen.github.io/tags/%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -547,35 +547,7 @@
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/tags/Troubleshooting/</loc>
-    <lastmod>2022-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mycpen.github.io/tags/Git/</loc>
-    <lastmod>2022-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://mycpen.github.io/tags/%E7%BC%96%E7%A0%81/</loc>
-    <lastmod>2022-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mycpen.github.io/tags/Python/</loc>
-    <lastmod>2022-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mycpen.github.io/tags/%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -638,13 +610,6 @@
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/tags/Linux/</loc>
-    <lastmod>2022-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://mycpen.github.io/tags/OOP/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -660,6 +625,41 @@
   
   <url>
     <loc>https://mycpen.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2022-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mycpen.github.io/tags/Hexo/</loc>
+    <lastmod>2022-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mycpen.github.io/tags/Pure/</loc>
+    <lastmod>2022-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mycpen.github.io/tags/Troubleshooting/</loc>
+    <lastmod>2022-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mycpen.github.io/tags/Git/</loc>
+    <lastmod>2022-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mycpen.github.io/tags/Linux/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -731,7 +731,7 @@
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/categories/Hexo/</loc>
+    <loc>https://mycpen.github.io/categories/Python/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -745,7 +745,7 @@
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/categories/Python/</loc>
+    <loc>https://mycpen.github.io/categories/Hexo/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
