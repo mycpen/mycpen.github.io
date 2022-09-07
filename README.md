@@ -1,5 +1,5 @@
 # 基于 Hexo 搭建的私人博客
-## 一. 技术支持
+## 一. 支持
 1. [Hexo](https://hexo.io/zh-cn/)
    - Hexo 是一个快速、简洁且高效的博客框架。
    - Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
@@ -13,8 +13,9 @@
 
 
 
-## 二. 个人站点
-- 云服务器、GitHub、Gitee
+## 二. 托管
+- 云服务器、GitHub、Gitee；
+- 站点：
   1. [https://blog.cpen.top](https://blog.cpen.top/)
   2. [https://mycpen.github.io](https://mycpen.github.io/)
   3. [https://mycpen.gitee.io](https://mycpen.gitee.io/)
