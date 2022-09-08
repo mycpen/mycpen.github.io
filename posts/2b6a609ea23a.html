@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  <!-- 谷歌收录 -->
+  <meta name="google-site-verification" content="0vSEw-WeA7Q6caMNQWaHaQpXvN95Giznl-CDKPH8VAk" />
+  <meta name="google-site-verification" content="5jJNeWCOgSzXuAeGzPNgbyKyTkZhoGh47zpVZciGkrU" />
+  <meta name="google-site-verification" content="Wp-oDK8r6lsN6G8D2OnqbGQKhzil08oJIyJFAmn5sSA" />
+  <!-- 百度收录 -->
+  <meta name="baidu-site-verification" content="code-Ib5uAxNWgD" />
+  <meta name="baidu-site-verification" content="code-ZRr1qxOfs4" />
+
+
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?03b05cf1da8eee934a12b53adecf56d8";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+
+  <script>
+  var _hmt2 = _hmt2 || [];
+  (function() {
+    var hm2 = document.createElement("script");
+    hm2.src = "https://hm.baidu.com/hm.js?f7e059820ae1b7ff42dd7110eff89f5e";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm2, s);
+  })();
+  </script>
+
+  <script>
+  var _hmt3 = _hmt3 || [];
+  (function() {
+    var hm3 = document.createElement("script");
+    hm3.src = "https://hm.baidu.com/hm.js?f2e1acf51670f04e1ad07d9576ff24bf";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm3, s);
+  })();
+  </script>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNMXCDY177"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YNMXCDY177');
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P406BZNR2D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P406BZNR2D');
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PEMRSX722N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PEMRSX722N');
+  </script>
+
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  <meta name="google-site-verification" content="google14c1549ee067dc6f.html" />
+  
+  
+  <title>08_Linux基础-vim-tmux-字符编码 | Mycpen&#39;s Blog</title>
+  <meta name="description" content="摘要：博客迁移 https:&#x2F;&#x2F;blog.csdn.net&#x2F;cpen_web → 本站">
+<meta property="og:type" content="article">
+<meta property="og:title" content="08_Linux基础-vim-tmux-字符编码">
+<meta property="og:url" content="https://mycpen.github.io/posts/2b6a609ea23a.html">
+<meta property="og:site_name" content="Mycpen&#39;s Blog">
+<meta property="og:description" content="摘要：博客迁移 https:&#x2F;&#x2F;blog.csdn.net&#x2F;cpen_web → 本站">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202205041447906.png">
+<meta property="article:published_time" content="2022-08-27T23:08:00.000Z">
+<meta property="article:modified_time" content="2022-08-27T23:08:01.000Z">
+<meta property="article:author" content="Mycpen">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Vim">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202205041447906.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://mycpen.github.io/posts/2b6a609ea23a.html">
+  
+    <link rel="alternate" href="true" title="Mycpen&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
+  
+  
+  
+    <link href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.css" rel="stylesheet">
+  
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<script src="https://cdn.jsdelivr.net/gh/bobcn/hexo_resize_image.js@master/hexo_resize_image.js"></script>
+<body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="/" target="_self">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">Peng</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">SRE</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> 中国</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-resources">
+          <a href="/resources">
+            
+            <i class="icon icon-star-fill"></i>
+            
+            <span class="menu-title">资源</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-gallery">
+          <a href="/gallery">
+            
+            <i class="icon icon-delicious"></i>
+            
+            <span class="menu-title">相册</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/mycpen" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://juejin.cn/user/4007034458485159" target="_blank" title="Juejin" data-toggle=tooltip data-placement=top><i class="icon icon-juejin"></i></a></li>
+        
+        <li><a href="https://segmentfault.com/u/mycpen" target="_blank" title="Segmentfault" data-toggle=tooltip data-placement=top><i class="icon icon-segmentfault"></i></a></li>
+        
+        <li><a href="https://stackoverflow.com/users/19841214/mycpen" target="_blank" title="Stackoverflow" data-toggle=tooltip data-placement=top><i class="icon icon-stackoverflow"></i></a></li>
+        
+        <li><a href="https://gitee.com/mycpen" target="_blank" title="Gitee" data-toggle=tooltip data-placement=top><i class="icon icon-gitee"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"><i style="color:#9400D3" class="icon icon-stackexchange"></i>公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>本站使用&nbsp;<u><a target="_blank" rel="noopener" href="https://www.bing.com/search?q=github+%E5%9B%BE%E5%BA%8A" style="color:#E541E5;">外网图床</a></u>，直接访问时<br>图片资源存在&nbsp;<b><a style="color:#E541E5;">加载过慢</a></b>、<b><a style="color:#E541E5;">失败</a></b>&nbsp;的情况。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title"><i style="color:#9400D3" class="icon icon-tags"></i>标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 18px; color: #fff">Hexo</a> <a href="/tags/Pure/" style="font-size: 13px; color: #fff">Pure</a> <a href="/tags/Troubleshooting/" style="font-size: 14.67px; color: #fff">Troubleshooting</a> <a href="/tags/Git/" style="font-size: 13px; color: #fff">Git</a> <a href="/tags/Django/" style="font-size: 18px; color: #fff">Django</a> <a href="/tags/MTV/" style="font-size: 14.67px; color: #fff">MTV</a> <a href="/tags/URL/" style="font-size: 14.67px; color: #fff">URL</a> <a href="/tags/Java/" style="font-size: 16.33px; color: #fff">Java</a> <a href="/tags/HTTP/" style="font-size: 14.67px; color: #fff">HTTP</a> <a href="/tags/GET/" style="font-size: 13px; color: #fff">GET</a> <a href="/tags/POST/" style="font-size: 13px; color: #fff">POST</a> <a href="/tags/MVC/" style="font-size: 13px; color: #fff">MVC</a> <a href="/tags/%E7%8A%B6%E6%80%81%E7%A0%81/" style="font-size: 13px; color: #fff">状态码</a> <a href="/tags/%E7%BC%96%E7%A0%81/" style="font-size: 13px; color: #fff">编码</a> <a href="/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/" style="font-size: 13px; color: #fff">运算符</a> <a href="/tags/%E8%BF%9B%E5%88%B6/" style="font-size: 13px; color: #fff">进制</a> <a href="/tags/Linux/" style="font-size: 23px; color: #fff">Linux</a> <a href="/tags/Nginx/" style="font-size: 14.67px; color: #fff">Nginx</a> <a href="/tags/Crontab/" style="font-size: 13px; color: #fff">Crontab</a> <a href="/tags/Vim/" style="font-size: 13px; color: #fff">Vim</a> <a href="/tags/Shell/" style="font-size: 19.67px; color: #fff">Shell</a> <a href="/tags/%E7%94%A8%E6%88%B7%E4%B8%8E%E7%BB%84/" style="font-size: 14.67px; color: #fff">用户与组</a> <a href="/tags/%E6%9D%83%E9%99%90/" style="font-size: 16.33px; color: #fff">权限</a> <a href="/tags/SSH/" style="font-size: 16.33px; color: #fff">SSH</a> <a href="/tags/Python/" style="font-size: 21.33px; color: #fff">Python</a> <a href="/tags/%E7%8E%AF%E5%A2%83/" style="font-size: 13px; color: #fff">环境</a> <a href="/tags/Ansible/" style="font-size: 13px; color: #fff">Ansible</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" style="font-size: 14.67px; color: #fff">数据类型</a> <a href="/tags/%E6%A8%A1%E5%9D%97/" style="font-size: 14.67px; color: #fff">模块</a> <a href="/tags/mail/" style="font-size: 13px; color: #fff">mail</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 13px; color: #fff">算法</a> <a href="/tags/psutil/" style="font-size: 13px; color: #fff">psutil</a> <a href="/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8/" style="font-size: 13px; color: #fff">上下文管理器</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 13px; color: #fff">函数</a> <a href="/tags/OOP/" style="font-size: 13px; color: #fff">OOP</a> <a href="/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" style="font-size: 13px; color: #fff">内存管理</a>
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+    var everytag=document.getElementsByClassName("widget-body tagcloud")[0].children;
+    for (var i = everytag.length - 1; i >= 0; i--) {
+      var r=Math.floor(Math.random()*180);
+        var g=Math.floor(Math.random()*180);
+        var b=Math.floor(Math.random()*180);
+        everytag[i].style.background = "rgb("+r+","+g+","+b+")";
+    }
+</script>
+    
+      
+  <div class="widget">
+    <h3 class="widget-title"><i style="color:#9400D3" class="icon icon-folder-open"></i>分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">10</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title"><i style="color:#9400D3" class="icon icon-archives-fill"></i>归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">43</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title"><i style="color:#9400D3" class="icon icon-shu-fill"></i>最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled ">
+        <!-- site.posts.sort('date', -1).limit(5).each(function(post){ ... 删除 5 的限制，与首页 最新文章 有关 -->
+        
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/posts/428d25f2bb32.html" class="thumb">
+    
+    
+        <span style="background-image:url(/images/logo/python-logo.svg)" alt="10_Python-CSDN_内存管理" class="thumb-image"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Python/">Python</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/428d25f2bb32.html" class="title">10_Python-CSDN_内存管理</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-01T09:10:00.000Z" itemprop="datePublished">2022-09-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/posts/8c5f09830765.html" class="thumb">
+    
+    
+        <span style="background-image:url(/images/logo/python-logo.svg)" alt="09_Python-CSDN_上下文管理器" class="thumb-image"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Python/">Python</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/8c5f09830765.html" class="title">09_Python-CSDN_上下文管理器</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-01T09:00:00.000Z" itemprop="datePublished">2022-09-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/posts/a708fe9e2814.html" class="thumb">
+    
+    
+        <span style="background-image:url(/images/logo/python-logo.svg)" alt="08_Python-CSDN_面向对象练习" class="thumb-image"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Python/">Python</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/a708fe9e2814.html" class="title">08_Python-CSDN_面向对象练习</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-01T08:50:00.000Z" itemprop="datePublished">2022-09-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/posts/1b6c5e3fa07f.html" class="thumb">
+    
+    
+        <span style="background-image:url(/images/logo/python-logo.svg)" alt="07_Python-CSDN_高阶函数" class="thumb-image"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Python/">Python</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/1b6c5e3fa07f.html" class="title">07_Python-CSDN_高阶函数</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-01T08:40:00.000Z" itemprop="datePublished">2022-09-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/posts/3b057ef47def.html" class="thumb">
+    
+    
+        <span style="background-image:url(/images/logo/python-logo.svg)" alt="06_Python-CSDN_psutil模块" class="thumb-image"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Python/">Python</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/3b057ef47def.html" class="title">06_Python-CSDN_psutil模块</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-01T08:30:00.000Z" itemprop="datePublished">2022-09-01</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#08-Linux%E5%9F%BA%E7%A1%80-vim-tmux-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81"><span class="toc-text">08_Linux基础-vim-tmux-字符编码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-vim"><span class="toc-text">一. vim</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#vim%E7%BC%96%E8%BE%91%E5%99%A8%E4%BD%9C%E7%94%A8"><span class="toc-text">vim编辑器作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim%E6%A8%A1%E5%BC%8F"><span class="toc-text">vim模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#vim%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-text">vim命令模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F"><span class="toc-text">vim编辑模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim%E6%9C%AB%E8%A1%8C%E6%A8%A1%E5%BC%8F"><span class="toc-text">vim末行模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim%E8%A7%86%E5%9B%BE%E6%A8%A1%E5%BC%8F"><span class="toc-text">vim视图模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim%E6%9B%BF%E6%8D%A2%E6%A8%A1%E5%BC%8F"><span class="toc-text">vim替换模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0-2"><span class="toc-text">练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="toc-text">vim常用快捷方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%80%E5%87%BAvim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">退出vim编辑器的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8"><span class="toc-text">光标移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim%E8%AE%BE%E7%BD%AE"><span class="toc-text">vim设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%EF%BC%88%E5%89%AA%E5%88%87%EF%BC%89%E3%80%81%E5%A4%8D%E5%88%B6%E3%80%81%E7%B2%98%E8%B4%B4"><span class="toc-text">删除（剪切）、复制、粘贴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E6%9F%A5%E6%89%BE"><span class="toc-text">文件内容查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%96%E6%B6%88%E9%AB%98%E4%BA%AE%E3%80%81%E8%AE%BE%E7%BD%AE%E8%A1%8C%E6%95%B0%E3%80%81%E5%8F%96%E6%B6%88%E8%A1%8C%E6%95%B0%E8%AE%BE%E7%BD%AE"><span class="toc-text">取消高亮、设置行数、取消行数设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-vim-tmux%E5%8F%8A%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98"><span class="toc-text">二. vim-tmux及字符编码问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tmux"><span class="toc-text">tmux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A0%81"><span class="toc-text">编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%EF%BC%88xmind%EF%BC%89"><span class="toc-text">总结（xmind）</span></a></li></ol></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-Linux_基础/08_Linux基础-vim-tmux-字符编码" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      08_Linux基础-vim-tmux-字符编码
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar"></i>
+    <a href="/posts/2b6a609ea23a.html" class="article-date">
+        发布于<time datetime="2022-08-27T23:08:00.000Z" itemprop="datePublished">
+            2022-08-28
+        </time>
+    </a>
+</span>
+
+
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+    <a href="/posts/2b6a609ea23a.html" class="article-date">
+        更新于<time datetime="2022-08-27T23:08:01.000Z" itemprop="dateUpdated">
+            2022-08-28
+        </time>
+    </a>
+</span>
+
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="article-tag-link-link" href="/tags/Vim/" rel="tag">Vim</a>
+  </span>
+
+
+        
+
+	<span class="article-read hidden-xs">
+    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
+    	<span id="/posts/2b6a609ea23a.html" class="leancloud_visitors"  data-flag-title="08_Linux基础-vim-tmux-字符编码">
+			<span class="leancloud-visitors-count">0</span>
+		</span>
+    </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/2b6a609ea23a.html#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 4.2k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 17(分)</span>
+	
+
+      </div>
+    </div>
+    <div style="background-color:#D7BDE2;border:1px solid #D7BDE2;border-radius:10px;padding:5px">
+      <b>温馨提示</b>：点击页面此处(或下方)<a class="toggle-btn   collapsed  " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span style="color:#C71585"><b>[&nbsp;</b></span><span style="color:#C71585"><b>文章目录</b></span>
+      <b><i style="color:red" class="text-collapsed icon icon-anchor"></i></b>
+      <b><i class="text-in icon icon-close"></i></b>
+      <span style="color:#C71585"><b>]</b></span>
+    </a>以展开或折叠目录~
+    </div><br>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>摘要：博客迁移 <a target="_blank" rel="noopener" href="https://blog.csdn.net/cpen_web"><code>https://blog.csdn.net/cpen_web</code></a> → 本站<span id="more"></span></p>
+<h1 id="08-Linux基础-vim-tmux-字符编码">08_Linux基础-vim-tmux-字符编码</h1>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/cpen_web">博客🔗：https://blog.csdn.net/cpen_web</a></p>
+<hr>
+<h2 id="一-vim">一. vim</h2>
+<blockquote>
+<p>文本编辑器-vim（==编辑文本==）</p>
+</blockquote>
+<blockquote>
+<p>Windows：记事本、word、sublime、pycharm</p>
+<p>能编辑音乐、视频、图片？答：不能，==只能编辑文本==</p>
+</blockquote>
+<blockquote>
+<p>Linux：</p>
+<p>​		vi（==字符界面==），vim（==字符界面==），gedit（==图形化==）</p>
+<p>==unix 都会安装vi==</p>
+<p>vim 是vi的==加强版==（在vi基础上添加其他功能）</p>
+</blockquote>
+<h3 id="vim编辑器作用">vim编辑器作用</h3>
+<blockquote>
+<p>vim编辑器==作用==：</p>
+<p>==1、编写脚本、程序==</p>
+<p>==2、修改配置文件==</p>
+<p>==3、做一些文本处理==</p>
+</blockquote>
+<h3 id="vim模式">vim模式</h3>
+<blockquote>
+<p>vim有三种最常用最基本的模式：命令模式、编辑模式（插入模式）、末行模式、可视模式，替换模式</p>
+<p>vim有三种最常用最==基本==的模式：</p>
+<p>==命令模式==</p>
+<p>==编辑模式==</p>
+<p>==末行模式==</p>
+<p>还有另外两种==不常用==模式：</p>
+<p>==视图模式==</p>
+<p>==替换模式==</p>
+</blockquote>
+<h4 id="vim命令模式">vim命令模式</h4>
+<blockquote>
+<p>==命令模式：vim  a  /  ESC==</p>
+<p>​		==无法编辑==，只允许删除、复制、粘贴、撤销等快捷操作，打开文件时==默认==进行此模式</p>
+<p>==yy	复制==</p>
+<p>==p	粘贴==</p>
+<p>==dd	删除==</p>
+<p>==u	撤销==</p>
+<p>==命令模式== 相当于一个==中间==介</p>
+<p>每个模式==退出== 都会==回到命令模式==，命令模式可以进入所有模式</p>
+</blockquote>
+<h4 id="vim编辑模式">vim编辑模式</h4>
+<blockquote>
+<p>编辑模式 ESC  ==i==</p>
+<p>– 插入 –</p>
+<p>​		插入模式，进行==文本编辑==</p>
+<p>-----------------------------------------------------------------------</p>
+<p>操作键	功能</p>
+<p>​		==i==	光标在==当前==位置进入插入模式</p>
+<p>​		I	光标==跳到行首==并进入插入模式</p>
+<p>​		a	光标==后退一格==并进入插入模式</p>
+<p>​		A	光标==退到行尾==并进入插入模式</p>
+<p>​		==o==	在光标所在==行下新起一行==并进入插入模式</p>
+<p>​		==O==	在光标所在==行上新起一行==并进入插入模式</p>
+<p>​		s	==删除==光标==所在字符==并进入插入模式</p>
+<p>​		S	==删除==光标所在==行==并进入插入模式</p>
+</blockquote>
+<h4 id="vim末行模式">vim末行模式</h4>
+<blockquote>
+<p>末行模式 ESC  ==:==</p>
+<p>:</p>
+<p>输入命令，设置环境，保存文件，查找替换</p>
+<p>----------------------------------------------------</p>
+<p>操作键	功能</p>
+<p>​		==:q==	如果未对文件做改动则==退出==</p>
+<p>​		==:q!==	==放弃保存==并==退出==</p>
+<p>​		==:wq	保存==当前文件并==退出==</p>
+<p>​		==:wq!	强制保存==当前文件并==退出==</p>
+<p>​		==:x	保存==当前文件并==退出==</p>
+<p>​		==:x!	强制保存==当前文件并==退出==</p>
+<p>​		==ZZ	保存==当前文件并==退出==</p>
+</blockquote>
+<h4 id="vim视图模式">vim视图模式</h4>
+<blockquote>
+<p>视图模式 ESC  ==v、V、ctrl+v==</p>
+<p>– 可视 行 –</p>
+<p>​		选择特定的块文本，进行复制，修改等</p>
+<p>小==v==：选择==行指定的部分==</p>
+<p>大==V==：选择==整个行==</p>
+<p>==Ctrl + v== :选择==块== 插入按I  退出模式进人命令模式（Esc），这个时候就全部加上</p>
+</blockquote>
+<h4 id="vim替换模式">vim替换模式</h4>
+<blockquote>
+<p>替换模式 ESC  ==R==</p>
+<p>– 替换 –</p>
+<p>-----------------------------------</p>
+<p>123 hello456 789<br>
+xxx helloyyy zzz<br>
+xxx yyy zzz</p>
+</blockquote>
+<h3 id="练习-2">练习</h3>
+<blockquote>
+<p><strong>课堂练习1 插入模式</strong></p>
+<p>123 456<br>
+123 4<br>
+xyz 789<br>
+4<br>
+xyz 789</p>
+<p>---------------------------------------------------------</p>
+<p>步骤：</p>
+<p>==v== 小v 可视模式 visual —》选择一部分</p>
+<p>==y==  按y复制</p>
+<p>==o== 按o另起一行，进入插入模式</p>
+<p>==P== 再按esc，再p，按p粘贴</p>
+</blockquote>
+<blockquote>
+<p><strong>课堂练习2</strong></p>
+<p>123 TEST 456 789<br>
+xxx TEST yyy zzz</p>
+<p>---------------------------------------------------------</p>
+<p>选择块插入</p>
+<p>ctrl + v：选择块</p>
+<p>插入按大I</p>
+<p>ESC  退出模式进入命令模式，这个时候就全部加上</p>
+</blockquote>
+<h3 id="vim常用快捷方式">vim常用快捷方式</h3>
+<blockquote>
+<p>vim 常用快捷方式</p>
+<p>vim打开文件：</p>
+<p># vim e<br>
+# ==vim +5 e==</p>
+<p>表示打开文件e，并且==将光标移动到第3行==</p>
+<p># ==vim +/aa e==</p>
+<p>打开文件e，并且==高亮显示aa字符==</p>
+</blockquote>
+<h3 id="退出vim编辑器的方法">退出vim编辑器的方法</h3>
+<blockquote>
+<p>vim保存退出：</p>
+<p>操作键	功能</p>
+<p>​		==:q==	如果未对文件做改动则==退出==</p>
+<p>​		==:q!==	放弃保存并==退出==</p>
+<p>​		==:wq==	==保存==当前文件并==退出==</p>
+<p>​		==:wq!==	==强制保存==当前文件并==退出==</p>
+<p>​		==:x==	==保存==当前文件并==退出==</p>
+<p>​		==:x!==	==强制保存==当前文件并==退出==</p>
+<p>​		==ZZ==	==保存==当前文件并==退出== （注：命令模式退出）</p>
+</blockquote>
+<h3 id="光标移动">光标移动</h3>
+<blockquote>
+<p>光标移动：上下左右方向键（k，j，h，l）</p>
+<p>-------------------------------------------------</p>
+<p>操作类型		 	操作键				功能</p>
+<p>==光标==方向移动	 ==k，j，h，l==		==上、下、左、右==</p>
+<p>==============================================================</p>
+<p>==翻页==			 Page Down或Ctrl+F	向==下==翻动一整页内容</p>
+<p>​					 Page Up或Ctrl+B		向==上==翻动一整页内容</p>
+<p>==============================================================</p>
+<p>==行内==快速跳转	 Home键或“^”、数字“0”	跳转至==行首	（注：“^”尖符号）==</p>
+<p>​							End键或“$”键					跳转到==行尾==</p>
+<p>==============================================================</p>
+<p>==行间==快速跳转</p>
+<p>1G或者gg			跳转到文件的==首行==</p>
+<p>G						  跳转到文件的==末尾行==</p>
+<p>#G						跳转到文件中的==第#行==</p>
+<p>（末行模式）:40	跳转到==40行==</p>
+<p>w						  ==每个单词==的==首字母==跳转</p>
+<p>e						   ==每个单词==的==尾字母==跳转</p>
+</blockquote>
+<h3 id="vim设置">vim设置</h3>
+<blockquote>
+<p><strong>vim设置</strong></p>
+<p>（末行模式）:set number		==设置行数==</p>
+<p>（末行模式）:set nonumber 	==取消设置==</p>
+<p>--------------------------------------</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:<span class="keyword">set</span> <span class="keyword">number</span></span><br><span class="line"></span><br><span class="line"> <span class="number">1</span> aa bb <span class="keyword">cc</span></span><br><span class="line"> <span class="number">2</span> dd ee ff</span><br><span class="line"> <span class="number">1</span> aa bb <span class="keyword">cc</span></span><br><span class="line"> <span class="number">2</span> dd ee ff</span><br><span class="line"> <span class="number">3</span> aa bb <span class="keyword">cc</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="删除（剪切）、复制、粘贴">删除（剪切）、复制、粘贴</h3>
+<blockquote>
+<p>操作类型</p>
+<p>操作键		功能</p>
+<p>--------------------------------------</p>
+<p><strong>删除</strong> 		（*注：一般==^行首，$行尾==）</p>
+<p>==x或d或Del	删除==光标处的==单个字符==</p>
+<p>==dd			删除==当前光标==所在行==</p>
+<p>==#dd			删除==从光标处开始的==#行内容==</p>
+<p>d==^==			==删除==当前==光标之前到行首==的所有字符</p>
+<p>d==$==			删除当前==光标处到行尾==的所有字符</p>
+<p>d==w==			==删除一个单词==（word)，以空格、冒号等 符号</p>
+<p>------------------------------------------------------</p>
+<p><strong>复制</strong></p>
+<p>==yy			复制==当前行==整行==的内容到剪贴板</p>
+<p>==#yy			复制==从光标处开始的==#行==内容</p>
+<p>------------------------------------------------------</p>
+<p><strong>粘贴</strong></p>
+<p>小==p==			将==缓冲区==中的内容==粘贴==到光标位置处==之后==</p>
+<p>大==P			粘贴==到光标位置处==之前==</p>
+</blockquote>
+<h3 id="文件内容查找">文件内容查找</h3>
+<blockquote>
+<p>文件内容查找</p>
+<p>操作键	功能</p>
+<p>==/==word	==从上而下==在文件中查找字符串“word”</p>
+<p>==?==word	==从下而上==在文件中查找字符串“word”</p>
+<p>小==n==		==定位下一个==匹配的被查找字符串</p>
+<p>大==N==		==定位上一个==匹配的被查找字符串</p>
+<p>（注：/word 和 ?word 不同点：==方向相反==）</p>
+</blockquote>
+<h3 id="取消高亮、设置行数、取消行数设置">取消高亮、设置行数、取消行数设置</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">取消高亮 ：noh</span><br><span class="line">设置行数：set nu</span><br><span class="line">取消：set nonu</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="二-vim-tmux及字符编码问题">二. vim-tmux及字符编码问题</h2>
+<blockquote>
+<p><strong>文件内容替换</strong></p>
+<p>文件内容替换(末行模式）</p>
+<p>命令						功能</p>
+<p>==:s /old/new==			将==当前行==中查找到的==第一个==字符“old”串==替换==为“new”</p>
+<p>==:s /old/new/g==		 将==当前行==中查找到的==所有==字符串“old”==替换==为“new”</p>
+<p>==:#,# s==/old/new/==g==	在==行号“#,#”==范围内替换==所有==的字符串“old”为“new”</p>
+<p>==:% s==/old/new/==g==	   在==整个文件==范围内替换==所有==的字符串“old”为“new” global</p>
+<p>==:s== /old/new/==gc==		在替换命令末尾加入==c命令==，将对每个替换动作==提示==用 户进行==确认==	Confirm</p>
+<p>==:%s==/feng//==g==			 将==所有==的feng==删除==</p>
+<p>（注：:s/…/… 当前行 第一个str</p>
+<p>​			:s/…/…/g当前行 所有str</p>
+<p>​			:#,#s/…/…/g 行号#,# 所有str</p>
+<p>​			:%s/…/…/g 整个文档 所有str</p>
+<p>​			:s/…/…/gc 整个文档 所有str 确认提示</p>
+<p>​			:%s/…//g 整个文档 所有str 删除）</p>
+<p>（注：s 	 —— 替换</p>
+<p>​			 :s	 —— 当前行替换</p>
+<p>​			#,#  —— 行号#到#</p>
+<p>​			%	 —— 整个文档</p>
+<p>​			g	 —— 所有字符串</p>
+<p>​			c	 —— 确认提示</p>
+<p>​			:%s/…//g —— 整个文档 所有str 删除）</p>
+</blockquote>
+<blockquote>
+<p>==缓存：swp文件==</p>
+<p>==编写文件时 1.txt==</p>
+<p>==先把1.txt文件拷贝一份，拷贝成.1.txt.swp文件，真正编辑的是这个文件==</p>
+<p>==保存时，会将.1.txt.swp覆盖1.txt==</p>
+<p>-------------------------------------------------------------------------------------------</p>
+<p><strong>相关操作</strong></p>
+<p>一个终端下# vim 2.txt,另一个终端敲# ls -al,提示如下</p>
+<p>[root@sanchuang-linux cp]# ==ls -al==<br>
+总用量 88<br>
+-rw-r–r–.  1 root root  4096 10月 15 15:05 ==.2.txt.swp==</p>
+<p>===========================================================================================</p>
+<p>在另一个终端# vim 2.txt，提示如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">发现交换文件 &quot;.2.txt.swp&quot;</span><br><span class="line">            所有者: root    日期: Thu Oct 15 15:05:45 2020</span><br><span class="line">            文件名: ~root/cp/2.txt</span><br><span class="line">            修改过: 否</span><br><span class="line">            用户名: root      主机名: sanchuang-linux</span><br><span class="line">           进程 ID: 3129 (仍在运行)</span><br><span class="line">正在打开文件 &quot;2.txt&quot;</span><br><span class="line">              日期: Thu Oct 15 15:05:22 2020</span><br><span class="line"></span><br><span class="line">(1) Another program may be editing the same file.  If this is the case,</span><br><span class="line">    be careful not to end up with two different instances of the same</span><br><span class="line">    file when making changes.  Quit, or continue with caution.</span><br><span class="line">(2) An edit session for this file crashed.</span><br><span class="line">    如果是这样，请用 &quot;:recover&quot; 或 &quot;vim -r 2.txt&quot;</span><br><span class="line">    恢复修改的内容 (请见 &quot;:help recovery&quot;)。</span><br><span class="line">    如果你已经进行了恢复，请删除交换文件 &quot;.2.txt.swp&quot;</span><br><span class="line">    以避免再看到此消息。</span><br><span class="line"></span><br><span class="line">交换文件 &quot;.2.txt.swp&quot; 已存在！</span><br><span class="line">以只读方式打开([O]), 直接编辑((E)), 恢复((R)), 退出((Q)), 中止((A)): </span><br></pre></td></tr></table></figure>
+<p>===========================================================================================</p>
+<p>:wq 写入时，提示如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;2.txt&quot;                                                                                          </span><br><span class="line">警告: 此文件自读入后已发生变动！！！</span><br><span class="line">确实要写入吗 (y/n)?</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>==* 注意==：进入命令模式，按数字键，之后再进入插入模式的话，会将输入内容按照之前按的数字大小复制成多份</p>
+<p>（注：步骤</p>
+<p>​			vim 1.txt ——&gt; 先按数字3 ——&gt; 按i进入插入模式 ——&gt; abc ——&gt; Esc ——&gt; abcabcabc）</p>
+</blockquote>
+<blockquote>
+<p><strong>打开新文件或读入其他文件内容 &amp;&amp; 撤销和另存为</strong></p>
+<p>打开新文件 ==:e==  或 读入其他文件内容 ==:r==</p>
+<p>命令	功能</p>
+<p>==:e== ~/install.log			==打开==新的==文件==进行==编辑==</p>
+<p>==:r== /etc/filesystems	在==当前文件==中==读入其他文件内容== （注：即追加内容）</p>
+<p>撤销和另存为 ==:w==</p>
+<p>==:w== /tmp/hello.txt	把当前文件另存为/tmp目录下的hello.txt</p>
+<p>==同时编辑==多个文件</p>
+<p># ==vim 1.txt 2.txt==</p>
+<p>==:n== 编辑上一个</p>
+<p>==:N== 编辑下一个</p>
+<p>===========================================================================================</p>
+<p>例：</p>
+<p># vim 2.txt</p>
+<p>==:e 1.txt==</p>
+<p>（注：进入1.txt进行编辑）</p>
+<p>--------------------------</p>
+<p># vim 2.txt</p>
+<p>==:r 1.txt==</p>
+<p>（注：读入1.txt文件的内容。在当前光标下一行插入1.txt文件内容）</p>
+<p>===========================================================================================</p>
+<p>撤销和另存为 ==:w==</p>
+<p>命令						  功能</p>
+<p>==:w== /tmp/hello.txt	把当前文件另存为/tmp目录下的hello.txt</p>
+<p>===========================================================================================</p>
+<p>例：</p>
+<p># vim 1.txt</p>
+<p>==:w /root/cp/test.txt==</p>
+<p>（注：将文件1.txt另存为在/root/cp/目录下，==改名为test.txt==）</p>
+</blockquote>
+<blockquote>
+<p><strong>vim的配置（3种）</strong></p>
+<p>--------------------------------------------------------------------------------------------</p>
+<p>第一种</p>
+<p>==vim设置==：（末行模式）</p>
+<p>一次性设置行数：（只在当前编辑时生效）</p>
+<p>:set number</p>
+<p>取消</p>
+<p>:set nonumber</p>
+<p>--------------------------------------------------------------------------------------------</p>
+<p>第二种</p>
+<p>==全局配置文件==：</p>
+<p># vim /etc/vimrc</p>
+<p># cp /etc/vimrc{,.bak} （注：效果等同于 # cp /etc/vimrc /etc/vimrc.bak）</p>
+<p>​									   （* 注↑：备份操作。修改全局配置文件前先备份。出错就回滚）</p>
+<p>set number				   （注：==设置行数==）</p>
+<p>set ==showcmd==			   （注：==显示当前键入命令==）</p>
+<p>set encoding=utf-8 	 （注：==设置编码==）</p>
+<p>set tabstop=4			   （注：==设置tab键的空格数==）</p>
+<p>--------------------------------------------------------------------------------------------</p>
+<p>第三种：(只针对当前用户生效)</p>
+<p>==编写 ~/.vimrc==</p>
+<p>[root@sanchuang-linux ~]# vim ==.vimrc==</p>
+<p>[root@sanchuang-linux ~]# cat .vimrc</p>
+<p>set number</p>
+<p>set showcmd</p>
+<p>set encoding=utf-8</p>
+<p>set tabstop=4</p>
+</blockquote>
+<h3 id="tmux">tmux</h3>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">tmux shell里面多屏幕编辑</span><br><span class="line">安装：</span><br><span class="line"><span class="comment"># yum install tmux  -y  </span></span><br><span class="line">tmux</span><br><span class="line">Ctrl+b 上下左右</span><br><span class="line">Ctrl+b <span class="built_in">shift</span> +＂</span><br><span class="line">Ctrl+b <span class="built_in">shift</span> + %</span><br><span class="line">Ctrl+b + c  创造新的一页</span><br><span class="line">Ctrl+b + p  返回上一页</span><br><span class="line">Ctrl+b + n  返回下一页</span><br><span class="line">Ctrl+b + x 关闭当前小窗口	 </span><br><span class="line">ctrl+d	关闭</span><br><span class="line">Ctrl+b + b + ! 	删除</span><br><span class="line"></span><br><span class="line">Ctrl+b + d 暂存，保存当前的tmux状态并退出tmux</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>tmux：</p>
+<p>安装：yum install tmux</p>
+<p>tmux：</p>
+<p>一：敲tmux 进入会话</p>
+<p>窗口底部有绿杠表示进入了tmux</p>
+<p>----------------------------------------------------------------------------------------------------------</p>
+<p>左右分屏：先按==ctrl + b==，然后再按shift+==%==号</p>
+<p>上下分屏：先按==ctrl + b==,   然后再按shift+==&quot;==</p>
+<p>上下左右移动光标： ==ctrl + b==，再按==上下左右==方向键</p>
+<p>删除一个分割： 光标移动到那个分割屏幕，然后按==ctrl +d==</p>
+<p>新增一个新的窗口（新增一页）：==ctrl+b==，然后按==c==</p>
+<p>返回上一页： ==ctrl+b== 然后按==p==</p>
+<p>返回下一页： ==ctrl+b== 然后按==n==</p>
+<p>----------------------------------------------------------------------------------------------------------</p>
+<p>保存当前的tmux状态，并退出tmux：</p>
+<p>使用： ==ctrl+b==  然后按==d==</p>
+<p>----------------------------------------------------------------------------------------------------------</p>
+<p>查看当前保存的会话状态</p>
+<p>[root@mysql-binary ~]# ==tmux ls==</p>
+<p>0: 2 windows (created Thu Oct 15 16:31:27 2020) [139x22]</p>
+<p>1: 2 windows (created Thu Oct 15 16:45:40 2020) [139x22]</p>
+<p>-------------------------------------------------------------------------------------------------------------</p>
+<p>进入第一个会话状态：</p>
+<p>==tmux a -t 0==</p>
+<p>-------------------------------------------------------------------------------------------------------------</p>
+<p>==设置tmux==，跟vim的末行模式很像：</p>
+<p>按==ctrl+b== ,然后按==：==（这时窗口底部就会有==黄色==的杠）</p>
+<p>设置==同步==：  ==ctrl+b== 然后按==：== 然后输入==set synchronize-panes on==</p>
+<p>​               								   取消同步==set synchronize-panes off==</p>
+</blockquote>
+<blockquote>
+<p><strong>tmux终端关闭，执行的程序会继续执行 （* tmux的好处）</strong></p>
+<p>tmux 终端关闭，不是tmux会话关闭。tmux 终端关闭，那之前执行的程序都会继续执行。</p>
+<p>不使用tmux，默认情况下，终端关闭，执行的程序也会关闭。 测试如下</p>
+<p>================================================================</p>
+<p>测试：</p>
+<p>==编写脚本：==</p>
+<p># cat <a target="_blank" rel="noopener" href="http://sleep.sh">sleep.sh</a><br>
+echo “begin…”<br>
+sleep 100<br>
+echo “end…”</p>
+<p>=======================</p>
+<p>==运行脚本==<br>
+# sh <a target="_blank" rel="noopener" href="http://sleep.sh">sleep.sh</a><br>
+begin…</p>
+<p>=======================</p>
+<p>运行脚本：==（放到后台运行）==</p>
+<p># sh <a target="_blank" rel="noopener" href="http://sleep.sh">sleep.sh</a> ==&amp;==</p>
+<p>=======================</p>
+<p>==查看进程有没有运行==</p>
+<p># ==ps -ef |grep sleep==<br>
+root    13133  13112  0 17:12 pts/6   00:00:00 sh <a target="_blank" rel="noopener" href="http://sleep.sh">sleep.sh</a><br>
+root    13134  13133  0 17:12 pts/6   00:00:00 sleep 100<br>
+root    13190  13140  0 17:12 pts/16  00:00:00 grep --color=auto sleep</p>
+<p>=======================</p>
+<p>==关闭终端之后再重新开启连接，查看进程有没有运行。==</p>
+<p>结果：没有运行</p>
+<p>……</p>
+<p>=======================</p>
+<p>==在tmux下 运行脚本==</p>
+<p>……</p>
+<p>==tmux关闭后  会话还在，程序还会一直运行==</p>
+<p># ps -ef |grep sleep<br>
+root    13278  13003  0 17:17 pts/13  00:00:00 sh <a target="_blank" rel="noopener" href="http://sleep.sh">sleep.sh</a><br>
+root    13279  13278  0 17:17 pts/13  00:00:00 sleep 100<br>
+root    13284  13140  0 17:17 pts/16  00:00:00 grep --color=auto sleep</p>
+<p>=======================</p>
+</blockquote>
+<h3 id="编码">编码</h3>
+<blockquote>
+<p><strong>编码</strong></p>
+<p>编码：<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html">http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html</a></p>
+<p>文件编码一般2种方式：==ascii 和 unicode==</p>
+<p>UTF-8 是 Unicode 的实现方式之一</p>
+<p>==转编码==：</p>
+<p># ==iconv -f== utf-8 ==-t== gbk ==code_test.txt== &gt;==code_test1.txt==</p>
+<p>ASCII 码 最多能表示256个字，不够用</p>
+<p>unicode  万国码，每个字给你一个序号</p>
+<p>UTF-8 是 Unicode 的实现方式之一，规定怎么存储在计算机。</p>
+<p>（UTF-8对ascii码/英文码友好）</p>
+<p>==以什么编码方式存储，就要以什么编码方式解码==</p>
+<p>utf-8、utf-16</p>
+<p>国内编码 gbk、gb2131</p>
+<p>===============================================</p>
+<p>==系统语言设置环境：==</p>
+<p># ==locale==</p>
+<p>LANG=zh_CN.UTF-8</p>
+<p>LC_CTYPE=“zh_CN.UTF-8”</p>
+<p>LC_NUMERIC=“zh_CN.UTF-8”</p>
+<p>LC_TIME=“zh_CN.UTF-8”</p>
+<p>LC_COLLATE=“zh_CN.UTF-8”</p>
+<p>LC_MONETARY=“zh_CN.UTF-8”</p>
+<p>LC_MESSAGES=“zh_CN.UTF-8”</p>
+<p>LC_PAPER=“zh_CN.UTF-8”</p>
+<p>LC_NAME=“zh_CN.UTF-8”</p>
+<p>LC_ADDRESS=“zh_CN.UTF-8”</p>
+<p>LC_TELEPHONE=“zh_CN.UTF-8”</p>
+<p>LC_MEASUREMENT=“zh_CN.UTF-8”</p>
+<p>LC_IDENTIFICATION=“zh_CN.UTF-8”</p>
+<p>LC_ALL=</p>
+<p>===============================================</p>
+<p>==file code_test.txt 	注：查看文件编码类型==</p>
+<p># locale 系统语言设置环境</p>
+<p># file code_test1.txt 看文件编码方式</p>
+<p>系统、文件、shell  三者统一 ，不会乱码</p>
+<p>===============================================</p>
+<p>上课代码操作：</p>
+<p># mkdir vim_test<br>
+# cd vim_test/<br>
+# ls<br>
+# rz -E	（注：将windows code_test.txt文件上传linux）<br>
+rz waiting to receive.<br>
+# ls<br>
+code_test.txt<br>
+# vim code_test.txt<br>
+# ==file code_test.txt 	（注：查看文件编码类型）==<br>
+code_test.txt: UTF-8 Unicode text<br>
+# iconv -f utf-8 -t ==gbk== code_test.txt &gt;code_test1.txt	（注：转国标码）<br>
+# ==file code_test1.txt==<br>
+code_test1.txt: ==ISO-8859 text	（注：国标码）==<br>
+# vim code_test1.txt 	（注：显示乱码）<br>
+#</p>
+<p>为什么出现乱码？答：以utf-8的方式打开gbk编码</p>
+<p>以什么编码方式存储，就要以什么编码方式解码</p>
+</blockquote>
+<h3 id="总结（xmind）">总结（xmind）</h3>
+<blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/202205041447906.png" alt="image-20220504144731448"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br></pre></td><td class="code"><pre><span class="line">vim文本编辑器</span><br><span class="line">vi，vim</span><br><span class="line">vim常见模式</span><br><span class="line">	命令模式</span><br><span class="line">		文件打开默认就是命令模式</span><br><span class="line">		ESC键到达</span><br><span class="line">	编辑模式</span><br><span class="line">		a,i,o,s（支持大写）</span><br><span class="line">	末行模式</span><br><span class="line">		：</span><br><span class="line">	可视模式</span><br><span class="line">		v</span><br><span class="line">			选中文本指定部分</span><br><span class="line">		V</span><br><span class="line">			选择文本指定行</span><br><span class="line">		ctrl+v</span><br><span class="line">			选择文本指定块</span><br><span class="line">	替换模式</span><br><span class="line">		R</span><br><span class="line">基本使用</span><br><span class="line">	命令模式</span><br><span class="line">		删除</span><br><span class="line">			x 、d</span><br><span class="line">			<span class="built_in">dd</span></span><br><span class="line">			5dd</span><br><span class="line">		复制</span><br><span class="line">			yy</span><br><span class="line">			3yy</span><br><span class="line">		粘贴</span><br><span class="line">			p </span><br><span class="line">		撤销</span><br><span class="line">			u</span><br><span class="line">		查找</span><br><span class="line">			/</span><br><span class="line">		光标移动</span><br><span class="line">			上下左右方向键（k,j,h,l）</span><br><span class="line">			文件首</span><br><span class="line">				gg</span><br><span class="line">			文件尾</span><br><span class="line">				G</span><br><span class="line">			移动到特定行</span><br><span class="line">				5G</span><br><span class="line">				：5</span><br><span class="line">			行首</span><br><span class="line">				home键</span><br><span class="line">				0</span><br><span class="line">				^</span><br><span class="line">			行尾</span><br><span class="line">				end键</span><br><span class="line">				$</span><br><span class="line">			上翻页</span><br><span class="line">				page up， ctrl+b</span><br><span class="line">			下翻页</span><br><span class="line">				pagedowm， ctrl+f</span><br><span class="line">	编辑模式</span><br><span class="line">		i</span><br><span class="line">		I</span><br><span class="line">		o</span><br><span class="line">		O</span><br><span class="line">		a</span><br><span class="line">		A</span><br><span class="line">		s</span><br><span class="line">		S</span><br><span class="line">	可视模式</span><br><span class="line">		复制y</span><br><span class="line">		插入 I</span><br><span class="line">	末行模式</span><br><span class="line">		退出和保存</span><br><span class="line">			q</span><br><span class="line">			q!</span><br><span class="line">			wq</span><br><span class="line">			wq!</span><br><span class="line">			x</span><br><span class="line">			ZZ命令模式退出</span><br><span class="line">		替换</span><br><span class="line">			：s/old/new</span><br><span class="line">			:s/old/new/g</span><br><span class="line">			:%s/old/new</span><br><span class="line">			:%s/old/new/g</span><br><span class="line">			:3,5s/old/new/g</span><br><span class="line">			:%s/old/new/gc</span><br><span class="line">		设置</span><br><span class="line">		文件操作</span><br><span class="line">			：e  编辑新文件</span><br><span class="line">			：r  导入文件内容</span><br><span class="line">			：w  另存文件路径</span><br><span class="line">			vim  1.txt 2.txt</span><br><span class="line">				：n 编辑下一个</span><br><span class="line">				：N 编辑上一个</span><br><span class="line">vim常见快捷方式使用</span><br><span class="line">	vim file1 file2 file3</span><br><span class="line">	vim +10  file</span><br><span class="line">	vim +/aa file</span><br><span class="line">vim的配置</span><br><span class="line">	临时配置</span><br><span class="line">		末行模式</span><br><span class="line">			：<span class="built_in">set</span> nu</span><br><span class="line">	全局配置</span><br><span class="line">		/etc/vimrc</span><br><span class="line">	用户配置</span><br><span class="line">		~/.vimrc</span><br><span class="line">tmux</span><br><span class="line">	tmux：</span><br><span class="line">安装：yum install tmux</span><br><span class="line">tmux： </span><br><span class="line">一：敲tmux 进入会话</span><br><span class="line">窗口底部有绿杠表示进入了tmux</span><br><span class="line"></span><br><span class="line">左右分屏：先按ctrl + b ，然后再按<span class="built_in">shift</span>+% 号</span><br><span class="line">上下分屏：先按ctrl + b, 然后再按 <span class="built_in">shift</span>+<span class="string">&quot;</span></span><br><span class="line"><span class="string">上下左右移动光标： ctrl + b 再按上下左右方向键</span></span><br><span class="line"><span class="string">删除一个分割： 光标移动到那个分割屏幕，然后按ctrl +d</span></span><br><span class="line"><span class="string">新增一个新的窗口（新增一页）：  ctrl+b 然后按c</span></span><br><span class="line"><span class="string">返回上一页： ctrl+b 然后按p</span></span><br><span class="line"><span class="string">返回下一页： ctrl+b 然后按n</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">保存当前的tmux状态，并退出tmux：</span></span><br><span class="line"><span class="string">使用： ctrl+b  然后按d</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">查看当前保存的会话状态</span></span><br><span class="line"><span class="string">[root@mysql-binary ~]# tmux ls</span></span><br><span class="line"><span class="string">0: 2 windows (created Thu Oct 15 16:31:27 2020) [139x22]</span></span><br><span class="line"><span class="string">1: 2 windows (created Thu Oct 15 16:45:40 2020) [139x22]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">进入第一个会话状态：</span></span><br><span class="line"><span class="string">tmux a -t 0</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">设置tmux，跟vim的末行模式很像：</span></span><br><span class="line"><span class="string">按ctrl+b ,然后按：  （这时窗口底部就会有黄色的杠）</span></span><br><span class="line"><span class="string">设置同步：  ctrl+b 然后按：  然后输入set synchronize-panes on</span></span><br><span class="line"><span class="string">                           取消同步set synchronize-panes off</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">tmux 终端关闭，不是tmux会话关闭。那之前执行的程序都会继续执行。</span></span><br><span class="line"><span class="string">不使用tmux，默认情况下，终端关闭，执行的程序也会关闭。</span></span><br><span class="line"><span class="string">文件编码</span></span><br><span class="line"><span class="string">	iconv -f utf-8 -t gbk file.txt &gt; file2.txt</span></span><br><span class="line"><span class="string">	查看系统语言环境</span></span><br><span class="line"><span class="string">		locale</span></span><br><span class="line"><span class="string">	ascii</span></span><br><span class="line"><span class="string">	unicode</span></span><br><span class="line"><span class="string">		utf-8</span></span><br><span class="line"><span class="string">		utf-16</span></span><br><span class="line"><span class="string">		gbk</span></span><br><span class="line"><span class="string">		gb2132</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-license">
+      <strong>文章作者： </strong><a href="/about/" style="color:#E541E5;"> Peng</a>
+    </li>
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://mycpen.github.io/posts/2b6a609ea23a.html" title="08_Linux基础-vim-tmux-字符编码" target="_blank" rel="external" style="color:#E541E5;">https://mycpen.github.io/posts/2b6a609ea23a.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external" >CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="/" target="_blank"><span class="text-dark">Peng</span><small class="ml-1x">SRE</small></a></h3>
+        <div>&#34; 我之所以想变强，是为了活得轻松写意。&#34;__一拳超人</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/posts/c5689376cc97.html" title="09_Linux基础-SHELL-标准输入与标准输出-重定向-管道"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/posts/0c8c42710561.html" title="07_Linux基础-计划任务-备份脚本-变量定义和使用"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn   collapsed  " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span style="color:#C71585"><b>[&nbsp;</b></span><span style="color:#C71585"><b>文章目录</b></span>
+        <b><i style="color:red" class="text-collapsed icon icon-anchor"></i></b>
+        <b><i class="text-in icon icon-close"></i></b>
+        <span style="color:#C71585"><b>]</b></span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+    
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/mycpen" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://juejin.cn/user/4007034458485159" target="_blank" title="Juejin" data-toggle=tooltip data-placement=top><i class="icon icon-juejin"></i></a></li>
+        
+        <li><a href="https://segmentfault.com/u/mycpen" target="_blank" title="Segmentfault" data-toggle=tooltip data-placement=top><i class="icon icon-segmentfault"></i></a></li>
+        
+        <li><a href="https://stackoverflow.com/users/19841214/mycpen" target="_blank" title="Stackoverflow" data-toggle=tooltip data-placement=top><i class="icon icon-stackoverflow"></i></a></li>
+        
+        <li><a href="https://gitee.com/mycpen" target="_blank" title="Gitee" data-toggle=tooltip data-placement=top><i class="icon icon-gitee"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+        <b>
+        &copy; &nbsp;2022 Mycpen
+        </b>
+        <br><i class="icon icon-hezuo">&nbsp;&nbsp;</i><b>Powered by&nbsp;</b><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;&nbsp;<b>Theme&nbsp;</b><a target="_blank" rel="noopener" href="https://github.com/cofess/hexo-theme-pure">Pure</a>
+        <div class="publishby" style="font-family:Courier">
+            <span id="busuanzi_container_site_pv">
+                <i class="icon icon-eye">&nbsp;&nbsp;</i><span id="busuanzi_value_site_pv" style="font-family:Courier"></span>&nbsp;
+                <i class="icon icon-users">&nbsp;&nbsp;</i><span id="busuanzi_value_site_uv" style="font-family:Courier"></span>
+            </span>
+            <br><i class="icon icon-clock"></i>&nbsp;<span id="sitetime" style="font-family:Courier"></span>
+        </div>
+        <!-- -->
+        <div class="publishby">
+            备案号：<a href="http://beian.miit.gov.cn" target="_blank">苏ICP备2020069048号-1</a>
+        </div>
+        <!-- -->
+    </div>
+</footer>
+<script>function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+       year - 作为date对象的年份，为4位年份值
+       month - 0-11之间的整数，做为date对象的月份
+       day - 1-31之间的整数，做为date对象的天数
+       hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+       minutes - 0-59之间的整数，做为date对象的分钟数
+       seconds - 0-59之间的整数，做为date对象的秒数
+       microseconds - 0-999之间的整数，做为date对象的毫秒数
+    */
+    var t1 = Date.UTC(2022,08,28,00,00,00); //t1为建站时间
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    // 将「数字」转「补零字符串」
+    var y = diffYears.toString()
+    var d = diffDays.toString().padStart(3, '0')
+    var h = diffHours.toString().padStart(2, '0')
+    var m = diffMinutes.toString().padStart(2, '0')
+    var s = diffSeconds.toString().padStart(2, '0')
+    document.getElementById("sitetime").innerHTML=y+":"+d+":"+h+":"+m+":"+s;
+    }
+    siteTime();
+</script>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+    
+    <script src="//code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" />
+    <script type="text/javascript">
+    var GUEST = ['nick', 'mail', 'link'];
+    var meta = 'nick,mail,link';
+    meta = meta.split(',').filter(function(item) {
+        return GUEST.indexOf(item) > -1;
+    });
+    var requiredFields = 'mail';
+    requiredFields = requiredFields.split(',');
+
+    new Valine({
+        el: '#vcomments',
+        appId: 'xq9WWLj240CudNDG1pxmHepA-gzGzoHsz',
+        appKey: 'IMUHid08Bv4OWOIwT8ueGjrq',
+        verify: true,
+        notify: true,
+        placeholder: '',
+        avatar: 'robohash',
+        meta: meta,
+        pageSize: '10' || 10,
+        enableQQ: 'true',
+        recordIP: 'true',
+        requiredFields: requiredFields,
+        visitor: true,
+        master: '1000b2475c5eaaef39376cab396fbc91',
+        friends: ['1725648a3566b8841f19423519e0a36e', '87b6f0e96e63727d889bb3653fb5867c', 'b7c8e70dc5b2bbbdbdeca1fc0e71b919'],
+        tagMeta: ['博主', '', ''],
+        metaPlaceholder: {"nick":"昵称/QQ号","mail":"邮箱(必填)","link":"网址(http://)"},
+        // 设置Bilibili表情包地址
+        emojiCDN: '//i0.hdslb.com/bfs/emote/', 
+        // 表情title和图片映射
+        emojiMaps: {
+            "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+            "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
+            "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",
+            "tv_再见": "180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
+            "tv_冷漠": "b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
+            "tv_发怒": "34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
+            "tv_发财": "34db290afd2963723c6eb3c4560667db7253a21a.png",
+            "tv_可爱": "9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
+            "tv_吐血": "09dd16a7aa59b77baa1155d47484409624470c77.png",
+            "tv_呆": "fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+            "tv_呕吐": "9f996894a39e282ccf5e66856af49483f81870f3.png",
+            "tv_困": "241ee304e44c0af029adceb294399391e4737ef2.png",
+            "tv_坏笑": "1f0b87f731a671079842116e0991c91c2c88645a.png",
+            "tv_大佬": "093c1e2c490161aca397afc45573c877cdead616.png",
+            "tv_大哭": "23269aeb35f99daee28dda129676f6e9ea87934f.png",
+            "tv_委屈": "d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+            "tv_害羞": "a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
+            "tv_尴尬": "7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+            "tv_微笑": "70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
+            "tv_思考": "90cf159733e558137ed20aa04d09964436f618a1.png",
+            "tv_惊吓": "0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
+            // ... 更多表情
+        },
+    });
+
+    fetch('https://v1.hitokoto.cn/?c=b')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+
+    </script>
+
+
+     
+
+
+
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.js"></script>
+  <script>
+  //利用 FancyBox 实现点击图片放大
+  $(document).ready(function() {
+    $('article img').not('[hidden]').not('.panel-body img').each(function() {
+      var $image = $(this);
+      var imageCaption = $image.attr('alt');
+      var $imageWrapLink = $image.parent('a');
+      if ($imageWrapLink.length < 1) {
+        var src = this.getAttribute('src');
+        var idx = src.lastIndexOf('?');
+        if (idx != -1) {
+          src = src.substring(0, idx);
+        }
+        $imageWrapLink = $image.wrap('<a href="' + src + '"></a>').parent('a');
+      }
+      $imageWrapLink.attr('data-fancybox', 'images');
+      if (imageCaption) {
+        $imageWrapLink.attr('data-caption', imageCaption);
+      }
+    });
+    $().fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+    });
+  });
+  </script>
+
+
+
+    <script defer type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'G-YNMXCDY177', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+    <script defer>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?03b05cf1da8eee934a12b53adecf56d8";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<div id="go-top"></div>
+<style type="text/css">
+#go-top {
+ width:40px;height:40px;
+ background-color:#DDA0DD;
+ position:relative;
+ border-radius:20px;
+ position:fixed;right:20px;bottom:50px;
+ cursor:pointer;display:none;
+}
+#go-top:after {
+ content:" ";
+ position:absolute;left:14px;top:14px;
+ border-top:2px solid #fff;border-right:2px solid #fff;
+ width:12px;height:12px;
+ transform:rotate(-45deg);
+}
+#go-top:hover {
+ background-color:#8A2BE2;
+}
+</style>
+<script>
+$(function () {
+  var top=$("#go-top");
+  $(window).scroll(function () {
+    ($(window).scrollTop() > 300) ? top.show(300) : top.hide(200);
+    $("#go-top").click(function () {
+      $('body,html').animate({scrollTop:0});
+      return false();
+    })
+  });
+});
+</script>
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+      z-index: 2;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+        .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  
+  <script>
+    addLoadEvent(()=>{
+      $('.highlight').each(function (i, e) {
+        var $wrap = $('<div>').addClass('highlight-wrap')
+        $(e).after($wrap)
+        $wrap.append($('<button>').addClass('copy-btn').append('一键复制').on('click', function (e) {
+          var code = $(this).parent().find(".code")[0].innerText
+          
+              code += ""
+          
+          var ta = document.createElement('textarea')
+          document.body.appendChild(ta)
+          ta.style.position = 'absolute'
+          ta.style.top = '0px'
+          ta.style.left = '0px'
+          ta.value = code
+          ta.select()
+          ta.focus()
+          var result = document.execCommand('copy')
+          document.body.removeChild(ta)
+          
+            if(result)$(this).text('复制成功')
+            else $(this).text('复制失败')
+          
+          $(this).blur()
+        })).on('mouseleave', function (e) {
+          var $b = $(this).find('.copy-btn')
+          setTimeout(function () {
+            $b.text('一键复制')
+          }, 300)
+        }).append(e)
+      })
+    })
+  </script>
+
+
+</body>
+</html>

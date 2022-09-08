@@ -1,4 +1,4 @@
-# 基于 Hexo 搭建的私人博客
+# Hexo + Pure 搭建的个人博客
 ## 一. 支持
 1. [Hexo](https://hexo.io/zh-cn/)
    - Hexo 是一个快速、简洁且高效的博客框架。
