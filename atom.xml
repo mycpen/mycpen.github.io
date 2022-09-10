@@ -6,7 +6,7 @@
   <link href="https://mycpen.github.io/atom.xml" rel="self"/>
   
   <link href="https://mycpen.github.io/"/>
-  <updated>2022-09-01T09:10:01.000Z</updated>
+  <updated>2022-09-10T04:00:01.000Z</updated>
   <id>https://mycpen.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>01_PHP-CentOS8.2 编译安装 PHP8.1.10</title>
+    <link href="https://mycpen.github.io/posts/8c0cadef35a1.html"/>
+    <id>https://mycpen.github.io/posts/8c0cadef35a1.html</id>
+    <published>2022-09-10T04:00:00.000Z</published>
+    <updated>2022-09-10T04:00:01.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;PHP&lt;/code&gt; + &lt;code&gt;编译安装&lt;/code&gt; + &lt;code&gt;图床迁移&lt;/code&gt;</summary>
+    
+    
+    
+    <category term="PHP" scheme="https://mycpen.github.io/categories/PHP/"/>
+    
+    
+    <category term="PHP" scheme="https://mycpen.github.io/tags/PHP/"/>
+    
+    <category term="脚本" scheme="https://mycpen.github.io/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>10_Python-CSDN_内存管理</title>
@@ -247,9 +268,9 @@
     
     <category term="Hexo" scheme="https://mycpen.github.io/tags/Hexo/"/>
     
-    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
-    
     <category term="Git" scheme="https://mycpen.github.io/tags/Git/"/>
+    
+    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
     
   </entry>
   
@@ -430,25 +451,6 @@
     <category term="Java" scheme="https://mycpen.github.io/tags/Java/"/>
     
     <category term="编码" scheme="https://mycpen.github.io/tags/%E7%BC%96%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>01_Java-特性-jdk-运行机制-转义字符-注释-代码规范</title>
-    <link href="https://mycpen.github.io/posts/036fced05398.html"/>
-    <id>https://mycpen.github.io/posts/036fced05398.html</id>
-    <published>2022-08-29T06:00:01.000Z</published>
-    <updated>2022-08-29T06:00:02.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;jdk&lt;/code&gt; + &lt;code&gt;oop&lt;/code&gt; + &lt;code&gt;转义字符&lt;/code&gt;</summary>
-    
-    
-    
-    <category term="Java" scheme="https://mycpen.github.io/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="https://mycpen.github.io/tags/Java/"/>
     
   </entry>
   
