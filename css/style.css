@@ -9338,3 +9338,14 @@ img.vimg:hover {
     display: none;
 }
 
+/* 又拍云提供信息 */
+.img-upyun {
+  border: 0;
+  /* border-style: solid; */
+  border-color: #514e92;
+  /* box-sizing: border-box; */
+  margin: auto;
+  padding: 0px;
+/*  text-align: center;
+  display: block;*/
+}
