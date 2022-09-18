@@ -9349,3 +9349,8 @@ img.vimg:hover {
 /*  text-align: center;
   display: block;*/
 }
+
+/* 增加字体大小 */
+body {
+  font-size: 16px;
+}
