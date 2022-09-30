@@ -31,11 +31,11 @@
     <category term="Error" scheme="https://mycpen.github.io/categories/Error/"/>
     
     
+    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
+    
     <category term="Error" scheme="https://mycpen.github.io/tags/Error/"/>
     
     <category term="Nginx" scheme="https://mycpen.github.io/tags/Nginx/"/>
-    
-    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
     
   </entry>
   
@@ -289,9 +289,9 @@
     <category term="Hexo" scheme="https://mycpen.github.io/categories/Hexo/"/>
     
     
-    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
-    
     <category term="Hexo" scheme="https://mycpen.github.io/tags/Hexo/"/>
+    
+    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
     
     <category term="Git" scheme="https://mycpen.github.io/tags/Git/"/>
     
@@ -331,9 +331,9 @@
     <category term="Hexo" scheme="https://mycpen.github.io/categories/Hexo/"/>
     
     
-    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
-    
     <category term="Hexo" scheme="https://mycpen.github.io/tags/Hexo/"/>
+    
+    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
     
   </entry>
   
@@ -375,9 +375,9 @@
     
     <category term="Django" scheme="https://mycpen.github.io/tags/Django/"/>
     
-    <category term="HTTP" scheme="https://mycpen.github.io/tags/HTTP/"/>
-    
     <category term="MTV" scheme="https://mycpen.github.io/tags/MTV/"/>
+    
+    <category term="HTTP" scheme="https://mycpen.github.io/tags/HTTP/"/>
     
     <category term="GET" scheme="https://mycpen.github.io/tags/GET/"/>
     
