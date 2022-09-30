@@ -1116,8 +1116,8 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Troubleshooting</tag>
+        <tag>Hexo</tag>
         <tag>Git</tag>
       </tags>
   </entry>
@@ -1216,8 +1216,8 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Troubleshooting</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1623,10 +1623,10 @@
       </categories>
       <tags>
         <tag>Django</tag>
+        <tag>MTV</tag>
         <tag>HTTP</tag>
         <tag>GET</tag>
         <tag>POST</tag>
-        <tag>MTV</tag>
         <tag>MVC</tag>
       </tags>
   </entry>
