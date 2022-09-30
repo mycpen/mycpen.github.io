@@ -31,6 +31,8 @@
     <category term="Error" scheme="https://mycpen.github.io/categories/Error/"/>
     
     
+    <category term="Error" scheme="https://mycpen.github.io/tags/Error/"/>
+    
     <category term="Nginx" scheme="https://mycpen.github.io/tags/Nginx/"/>
     
     <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
@@ -287,9 +289,9 @@
     <category term="Hexo" scheme="https://mycpen.github.io/categories/Hexo/"/>
     
     
-    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
-    
     <category term="Hexo" scheme="https://mycpen.github.io/tags/Hexo/"/>
+    
+    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
     
     <category term="Git" scheme="https://mycpen.github.io/tags/Git/"/>
     
@@ -329,9 +331,9 @@
     <category term="Hexo" scheme="https://mycpen.github.io/categories/Hexo/"/>
     
     
-    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
-    
     <category term="Hexo" scheme="https://mycpen.github.io/tags/Hexo/"/>
+    
+    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
     
   </entry>
   
@@ -375,11 +377,11 @@
     
     <category term="HTTP" scheme="https://mycpen.github.io/tags/HTTP/"/>
     
-    <category term="MTV" scheme="https://mycpen.github.io/tags/MTV/"/>
-    
     <category term="GET" scheme="https://mycpen.github.io/tags/GET/"/>
     
     <category term="POST" scheme="https://mycpen.github.io/tags/POST/"/>
+    
+    <category term="MTV" scheme="https://mycpen.github.io/tags/MTV/"/>
     
     <category term="MVC" scheme="https://mycpen.github.io/tags/MVC/"/>
     
@@ -433,8 +435,8 @@
   
   <entry>
     <title>03_Java-运算符-标识符命名规则规范-键盘输入-进制</title>
-    <link href="https://mycpen.github.io/posts/61e9d308.html"/>
-    <id>https://mycpen.github.io/posts/61e9d308.html</id>
+    <link href="https://mycpen.github.io/posts/62652.html"/>
+    <id>https://mycpen.github.io/posts/62652.html</id>
     <published>2022-08-29T06:30:00.000Z</published>
     <updated>2022-08-29T06:30:01.000Z</updated>
     
