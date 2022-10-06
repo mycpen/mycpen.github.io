@@ -14,10 +14,10 @@
 
 
 ## 二. 托管
-- 云服务器、GitHub、Gitee；
+- 云服务器、GitHub、Gitee（不再同步）；
 - 站点：
   1. [https://blog.cpen.top](https://blog.cpen.top/)
   2. [https://mycpen.github.io](https://mycpen.github.io/)
-  3. [https://mycpen.gitee.io](https://mycpen.gitee.io/)
+  3. [https://mycpen.gitee.io](https://mycpen.gitee.io/)（不再同步）
 
 &emsp;&emsp;&emsp;<a href="https://blog.cpen.top/" target="_self"><img src="/images/logo/aliyun.svg" title="云服务器" width="50px" height="50px"></a>&nbsp;<a href="https://mycpen.github.io/" target="_self"><img src="/images/logo/github.svg" title="GitHub Pages" width="50px" height="50px"></a>&nbsp;<a href="https://mycpen.gitee.io/" target="_self"><img src="/images/logo/gitee.svg" title="Gitee Pages" width="50px" height="50px"></a>
