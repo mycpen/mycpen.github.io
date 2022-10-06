@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Mycpen&#39;s Blog</title>
   
-  
+  <subtitle>程序人生</subtitle>
   <link href="https://mycpen.github.io/atom.xml" rel="self"/>
   
   <link href="https://mycpen.github.io/"/>
@@ -24,7 +24,7 @@
     <updated>2022-09-18T10:00:01.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;Error&lt;/code&gt; + &lt;code&gt;Nginx&lt;/code&gt; + &lt;code&gt;readv() failed (104: Connection reset by peer)&lt;/code&gt;</summary>
+    <summary type="html">Troubleshooting</summary>
     
     
     
@@ -47,7 +47,7 @@
     <updated>2022-09-18T04:00:01.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;PHP&lt;/code&gt; + &lt;code&gt;编译安装&lt;/code&gt; + &lt;code&gt;图床迁移&lt;/code&gt;</summary>
+    <summary type="html">一种开源的通用计算机脚本语言</summary>
     
     
     
@@ -261,7 +261,7 @@
     <updated>2022-09-01T07:40:01.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;摘要：以前在 &lt;a href=&quot;https://blog.csdn.net/cpen_web/category_11089219.html&quot;&gt;&lt;code&gt;CSDN 新星计划&lt;/code&gt;&lt;/a&gt; 上写的文章，迁移至此。</summary>
+    <summary type="html">一种广泛使用的解释型、高级和通用的编程语言</summary>
     
     
     
@@ -418,7 +418,7 @@
     <updated>2022-08-29T06:40:01.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;MTV&lt;/code&gt; + &lt;code&gt;URL&lt;/code&gt; + &lt;code&gt;视图函数&lt;/code&gt; + &lt;code&gt;项目结构&lt;/code&gt;</summary>
+    <summary type="html">一个开放源代码的 Web 应用框架</summary>
     
     
     
