@@ -579,6 +579,13 @@
   </url>
   
   <url>
+    <loc>https://mycpen.github.io/tags/Git/</loc>
+    <lastmod>2022-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://mycpen.github.io/tags/Java/</loc>
     <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -593,13 +600,6 @@
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/tags/Git/</loc>
-    <lastmod>2022-10-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://mycpen.github.io/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/</loc>
     <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -608,20 +608,6 @@
   
   <url>
     <loc>https://mycpen.github.io/tags/%E8%BF%9B%E5%88%B6/</loc>
-    <lastmod>2022-10-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mycpen.github.io/tags/PHP/</loc>
-    <lastmod>2022-10-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mycpen.github.io/tags/%E8%84%9A%E6%9C%AC/</loc>
     <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -684,6 +670,20 @@
   </url>
   
   <url>
+    <loc>https://mycpen.github.io/tags/PHP/</loc>
+    <lastmod>2022-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mycpen.github.io/tags/%E8%84%9A%E6%9C%AC/</loc>
+    <lastmod>2022-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://mycpen.github.io/tags/Python/</loc>
     <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -705,13 +705,6 @@
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-10-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://mycpen.github.io/tags/%E6%A8%A1%E5%9D%97/</loc>
     <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -720,6 +713,13 @@
   
   <url>
     <loc>https://mycpen.github.io/tags/mail/</loc>
+    <lastmod>2022-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mycpen.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -747,14 +747,14 @@
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</loc>
+    <loc>https://mycpen.github.io/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
     <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
+    <loc>https://mycpen.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -791,14 +791,14 @@
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/categories/PHP/</loc>
+    <loc>https://mycpen.github.io/categories/Linux/</loc>
     <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mycpen.github.io/categories/Linux/</loc>
+    <loc>https://mycpen.github.io/categories/PHP/</loc>
     <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
