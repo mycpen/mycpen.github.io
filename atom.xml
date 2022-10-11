@@ -28,7 +28,9 @@
       
     <summary type="html">&lt;p&gt;摘要：&lt;code&gt;shell&lt;/code&gt; + &lt;code&gt;awk&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&quot;一-sed的整行替换-c&quot;&gt;&lt;a href=&quot;#一-sed的整行替换-c&quot; class=&quot;headerlink&quot; title=&quot;一. sed的整行替换  c&quot;</summary>
+&lt;h1 id=&quot;一-sed的整行替换-c&quot;&gt;一. sed的整行替换  c&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;</summary>
       
     
     
@@ -91,8 +93,10 @@
     <summary type="html">&lt;p&gt;摘要：&lt;code&gt;shell&lt;/code&gt; + &lt;code&gt;awk&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
-&lt;p&gt;/bin下面放二进制文件&lt;br&gt;lib 放系统的公共模块、公共库、公共工具&lt;br&gt;/dev设备文件&lt;/p&gt;
-&lt;h1 id=&quot;标准输入、标准输出</summary>
+&lt;p&gt;/bin下面放二进制文件&lt;br&gt;
+lib 放系统的公共模块、公共库、公共工具&lt;br&gt;
+/dev设备文件&lt;/p&gt;
+&lt;p&gt;#标准输入、标准输出&lt;/</summary>
       
     
     
@@ -121,9 +125,9 @@
     <summary type="html">&lt;p&gt;摘要：&lt;code&gt;nginx&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;web方向&lt;/p&gt;
-&lt;p&gt;​        经典提问：&lt;/p&gt;
-&lt;p&gt;​                在浏览器里输入一个www.baidu.com回车，到显示出内容，背后发生哪些事情？&lt;/p&gt;
-&lt;p&gt;​ </summary>
+&lt;p&gt;​		经典提问：&lt;/p&gt;
+&lt;p&gt;​				在浏览器里输入一个www.baidu.com回车，到显示出内容，背后发生哪些事情？&lt;/p&gt;
+&lt;p&gt;​				应用层 --&amp;gt; 传输层 </summary>
       
     
     
@@ -149,9 +153,14 @@
       
     <summary type="html">&lt;p&gt;摘要：&lt;code&gt;Linux&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;ansible&lt;br&gt;        playbook&lt;br&gt;nfs&lt;br&gt;nginx&lt;br&gt;dns&lt;/p&gt;
+&lt;p&gt;ansible&lt;br&gt;
+playbook&lt;br&gt;
+nfs&lt;br&gt;
+nginx&lt;br&gt;
+dns&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&quot;一-ansible&quot;&gt;&lt;a href=&quot;#一-ansible&quot; cla</summary>
+&lt;h1 id=&quot;一-ansible&quot;&gt;一. ansible&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;a</summary>
       
     
     
@@ -228,8 +237,13 @@
       
     <summary type="html">&lt;p&gt;摘要：&lt;code&gt;ansible&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&quot;一-云计算&quot;&gt;&lt;a href=&quot;#一-云计算&quot; class=&quot;headerlink&quot; title=&quot;一. 云计算&quot;&gt;&lt;/a&gt;一. 云计算&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong</summary>
+&lt;h1 id=&quot;一-云计算&quot;&gt;一. 云计算&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;云计算&lt;/strong&gt;&lt;br&gt;
+openstack&lt;br&gt;
+docker&lt;br&gt;
+kvm&lt;br&gt;
+虚拟化</summary>
       
     
     
