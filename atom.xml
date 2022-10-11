@@ -6,7 +6,7 @@
   <link href="https://mycpen.github.io/atom.xml" rel="self"/>
   
   <link href="https://mycpen.github.io/"/>
-  <updated>2022-09-18T10:00:01.000Z</updated>
+  <updated>2022-10-11T10:00:01.000Z</updated>
   <id>https://mycpen.github.io/</id>
   
   <author>
@@ -15,6 +15,270 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>30_Linux基础-shell编程-sed</title>
+    <link href="https://mycpen.github.io/posts/4cb758ea.html"/>
+    <id>https://mycpen.github.io/posts/4cb758ea.html</id>
+    <published>2022-10-11T10:00:00.000Z</published>
+    <updated>2022-10-11T10:00:01.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;shell&lt;/code&gt; + &lt;code&gt;awk&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;一-sed的整行替换-c&quot;&gt;一. sed的整行替换  c&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://mycpen.github.io/tags/Shell/"/>
+    
+    <category term="sed" scheme="https://mycpen.github.io/tags/sed/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>29_Linux基础-shell编程-awk-sed</title>
+    <link href="https://mycpen.github.io/posts/3ae7567f.html"/>
+    <id>https://mycpen.github.io/posts/3ae7567f.html</id>
+    <published>2022-10-11T09:00:00.000Z</published>
+    <updated>2022-10-11T09:00:01.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;shell&lt;/code&gt; + &lt;code&gt;awk&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;awk&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;输入分隔符（-F、FS）、输出分隔符（OFS）&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;awk里引用shell变量&lt;/p&gt;
+&lt;h</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://mycpen.github.io/tags/Shell/"/>
+    
+    <category term="awk" scheme="https://mycpen.github.io/tags/awk/"/>
+    
+    <category term="sed" scheme="https://mycpen.github.io/tags/sed/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>28_Linux基础-shell编程-awk</title>
+    <link href="https://mycpen.github.io/posts/29e2641c.html"/>
+    <id>https://mycpen.github.io/posts/29e2641c.html</id>
+    <published>2022-10-11T08:00:00.000Z</published>
+    <updated>2022-10-11T08:00:01.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;shell&lt;/code&gt; + &lt;code&gt;awk&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/bin下面放二进制文件&lt;br&gt;
+lib 放系统的公共模块、公共库、公共工具&lt;br&gt;
+/dev设备文件&lt;/p&gt;
+&lt;p&gt;#标准输入、标准输出&lt;/</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://mycpen.github.io/tags/Shell/"/>
+    
+    <category term="awk" scheme="https://mycpen.github.io/tags/awk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>26_Linux基础-项目轮廓-回顾ansible-dns-nfs-nginx</title>
+    <link href="https://mycpen.github.io/posts/dd4b1092.html"/>
+    <id>https://mycpen.github.io/posts/dd4b1092.html</id>
+    <published>2022-10-11T07:00:00.000Z</published>
+    <updated>2022-10-11T07:00:01.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;Linux&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;ansible&lt;br&gt;
+playbook&lt;br&gt;
+nfs&lt;br&gt;
+nginx&lt;br&gt;
+dns&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;一-ansible&quot;&gt;一. ansible&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;a</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>27_Linux基础-nginx</title>
+    <link href="https://mycpen.github.io/posts/45562d6f.html"/>
+    <id>https://mycpen.github.io/posts/45562d6f.html</id>
+    <published>2022-10-11T06:30:00.000Z</published>
+    <updated>2022-10-11T06:30:01.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;nginx&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;web方向&lt;/p&gt;
+&lt;p&gt;​		经典提问：&lt;/p&gt;
+&lt;p&gt;​				在浏览器里输入一个www.baidu.com回车，到显示出内容，背后发生哪些事情？&lt;/p&gt;
+&lt;p&gt;​				应用层 --&amp;gt; 传输层 </summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/categories/Linux/"/>
+    
+    
+    <category term="Nginx" scheme="https://mycpen.github.io/tags/Nginx/"/>
+    
+    <category term="Linux" scheme="https://mycpen.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>25_Linux基础-NFS服务</title>
+    <link href="https://mycpen.github.io/posts/317b0311.html"/>
+    <id>https://mycpen.github.io/posts/317b0311.html</id>
+    <published>2022-10-11T06:00:00.000Z</published>
+    <updated>2022-10-11T06:00:01.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;NFS&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;日志轮转：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_43265596/article/details/85469405&quot;&gt;https://blog.csdn.n</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/tags/Linux/"/>
+    
+    <category term="NFS" scheme="https://mycpen.github.io/tags/NFS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>24_Linux基础-DNS服务</title>
+    <link href="https://mycpen.github.io/posts/ecc378ee.html"/>
+    <id>https://mycpen.github.io/posts/ecc378ee.html</id>
+    <published>2022-10-11T05:00:00.000Z</published>
+    <updated>2022-10-11T05:00:01.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;DNS&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考文章：&lt;a href=&quot;https://blog.csdn.net/loukundeboke/article/details/80012231&quot;&gt;https://blog.csdn.net/loukunde</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/tags/Linux/"/>
+    
+    <category term="DNS" scheme="https://mycpen.github.io/tags/DNS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>23_Linux基础-ansible2</title>
+    <link href="https://mycpen.github.io/posts/b0a8892b.html"/>
+    <id>https://mycpen.github.io/posts/b0a8892b.html</id>
+    <published>2022-10-11T04:00:00.000Z</published>
+    <updated>2022-10-11T04:00:01.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;ansible&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;一-云计算&quot;&gt;一. 云计算&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;云计算&lt;/strong&gt;&lt;br&gt;
+openstack&lt;br&gt;
+docker&lt;br&gt;
+kvm&lt;br&gt;
+虚拟化</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://mycpen.github.io/tags/Linux/"/>
+    
+    <category term="Ansible" scheme="https://mycpen.github.io/tags/Ansible/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>01_Other-Supervisor管理进程</title>
+    <link href="https://mycpen.github.io/posts/88a726.html"/>
+    <id>https://mycpen.github.io/posts/88a726.html</id>
+    <published>2022-10-10T17:00:00.000Z</published>
+    <updated>2022-10-10T17:00:01.000Z</updated>
+    
+    
+    <summary type="html">零碎知识点</summary>
+    
+    
+    
+    <category term="Other" scheme="https://mycpen.github.io/categories/Other/"/>
+    
+    
+    <category term="Other" scheme="https://mycpen.github.io/tags/Other/"/>
+    
+    <category term="Supervisor" scheme="https://mycpen.github.io/tags/Supervisor/"/>
+    
+    <category term="Twikoo" scheme="https://mycpen.github.io/tags/Twikoo/"/>
+    
+  </entry>
   
   <entry>
     <title>01_Error-Nginx 反代后端接口报错</title>
@@ -250,209 +514,6 @@
     <category term="Python" scheme="https://mycpen.github.io/tags/Python/"/>
     
     <category term="数据类型" scheme="https://mycpen.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>01_Python-CSDN_环境搭建</title>
-    <link href="https://mycpen.github.io/posts/16756.html"/>
-    <id>https://mycpen.github.io/posts/16756.html</id>
-    <published>2022-09-01T07:40:00.000Z</published>
-    <updated>2022-09-01T07:40:01.000Z</updated>
-    
-    
-    <summary type="html">一种广泛使用的解释型、高级和通用的编程语言</summary>
-    
-    
-    
-    <category term="Python" scheme="https://mycpen.github.io/categories/Python/"/>
-    
-    
-    <category term="Python" scheme="https://mycpen.github.io/tags/Python/"/>
-    
-    <category term="环境" scheme="https://mycpen.github.io/tags/%E7%8E%AF%E5%A2%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>04_Hexo-多平台部署-云服务器-GitHub-Gitee</title>
-    <link href="https://mycpen.github.io/posts/38874.html"/>
-    <id>https://mycpen.github.io/posts/38874.html</id>
-    <published>2022-08-31T08:00:00.000Z</published>
-    <updated>2022-09-06T04:41:01.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;多平台&lt;/code&gt; + &lt;code&gt;一键部署&lt;/code&gt; + &lt;code&gt;云服务器&lt;/code&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://mycpen.github.io/categories/Hexo/"/>
-    
-    
-    <category term="Hexo" scheme="https://mycpen.github.io/tags/Hexo/"/>
-    
-    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
-    
-    <category term="Git" scheme="https://mycpen.github.io/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>03_Hexo-Github Pages 个人博客源文件备份迁移</title>
-    <link href="https://mycpen.github.io/posts/43907.html"/>
-    <id>https://mycpen.github.io/posts/43907.html</id>
-    <published>2022-08-30T08:00:00.000Z</published>
-    <updated>2022-08-30T22:00:01.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;Hexo&lt;/code&gt; + &lt;code&gt;迁移 / 备份&lt;/code&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://mycpen.github.io/categories/Hexo/"/>
-    
-    
-    <category term="Hexo" scheme="https://mycpen.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>02_Hexo-出错排查-Nunjucks Error</title>
-    <link href="https://mycpen.github.io/posts/5162.html"/>
-    <id>https://mycpen.github.io/posts/5162.html</id>
-    <published>2022-08-29T07:40:00.000Z</published>
-    <updated>2022-08-29T07:41:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;Nunjucks Error&lt;/code&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://mycpen.github.io/categories/Hexo/"/>
-    
-    
-    <category term="Hexo" scheme="https://mycpen.github.io/tags/Hexo/"/>
-    
-    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>04_Django-模板变量/标签/过滤器/继承-url反向解析</title>
-    <link href="https://mycpen.github.io/posts/65154.html"/>
-    <id>https://mycpen.github.io/posts/65154.html</id>
-    <published>2022-08-29T07:20:00.000Z</published>
-    <updated>2022-08-29T07:20:01.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;变量&lt;/code&gt; + &lt;code&gt;标签&lt;/code&gt; + &lt;code&gt;过滤器&lt;/code&gt; + &lt;code&gt;继承&lt;/code&gt; + &lt;code&gt;URL 反向解析&lt;/code&gt;</summary>
-    
-    
-    
-    <category term="Django" scheme="https://mycpen.github.io/categories/Django/"/>
-    
-    
-    <category term="Django" scheme="https://mycpen.github.io/tags/Django/"/>
-    
-    <category term="URL" scheme="https://mycpen.github.io/tags/URL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>03_Django-GET请求和POST请求-设计模式及模板层</title>
-    <link href="https://mycpen.github.io/posts/42935.html"/>
-    <id>https://mycpen.github.io/posts/42935.html</id>
-    <published>2022-08-29T07:00:00.000Z</published>
-    <updated>2022-08-29T07:00:01.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;GET&lt;/code&gt; + &lt;code&gt;POST&lt;/code&gt; + &lt;code&gt;MTV&lt;/code&gt; + &lt;code&gt;模板层&lt;/code&gt;</summary>
-    
-    
-    
-    <category term="Django" scheme="https://mycpen.github.io/categories/Django/"/>
-    
-    
-    <category term="Django" scheme="https://mycpen.github.io/tags/Django/"/>
-    
-    <category term="MTV" scheme="https://mycpen.github.io/tags/MTV/"/>
-    
-    <category term="HTTP" scheme="https://mycpen.github.io/tags/HTTP/"/>
-    
-    <category term="GET" scheme="https://mycpen.github.io/tags/GET/"/>
-    
-    <category term="POST" scheme="https://mycpen.github.io/tags/POST/"/>
-    
-    <category term="MVC" scheme="https://mycpen.github.io/tags/MVC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>02_Django-路由配置-HTTP协议的请求和响应</title>
-    <link href="https://mycpen.github.io/posts/57095.html"/>
-    <id>https://mycpen.github.io/posts/57095.html</id>
-    <published>2022-08-29T06:50:00.000Z</published>
-    <updated>2022-08-29T06:50:01.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;路由&lt;/code&gt; + &lt;code&gt;HTTP请求与响应&lt;/code&gt;</summary>
-    
-    
-    
-    <category term="Django" scheme="https://mycpen.github.io/categories/Django/"/>
-    
-    
-    <category term="Django" scheme="https://mycpen.github.io/tags/Django/"/>
-    
-    <category term="HTTP" scheme="https://mycpen.github.io/tags/HTTP/"/>
-    
-    <category term="状态码" scheme="https://mycpen.github.io/tags/%E7%8A%B6%E6%80%81%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>01_Django-介绍-项目结构-URL和视图函数</title>
-    <link href="https://mycpen.github.io/posts/14763.html"/>
-    <id>https://mycpen.github.io/posts/14763.html</id>
-    <published>2022-08-29T06:40:00.000Z</published>
-    <updated>2022-08-29T06:40:01.000Z</updated>
-    
-    
-    <summary type="html">一个开放源代码的 Web 应用框架</summary>
-    
-    
-    
-    <category term="Django" scheme="https://mycpen.github.io/categories/Django/"/>
-    
-    
-    <category term="Django" scheme="https://mycpen.github.io/tags/Django/"/>
-    
-    <category term="MTV" scheme="https://mycpen.github.io/tags/MTV/"/>
-    
-    <category term="URL" scheme="https://mycpen.github.io/tags/URL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>03_Java-运算符-标识符命名规则规范-键盘输入-进制</title>
-    <link href="https://mycpen.github.io/posts/62652.html"/>
-    <id>https://mycpen.github.io/posts/62652.html</id>
-    <published>2022-08-29T06:30:00.000Z</published>
-    <updated>2022-08-29T06:30:01.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;运算符&lt;/code&gt; + &lt;code&gt;标识符&lt;/code&gt; + &lt;code&gt;进制&lt;/code&gt;</summary>
-    
-    
-    
-    <category term="Java" scheme="https://mycpen.github.io/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="https://mycpen.github.io/tags/Java/"/>
-    
-    <category term="运算符" scheme="https://mycpen.github.io/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
-    
-    <category term="进制" scheme="https://mycpen.github.io/tags/%E8%BF%9B%E5%88%B6/"/>
     
   </entry>
   
