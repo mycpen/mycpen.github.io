@@ -24,14 +24,7 @@
     <updated>2022-10-11T10:00:01.000Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;shell&lt;/code&gt; + &lt;code&gt;awk&lt;/code&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;一-sed的整行替换-c&quot;&gt;一. sed的整行替换  c&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;</summary>
-      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;shell&lt;/code&gt; + &lt;code&gt;awk&lt;/code&gt;</summary>
     
     
     
@@ -54,16 +47,7 @@
     <updated>2022-10-11T09:00:01.000Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;shell&lt;/code&gt; + &lt;code&gt;awk&lt;/code&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;awk&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;输入分隔符（-F、FS）、输出分隔符（OFS）&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;awk里引用shell变量&lt;/p&gt;
-&lt;h</summary>
-      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;shell&lt;/code&gt; + &lt;code&gt;awk&lt;/code&gt;</summary>
     
     
     
@@ -88,16 +72,7 @@
     <updated>2022-10-11T08:00:01.000Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;shell&lt;/code&gt; + &lt;code&gt;awk&lt;/code&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;/bin下面放二进制文件&lt;br&gt;
-lib 放系统的公共模块、公共库、公共工具&lt;br&gt;
-/dev设备文件&lt;/p&gt;
-&lt;p&gt;#标准输入、标准输出&lt;/</summary>
-      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;shell&lt;/code&gt; + &lt;code&gt;awk&lt;/code&gt;</summary>
     
     
     
@@ -120,15 +95,7 @@ lib 放系统的公共模块、公共库、公共工具&lt;br&gt;
     <updated>2022-10-11T07:30:01.000Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;nginx&lt;/code&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;web方向&lt;/p&gt;
-&lt;p&gt;​		经典提问：&lt;/p&gt;
-&lt;p&gt;​				在浏览器里输入一个www.baidu.com回车，到显示出内容，背后发生哪些事情？&lt;/p&gt;
-&lt;p&gt;​				应用层 --&amp;gt; 传输层 </summary>
-      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;nginx&lt;/code&gt;</summary>
     
     
     
@@ -149,19 +116,7 @@ lib 放系统的公共模块、公共库、公共工具&lt;br&gt;
     <updated>2022-10-11T07:00:01.000Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;Linux&lt;/code&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;ansible&lt;br&gt;
-playbook&lt;br&gt;
-nfs&lt;br&gt;
-nginx&lt;br&gt;
-dns&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;一-ansible&quot;&gt;一. ansible&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;a</summary>
-      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;Linux&lt;/code&gt;</summary>
     
     
     
@@ -180,13 +135,7 @@ dns&lt;/p&gt;
     <updated>2022-10-11T06:00:01.000Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;NFS&lt;/code&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;日志轮转：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_43265596/article/details/85469405&quot;&gt;https://blog.csdn.n</summary>
-      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;NFS&lt;/code&gt;</summary>
     
     
     
@@ -207,12 +156,7 @@ dns&lt;/p&gt;
     <updated>2022-10-11T05:00:01.000Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;DNS&lt;/code&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;参考文章：&lt;a href=&quot;https://blog.csdn.net/loukundeboke/article/details/80012231&quot;&gt;https://blog.csdn.net/loukunde</summary>
-      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;DNS&lt;/code&gt;</summary>
     
     
     
@@ -233,18 +177,7 @@ dns&lt;/p&gt;
     <updated>2022-10-11T04:00:01.000Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;ansible&lt;/code&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;一-云计算&quot;&gt;一. 云计算&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;云计算&lt;/strong&gt;&lt;br&gt;
-openstack&lt;br&gt;
-docker&lt;br&gt;
-kvm&lt;br&gt;
-虚拟化</summary>
-      
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;ansible&lt;/code&gt;</summary>
     
     
     
@@ -295,11 +228,11 @@ kvm&lt;br&gt;
     <category term="Error" scheme="https://mycpen.github.io/categories/Error/"/>
     
     
+    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
+    
     <category term="Error" scheme="https://mycpen.github.io/tags/Error/"/>
     
     <category term="Nginx" scheme="https://mycpen.github.io/tags/Nginx/"/>
-    
-    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
     
   </entry>
   
