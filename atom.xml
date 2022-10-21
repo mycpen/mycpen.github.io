@@ -6,7 +6,7 @@
   <link href="https://mycpen.github.io/atom.xml" rel="self"/>
   
   <link href="https://mycpen.github.io/"/>
-  <updated>2022-10-11T10:00:01.000Z</updated>
+  <updated>2022-10-20T17:00:01.000Z</updated>
   <id>https://mycpen.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>02_Other-AList 搭建云盘</title>
+    <link href="https://mycpen.github.io/posts/6a2caa19.html"/>
+    <id>https://mycpen.github.io/posts/6a2caa19.html</id>
+    <published>2022-10-20T17:00:00.000Z</published>
+    <updated>2022-10-20T17:00:01.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;AList&lt;/code&gt; + &lt;code&gt;云盘&lt;/code&gt;</summary>
+    
+    
+    
+    <category term="Other" scheme="https://mycpen.github.io/categories/Other/"/>
+    
+    
+    <category term="Other" scheme="https://mycpen.github.io/tags/Other/"/>
+    
+    <category term="AList" scheme="https://mycpen.github.io/tags/AList/"/>
+    
+  </entry>
   
   <entry>
     <title>30_Linux基础-shell编程-sed</title>
@@ -414,27 +435,6 @@
     <id>https://mycpen.github.io/posts/37069.html</id>
     <published>2022-09-01T08:00:00.000Z</published>
     <updated>2022-09-01T08:00:01.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;摘要：以前在 &lt;a href=&quot;https://blog.csdn.net/cpen_web/category_11089219.html&quot;&gt;&lt;code&gt;CSDN 新星计划&lt;/code&gt;&lt;/a&gt; 上写的文章，迁移至此。</summary>
-    
-    
-    
-    <category term="Python" scheme="https://mycpen.github.io/categories/Python/"/>
-    
-    
-    <category term="Python" scheme="https://mycpen.github.io/tags/Python/"/>
-    
-    <category term="数据类型" scheme="https://mycpen.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>02_Python-CSDN_数据类型1</title>
-    <link href="https://mycpen.github.io/posts/4979.html"/>
-    <id>https://mycpen.github.io/posts/4979.html</id>
-    <published>2022-09-01T07:50:00.000Z</published>
-    <updated>2022-09-01T07:50:01.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;摘要：以前在 &lt;a href=&quot;https://blog.csdn.net/cpen_web/category_11089219.html&quot;&gt;&lt;code&gt;CSDN 新星计划&lt;/code&gt;&lt;/a&gt; 上写的文章，迁移至此。</summary>
