@@ -249,11 +249,11 @@
     <category term="Error" scheme="https://mycpen.github.io/categories/Error/"/>
     
     
-    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
-    
     <category term="Error" scheme="https://mycpen.github.io/tags/Error/"/>
     
     <category term="Nginx" scheme="https://mycpen.github.io/tags/Nginx/"/>
+    
+    <category term="Troubleshooting" scheme="https://mycpen.github.io/tags/Troubleshooting/"/>
     
   </entry>
   
