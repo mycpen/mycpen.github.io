@@ -79,9 +79,9 @@
     
     <category term="Shell" scheme="https://mycpen.github.io/tags/Shell/"/>
     
-    <category term="awk" scheme="https://mycpen.github.io/tags/awk/"/>
-    
     <category term="sed" scheme="https://mycpen.github.io/tags/sed/"/>
+    
+    <category term="awk" scheme="https://mycpen.github.io/tags/awk/"/>
     
   </entry>
   
