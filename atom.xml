@@ -75,9 +75,9 @@
     <category term="Error" scheme="https://blog.cpen.top/categories/Error/"/>
     
     
-    <category term="Git" scheme="https://blog.cpen.top/tags/Git/"/>
-    
     <category term="Error" scheme="https://blog.cpen.top/tags/Error/"/>
+    
+    <category term="Git" scheme="https://blog.cpen.top/tags/Git/"/>
     
   </entry>
   
@@ -144,9 +144,9 @@
     
     <category term="Shell" scheme="https://blog.cpen.top/tags/Shell/"/>
     
-    <category term="awk" scheme="https://blog.cpen.top/tags/awk/"/>
-    
     <category term="sed" scheme="https://blog.cpen.top/tags/sed/"/>
+    
+    <category term="awk" scheme="https://blog.cpen.top/tags/awk/"/>
     
   </entry>
   
@@ -314,11 +314,11 @@
     <category term="Error" scheme="https://blog.cpen.top/categories/Error/"/>
     
     
-    <category term="Troubleshooting" scheme="https://blog.cpen.top/tags/Troubleshooting/"/>
-    
     <category term="Error" scheme="https://blog.cpen.top/tags/Error/"/>
     
     <category term="Nginx" scheme="https://blog.cpen.top/tags/Nginx/"/>
+    
+    <category term="Troubleshooting" scheme="https://blog.cpen.top/tags/Troubleshooting/"/>
     
   </entry>
   
