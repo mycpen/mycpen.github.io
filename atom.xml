@@ -6,7 +6,7 @@
   <link href="https://blog.cpen.top/atom.xml" rel="self"/>
   
   <link href="https://blog.cpen.top/"/>
-  <updated>2022-10-20T17:00:01.000Z</updated>
+  <updated>2022-10-29T10:00:01.000Z</updated>
   <id>https://blog.cpen.top/</id>
   
   <author>
@@ -15,6 +15,71 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>06_Hexo-elemecdn加速Butterfly第三方js</title>
+    <link href="https://blog.cpen.top/posts/9b5a2768.html"/>
+    <id>https://blog.cpen.top/posts/9b5a2768.html</id>
+    <published>2022-10-28T10:00:00.000Z</published>
+    <updated>2022-10-29T10:00:01.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;摘要：Element</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://blog.cpen.top/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://blog.cpen.top/tags/Hexo/"/>
+    
+    <category term="Element" scheme="https://blog.cpen.top/tags/Element/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>05_Hexo-twikoo数据从MongoDB导出-js适配pjax</title>
+    <link href="https://blog.cpen.top/posts/51a9ee30.html"/>
+    <id>https://blog.cpen.top/posts/51a9ee30.html</id>
+    <published>2022-10-27T17:00:00.000Z</published>
+    <updated>2022-10-27T17:00:01.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;摘要：twikoo + pjax</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://blog.cpen.top/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://blog.cpen.top/tags/Hexo/"/>
+    
+    <category term="Twikoo" scheme="https://blog.cpen.top/tags/Twikoo/"/>
+    
+    <category term="PJAX" scheme="https://blog.cpen.top/tags/PJAX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>02_Error-记 Win下 Git 忘加入 PATH</title>
+    <link href="https://blog.cpen.top/posts/cb0ae693.html"/>
+    <id>https://blog.cpen.top/posts/cb0ae693.html</id>
+    <published>2022-10-26T10:00:00.000Z</published>
+    <updated>2022-10-26T10:00:01.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;摘要：&lt;code&gt;git bash&lt;/code&gt;</summary>
+    
+    
+    
+    <category term="Error" scheme="https://blog.cpen.top/categories/Error/"/>
+    
+    
+    <category term="Git" scheme="https://blog.cpen.top/tags/Git/"/>
+    
+    <category term="Error" scheme="https://blog.cpen.top/tags/Error/"/>
+    
+  </entry>
   
   <entry>
     <title>02_Other-AList 搭建云盘</title>
@@ -226,11 +291,11 @@
     <category term="Other" scheme="https://blog.cpen.top/categories/Other/"/>
     
     
+    <category term="Twikoo" scheme="https://blog.cpen.top/tags/Twikoo/"/>
+    
     <category term="Other" scheme="https://blog.cpen.top/tags/Other/"/>
     
     <category term="Supervisor" scheme="https://blog.cpen.top/tags/Supervisor/"/>
-    
-    <category term="Twikoo" scheme="https://blog.cpen.top/tags/Twikoo/"/>
     
   </entry>
   
@@ -249,11 +314,11 @@
     <category term="Error" scheme="https://blog.cpen.top/categories/Error/"/>
     
     
+    <category term="Troubleshooting" scheme="https://blog.cpen.top/tags/Troubleshooting/"/>
+    
     <category term="Error" scheme="https://blog.cpen.top/tags/Error/"/>
     
     <category term="Nginx" scheme="https://blog.cpen.top/tags/Nginx/"/>
-    
-    <category term="Troubleshooting" scheme="https://blog.cpen.top/tags/Troubleshooting/"/>
     
   </entry>
   
@@ -382,71 +447,6 @@
     <category term="模块" scheme="https://blog.cpen.top/tags/%E6%A8%A1%E5%9D%97/"/>
     
     <category term="psutil" scheme="https://blog.cpen.top/tags/psutil/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>05_Python-CSDN_排序算法</title>
-    <link href="https://blog.cpen.top/posts/49827.html"/>
-    <id>https://blog.cpen.top/posts/49827.html</id>
-    <published>2022-09-01T08:20:00.000Z</published>
-    <updated>2022-09-01T08:20:01.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;摘要：以前在 &lt;a href=&quot;https://blog.csdn.net/cpen_web/category_11089219.html&quot;&gt;&lt;code&gt;CSDN 新星计划&lt;/code&gt;&lt;/a&gt; 上写的文章，迁移至此。</summary>
-    
-    
-    
-    <category term="Python" scheme="https://blog.cpen.top/categories/Python/"/>
-    
-    
-    <category term="Python" scheme="https://blog.cpen.top/tags/Python/"/>
-    
-    <category term="算法" scheme="https://blog.cpen.top/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>04_Python-CSDN_mail模块</title>
-    <link href="https://blog.cpen.top/posts/33188.html"/>
-    <id>https://blog.cpen.top/posts/33188.html</id>
-    <published>2022-09-01T08:10:00.000Z</published>
-    <updated>2022-09-01T08:10:01.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;摘要：以前在 &lt;a href=&quot;https://blog.csdn.net/cpen_web/category_11089219.html&quot;&gt;&lt;code&gt;CSDN 新星计划&lt;/code&gt;&lt;/a&gt; 上写的文章，迁移至此。</summary>
-    
-    
-    
-    <category term="Python" scheme="https://blog.cpen.top/categories/Python/"/>
-    
-    
-    <category term="Python" scheme="https://blog.cpen.top/tags/Python/"/>
-    
-    <category term="模块" scheme="https://blog.cpen.top/tags/%E6%A8%A1%E5%9D%97/"/>
-    
-    <category term="mail" scheme="https://blog.cpen.top/tags/mail/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>03_Python-CSDN_数据类型2</title>
-    <link href="https://blog.cpen.top/posts/37069.html"/>
-    <id>https://blog.cpen.top/posts/37069.html</id>
-    <published>2022-09-01T08:00:00.000Z</published>
-    <updated>2022-09-01T08:00:01.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;摘要：以前在 &lt;a href=&quot;https://blog.csdn.net/cpen_web/category_11089219.html&quot;&gt;&lt;code&gt;CSDN 新星计划&lt;/code&gt;&lt;/a&gt; 上写的文章，迁移至此。</summary>
-    
-    
-    
-    <category term="Python" scheme="https://blog.cpen.top/categories/Python/"/>
-    
-    
-    <category term="Python" scheme="https://blog.cpen.top/tags/Python/"/>
-    
-    <category term="数据类型" scheme="https://blog.cpen.top/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     
   </entry>
   
