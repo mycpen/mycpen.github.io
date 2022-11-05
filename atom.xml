@@ -6,7 +6,7 @@
   <link href="https://blog.cpen.top/atom.xml" rel="self"/>
   
   <link href="https://blog.cpen.top/"/>
-  <updated>2022-10-29T10:00:01.000Z</updated>
+  <updated>2022-11-05T17:00:01.000Z</updated>
   <id>https://blog.cpen.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>03_Other-PC端自用软件（工具）整理</title>
+    <link href="https://blog.cpen.top/posts/583c5c34.html"/>
+    <id>https://blog.cpen.top/posts/583c5c34.html</id>
+    <published>2022-11-05T17:00:00.000Z</published>
+    <updated>2022-11-05T17:00:01.000Z</updated>
+    
+    
+    <summary type="html">Other</summary>
+    
+    
+    
+    <category term="Other" scheme="https://blog.cpen.top/categories/Other/"/>
+    
+    
+    <category term="Other" scheme="https://blog.cpen.top/tags/Other/"/>
+    
+    <category term="工具" scheme="https://blog.cpen.top/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>06_Hexo-elemecdn加速Butterfly第三方js</title>
@@ -424,29 +445,6 @@
     <category term="Python" scheme="https://blog.cpen.top/tags/Python/"/>
     
     <category term="函数" scheme="https://blog.cpen.top/tags/%E5%87%BD%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>06_Python-CSDN_psutil模块</title>
-    <link href="https://blog.cpen.top/posts/314.html"/>
-    <id>https://blog.cpen.top/posts/314.html</id>
-    <published>2022-09-01T08:30:00.000Z</published>
-    <updated>2022-09-01T08:30:01.000Z</updated>
-    
-    
-    <summary type="html">Python</summary>
-    
-    
-    
-    <category term="Python" scheme="https://blog.cpen.top/categories/Python/"/>
-    
-    
-    <category term="Python" scheme="https://blog.cpen.top/tags/Python/"/>
-    
-    <category term="模块" scheme="https://blog.cpen.top/tags/%E6%A8%A1%E5%9D%97/"/>
-    
-    <category term="psutil" scheme="https://blog.cpen.top/tags/psutil/"/>
     
   </entry>
   
