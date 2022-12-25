@@ -6,7 +6,7 @@
   <link href="https://blog.cpen.top/atom.xml" rel="self"/>
   
   <link href="https://blog.cpen.top/"/>
-  <updated>2022-11-05T17:00:01.000Z</updated>
+  <updated>2022-12-24T18:00:01.000Z</updated>
   <id>https://blog.cpen.top/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>05_Other-使用 Python open 函数批量替换文件内容</title>
+    <link href="https://blog.cpen.top/posts/3ffec809.html"/>
+    <id>https://blog.cpen.top/posts/3ffec809.html</id>
+    <published>2022-12-23T18:00:00.000Z</published>
+    <updated>2022-12-24T18:00:01.000Z</updated>
+    
+    
+    <summary type="html">Other</summary>
+    
+    
+    
+    <category term="Other" scheme="https://blog.cpen.top/categories/Other/"/>
+    
+    
+    <category term="Other" scheme="https://blog.cpen.top/tags/Other/"/>
+    
+    <category term="Python" scheme="https://blog.cpen.top/tags/Python/"/>
+    
+    <category term="open" scheme="https://blog.cpen.top/tags/open/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>04_Other-使用 Python ftplib 模块同步又拍云云存储数据至本地</title>
+    <link href="https://blog.cpen.top/posts/4f5c6419.html"/>
+    <id>https://blog.cpen.top/posts/4f5c6419.html</id>
+    <published>2022-12-23T17:00:00.000Z</published>
+    <updated>2022-12-23T17:00:01.000Z</updated>
+    
+    
+    <summary type="html">Other</summary>
+    
+    
+    
+    <category term="Other" scheme="https://blog.cpen.top/categories/Other/"/>
+    
+    
+    <category term="Other" scheme="https://blog.cpen.top/tags/Other/"/>
+    
+    <category term="Python" scheme="https://blog.cpen.top/tags/Python/"/>
+    
+    <category term="FTP" scheme="https://blog.cpen.top/tags/FTP/"/>
+    
+  </entry>
   
   <entry>
     <title>03_Other-PC端自用软件（工具）整理</title>
@@ -403,48 +449,6 @@
     <category term="Python" scheme="https://blog.cpen.top/tags/Python/"/>
     
     <category term="上下文管理器" scheme="https://blog.cpen.top/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>08_Python-CSDN_面向对象练习</title>
-    <link href="https://blog.cpen.top/posts/13683.html"/>
-    <id>https://blog.cpen.top/posts/13683.html</id>
-    <published>2022-09-01T08:50:00.000Z</published>
-    <updated>2022-09-01T08:50:01.000Z</updated>
-    
-    
-    <summary type="html">Python</summary>
-    
-    
-    
-    <category term="Python" scheme="https://blog.cpen.top/categories/Python/"/>
-    
-    
-    <category term="Python" scheme="https://blog.cpen.top/tags/Python/"/>
-    
-    <category term="OOP" scheme="https://blog.cpen.top/tags/OOP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>07_Python-CSDN_高阶函数</title>
-    <link href="https://blog.cpen.top/posts/46.html"/>
-    <id>https://blog.cpen.top/posts/46.html</id>
-    <published>2022-09-01T08:40:00.000Z</published>
-    <updated>2022-09-01T08:40:01.000Z</updated>
-    
-    
-    <summary type="html">Python</summary>
-    
-    
-    
-    <category term="Python" scheme="https://blog.cpen.top/categories/Python/"/>
-    
-    
-    <category term="Python" scheme="https://blog.cpen.top/tags/Python/"/>
-    
-    <category term="函数" scheme="https://blog.cpen.top/tags/%E5%87%BD%E6%95%B0/"/>
     
   </entry>
   
