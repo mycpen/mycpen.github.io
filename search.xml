@@ -1,6 +1,323 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>07_Hexo-插件整理</title>
+    <url>/posts/4c16ee73.html</url>
+    <content><![CDATA[<p><strong>目录3 为转载内容</strong>，原文：<a href="https://blog.justlovesmile.top/posts/86111745.html">Justlovesmile_Hexo博客 | 插件推荐</a></p>
+<h2 id="1-较为关注">1. 较为关注</h2>
+<h3 id="1-1-hexo-blog-encrypt">1.1 hexo-blog-encrypt</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>博客文章加密，由 <a href="https://blog.justlovesmile.top/posts/86111745.html">Justlovesmile文章</a> 获知</p>
+</li>
+<li class="lvl-2">
+<p><a href="https://github.com/D0n9X1n/hexo-blog-encrypt">Github地址</a></p>
+</li>
+</ul>
+<h3 id="1-2-hexo-hide-posts">1.2 hexo-hide-posts</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>隐藏 Hexo 文章，由 <a href="https://github.com/jerryc127/hexo-theme-butterfly/pull/1122">Butterfly issue#1122</a>、<a href="https://github.com/jerryc127/hexo-theme-butterfly/issues/1119">issue#1119</a> 获知</p>
+</li>
+<li class="lvl-2">
+<p><a href="https://github.com/prinsss/hexo-hide-posts">Github地址</a></p>
+</li>
+</ul>
+<h3 id="1-3-hexo-renderer-markdown-it">1.3 hexo-renderer-markdown-it</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>渲染引擎，由 <a href="https://butterfly.js.org/posts/ceeb73f/#Math-%E6%95%B8%E5%AD%B8">Butterfly文档</a> 获知，由 <a href="https://ezgx.tk/posts/65320/">Echocbx</a> 获知 plugins 配置项</p>
+</li>
+<li class="lvl-2">
+<p><a href="https://github.com/hexojs/hexo-renderer-markdown-it">Github地址</a></p>
+</li>
+</ul>
+<h3 id="1-4-upupming-hexo-renderer-markdown-it-plus">1.4 @upupming/hexo-renderer-markdown-it-plus</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>渲染引擎，由 <a href="https://butterfly.js.org/posts/ceeb73f/#Math-%E6%95%B8%E5%AD%B8">Butterfly文档</a> 获知</p>
+</li>
+<li class="lvl-2">
+<p><a href="https://github.com/upupming/hexo-renderer-markdown-it-plus">Github地址</a></p>
+</li>
+</ul>
+<h3 id="1-5-hexo-renderer-markdown-it-katex">1.5 hexo-renderer-markdown-it-katex</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>渲染引擎，由 <a href="https://www.nickxu.top/2022/04/17/Hexo-Butterfly-%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97%EF%BC%88%E5%85%AB%EF%BC%89%E4%BD%BF%E7%94%A8-KaTeX-%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">Nick Xu</a> 获知</p>
+</li>
+<li class="lvl-2">
+<p><a href="https://github.com/Abreto/hexo-renderer-markdown-it-katex">Github地址</a></p>
+</li>
+</ul>
+<h2 id="2-Butterfly主题">2. Butterfly主题</h2>
+<h3 id="2-1-hexo-butterfly-swiper">2.1 hexo-butterfly-swiper</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>轮播图，作者：<a href="https://akilar.top/posts/8e1264d1/">Akilar</a>；二创：<a href="https://anzhiy.cn/posts/sdxhu.html#hexo-butterfly-swiper-anzhiyu-%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85">安知鱼</a></p>
+</li>
+</ul>
+<h3 id="2-2-hexo-butterfly-categories-card">2.2 hexo-butterfly-categories-card</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>分类磁铁，<a href="https://akilar.top/posts/a9131002/">Akilar</a></p>
+</li>
+</ul>
+<h3 id="2-3-hexo-filter-fcircle">2.3 hexo-filter-fcircle</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>朋友圈，<a href="https://fcircle-doc.js.cool/#/">https://fcircle-doc.js.cool/#/</a></p>
+</li>
+</ul>
+<h3 id="2-4-hexo-butterfly-article-double-row">2.4 hexo-butterfly-article-double-row</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>文章双栏，<a href="https://zfe.space/post/hexo-butterfly-article-double-row.html">小冰</a></p>
+</li>
+</ul>
+<h3 id="2-5-hexo-butterfly-charts">2.5 hexo-butterfly-charts</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>统计图表，<a href="https://guole.fun/posts/18158/">Guo Le</a></p>
+</li>
+</ul>
+<h2 id="3-以下内容摘自-Justlovesmile">3. 以下内容摘自 Justlovesmile</h2>
+<p>原文：<a href="https://blog.justlovesmile.top/posts/86111745.html">Justlovesmile_Hexo博客 | 插件推荐</a></p>
+<table>
+<thead>
+<tr>
+<th>插件</th>
+<th>功能</th>
+<th>文档链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hexo-generator-index-pin-top</td>
+<td>文章置顶</td>
+<td><a href="https://github.com/netcan/hexo-generator-index-pin-top">https://github.com/netcan/hexo-generator-index-pin-top</a></td>
+</tr>
+<tr>
+<td>hexo-wordcount</td>
+<td>文章字数统计和阅读时长统计</td>
+<td><a href="https://github.com/willin/hexo-wordcount">https://github.com/willin/hexo-wordcount</a></td>
+</tr>
+<tr>
+<td>hexo-abbrlink</td>
+<td>生成URL短链接</td>
+<td><a href="https://github.com/rozbo/hexo-abbrlink">https://github.com/rozbo/hexo-abbrlink</a></td>
+</tr>
+<tr>
+<td>hexo-lazyload-image</td>
+<td>图片懒加载</td>
+<td><a href="https://github.com/Troy-Yang/hexo-lazyload-image">https://github.com/Troy-Yang/hexo-lazyload-image</a></td>
+</tr>
+<tr>
+<td>hexo-generator-baidu-sitemap</td>
+<td>生成baidusitemap.xml</td>
+<td><a href="https://github.com/coneycode/hexo-generator-baidu-sitemap">https://github.com/coneycode/hexo-generator-baidu-sitemap</a></td>
+</tr>
+<tr>
+<td>hexo-generator-sitemap</td>
+<td>生成sitemap.xml</td>
+<td><a href="https://github.com/hexojs/hexo-generator-sitemap">https://github.com/hexojs/hexo-generator-sitemap</a></td>
+</tr>
+<tr>
+<td>hexo-generator-feed</td>
+<td>生成RSS文件</td>
+<td><a href="https://github.com/hexojs/hexo-generator-feed">https://github.com/hexojs/hexo-generator-feed</a></td>
+</tr>
+<tr>
+<td>hexo-external-link</td>
+<td>外链跳转</td>
+<td><a href="https://github.com/hvnobug/hexo-external-link">https://github.com/hvnobug/hexo-external-link</a></td>
+</tr>
+<tr>
+<td>hexo-autonofollow</td>
+<td>自动对外部链接增加nofollow属性</td>
+<td><a href="https://github.com/liuzc/hexo-autonofollow">https://github.com/liuzc/hexo-autonofollow</a></td>
+</tr>
+<tr>
+<td>hexo-filter-nofollow</td>
+<td>为外链添加 <code>rel=&quot;noopener external nofollow noreferrer&quot;</code></td>
+<td><a href="https://github.com/hexojs/hexo-filter-nofollow">https://github.com/hexojs/hexo-filter-nofollow</a></td>
+</tr>
+<tr>
+<td>hexo-prism-plugin</td>
+<td>代码高亮</td>
+<td><a href="https://github.com/ele828/hexo-prism-plugin">https://github.com/ele828/hexo-prism-plugin</a></td>
+</tr>
+<tr>
+<td>hexo-neat</td>
+<td>博客压缩</td>
+<td><a href="https://github.com/rozbo/hexo-neat">https://github.com/rozbo/hexo-neat</a></td>
+</tr>
+<tr>
+<td>hexo-allminifier</td>
+<td>博客压缩</td>
+<td><a href="https://developer.aliyun.com/mirror/npm/package/hexo-all-minifier">https://developer.aliyun.com/mirror/npm/package/hexo-all-minifier</a></td>
+</tr>
+<tr>
+<td>hexo-tag-aplayer</td>
+<td>aplayer音乐播放器</td>
+<td><a href="https://github.com/MoePlayer/hexo-tag-aplayer">https://github.com/MoePlayer/hexo-tag-aplayer</a></td>
+</tr>
+<tr>
+<td>hexo-tag-dplayer</td>
+<td>dplayer视频播放器</td>
+<td><a href="https://github.com/MoePlayer/hexo-tag-dplayer">https://github.com/MoePlayer/hexo-tag-dplayer</a></td>
+</tr>
+<tr>
+<td>hexo-douban</td>
+<td>添加豆瓣读书，电影，游戏页面</td>
+<td><a href="https://github.com/mythsman/hexo-douban">https://github.com/mythsman/hexo-douban</a></td>
+</tr>
+<tr>
+<td>hexo-generator-searchdb</td>
+<td>本地搜索,生成search.xml</td>
+<td><a href="https://github.com/theme-next/hexo-generator-searchdb">https://github.com/theme-next/hexo-generator-searchdb</a></td>
+</tr>
+<tr>
+<td>hexo-algoliasearch</td>
+<td>搜索系统</td>
+<td><a href="https://github.com/LouisBarranqueiro/hexo-algoliasearch">https://github.com/LouisBarranqueiro/hexo-algoliasearch</a></td>
+</tr>
+<tr>
+<td>hexo-algolia</td>
+<td>搜索系统</td>
+<td><a href="https://github.com/oncletom/hexo-algolia">https://github.com/oncletom/hexo-algolia</a></td>
+</tr>
+<tr>
+<td>hexo-generator-search</td>
+<td>本地搜索系统</td>
+<td><a href="https://github.com/wzpan/hexo-generator-search">https://github.com/wzpan/hexo-generator-search</a></td>
+</tr>
+<tr>
+<td>hexo-baidu-url-submit</td>
+<td>百度站长主动推送</td>
+<td><a href="https://github.com/huiwang/hexo-baidu-url-submit">https://github.com/huiwang/hexo-baidu-url-submit</a></td>
+</tr>
+<tr>
+<td>hexo-offline</td>
+<td>开启PWA</td>
+<td><a href="https://github.com/JLHwung/hexo-offline">https://github.com/JLHwung/hexo-offline</a></td>
+</tr>
+<tr>
+<td>hexo-pwa</td>
+<td>开启PWA</td>
+<td><a href="https://github.com/lavas-project/hexo-pwa">https://github.com/lavas-project/hexo-pwa</a></td>
+</tr>
+<tr>
+<td>hexo-helper-live2d</td>
+<td>看板娘</td>
+<td><a href="https://github.com/EYHN/hexo-helper-live2d">https://github.com/EYHN/hexo-helper-live2d</a></td>
+</tr>
+<tr>
+<td>hexo-addlink</td>
+<td>文末添加当前文章链接和版权声明</td>
+<td><a href="https://github.com/acwong00/hexo-addlink">https://github.com/acwong00/hexo-addlink</a></td>
+</tr>
+<tr>
+<td>hexo-blog-encrypt</td>
+<td>博客文章加密</td>
+<td><a href="https://github.com/MikeCoder/hexo-blog-encrypt">https://github.com/MikeCoder/hexo-blog-encrypt</a></td>
+</tr>
+<tr>
+<td>hexo-simple-mindmap</td>
+<td>博客添加脑图</td>
+<td><a href="https://github.com/HunterXuan/hexo-simple-mindmap">https://github.com/HunterXuan/hexo-simple-mindmap</a></td>
+</tr>
+<tr>
+<td>hexo-pdf</td>
+<td>博客展示pdf</td>
+<td><a href="https://github.com/superalsrk/hexo-pdf">https://github.com/superalsrk/hexo-pdf</a></td>
+</tr>
+<tr>
+<td>hexo-tag-echarts</td>
+<td>博客添加图表</td>
+<td><a href="https://github.com/zhoulvjun/hexo-tag-echarts">https://github.com/zhoulvjun/hexo-tag-echarts</a></td>
+</tr>
+<tr>
+<td>hexo-steam-games</td>
+<td>添加Steam游戏界面</td>
+<td><a href="https://github.com/HCLonely/hexo-steam-games">https://github.com/HCLonely/hexo-steam-games</a></td>
+</tr>
+<tr>
+<td>hexo-bilibili-bangumi</td>
+<td>添加bilibili番剧页面</td>
+<td><a href="https://github.com/HCLonely/hexo-bilibili-bangumi">https://github.com/HCLonely/hexo-bilibili-bangumi</a></td>
+</tr>
+<tr>
+<td>hexo-generator-random</td>
+<td>生成随机文章页面</td>
+<td><a href="https://github.com/Drew233/hexo-generator-random">https://github.com/Drew233/hexo-generator-random</a></td>
+</tr>
+<tr>
+<td>hexo-web-push-notification</td>
+<td>web推送插件</td>
+<td><a href="https://github.com/glazec/hexo-web-push-notification">https://github.com/glazec/hexo-web-push-notification</a></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>06_Other-Windows 图片批量压缩工具 ultra-tinypng</title>
+    <url>/posts/b7f58a40.html</url>
+    <content><![CDATA[<h2 id="1-前言-3">1. 前言</h2>
+<p>在 <a href="https://www.bilibili.com/video/BV1ve4y1C7im/">B站</a> 上发现了这款 Win 平台图片压缩工具</p>
+<p>优点：</p>
+<ol>
+<li class="lvl-3">
+<p>作者：本项目基于<a href="https://github.com/zhanyuzhang/super-tinypng">super-tinypng</a>，在原项目基础上加入了打包开箱即用、递归目录、线程池、重复跳过的功能。 项目的原理是程序化处理文件，调用<a href="https://tinypng.com/">tinypng</a>的接口进行文件压缩。</p>
+</li>
+</ol>
+<p>遗憾点：</p>
+<ol>
+<li class="lvl-3">
+<p>图片后缀需为 PNG或JPG</p>
+</li>
+<li class="lvl-3">
+<p>需小于5MB</p>
+</li>
+<li class="lvl-3">
+<p>Windows 平台工具（exe）</p>
+</li>
+</ol>
+<h2 id="2-下载地址">2. 下载地址</h2>
+<p>教程：<a href="https://www.bilibili.com/video/BV1ve4y1C7im/">B站：【开源工具】图片素材一键批量压缩 untra-tinypng</a></p>
+<p>项目源码：<a href="https://github.com/libudu/ultra-tinypng">Github</a></p>
+<p>工具下载：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><a href="https://pan.baidu.com/s/1g0pwPMo-5VV_tKc0q9SBWA">exe文件下载（百度云  提取码：337w）</a></p>
+</li>
+<li class="lvl-2">
+<p><a href="https://github.com/mycpen/ultra-tinypng/tree/master/dist">备用地址</a></p>
+</li>
+</ul>
+<h2 id="3-相关及其他压缩工具">3. 相关及其他压缩工具</h2>
+<p><a href="https://tinypng.com/">TinyPNG</a></p>
+<p><a href="https://github.com/meowtec/Imagine/releases">Imagine</a></p>
+<h2 id="4-鸣谢">4. 鸣谢</h2>
+<p>开发者：<a href="https://github.com/libudu">linpicio</a></p>
+]]></content>
+      <categories>
+        <category>Other</category>
+      </categories>
+      <tags>
+        <tag>Other</tag>
+        <tag>TinyPNG</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>01_转载-图床搭建 Backblaze B2 + Cloudflare CDN</title>
     <url>/posts/16589f92.html</url>
     <content><![CDATA[<h1 id="转载文章">转载文章</h1>
@@ -252,7 +569,7 @@
   <entry>
     <title>05_Other-使用 Python open 函数批量替换文件内容</title>
     <url>/posts/3ffec809.html</url>
-    <content><![CDATA[<h2 id="1-前言-3">1. 前言</h2>
+    <content><![CDATA[<h2 id="1-前言-2">1. 前言</h2>
 <p>在 <a href="https://www.jsdelivr.com/">jsd</a> 失效之后，博主使用了新的图床方案，需将文章的原 jsd 图片链接替换为新的图片地址</p>
 <p>这类脚本在网上有很多，都很推荐，如</p>
 <ul class="lvl-0">
@@ -266,7 +583,7 @@
 <p><a href="https://blog.justlovesmile.top/posts/7a5857a0.html">Justlovesmile：如何自动下载、压缩并批量替换文章中的外链图片</a></p>
 </li>
 </ul>
-<h2 id="2-脚本内容-2">2. 脚本内容</h2>
+<h2 id="2-脚本内容">2. 脚本内容</h2>
 <p>源码来自：<a href="https://blog.csdn.net/qq_38150250/article/details/118026219">批量修改文件内容（Python版）</a></p>
 <p>脚本采用递归的方式，遍历 43~46 行 目录下的所有文件，进行批量替换</p>
 <p>说明：</p>
@@ -282,7 +599,7 @@
 </li>
 </ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 源码参考  https://blog.csdn.net/qq_38150250/article/details/118026219</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># 文件查找 find . -name file_name -type f</span></span><br><span class="line"><span class="comment"># 查找函数：search_path 查找根路径 </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取文章路径</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">search</span>(<span class="params">search_path, search_result</span>):</span><br><span class="line">    <span class="comment"># 获取当前路径下地所有文件</span></span><br><span class="line">    all_file = os.listdir(search_path)</span><br><span class="line">    <span class="comment"># 对于每一个文件</span></span><br><span class="line">    <span class="keyword">for</span> each_file <span class="keyword">in</span> all_file:</span><br><span class="line">        <span class="comment"># 若文件为一个文件夹</span></span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(search_path + each_file):</span><br><span class="line">            <span class="comment"># 递归查找</span></span><br><span class="line">            search(search_path + each_file + <span class="string">&#x27;/&#x27;</span>, search_result)</span><br><span class="line">        <span class="comment"># 如果是需要被查找的文件</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">if</span> re.findall(<span class="string">&#x27;.*\.md$&#x27;</span>, each_file) == [each_file]:</span><br><span class="line">            <span class="comment"># 输出路径</span></span><br><span class="line">                search_result.append(search_path + each_file)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 替换 sed -i &#x27;s/old_str/new_str/&#x27;</span></span><br><span class="line"><span class="comment"># 文本替换 replace_file_name 需要替换的文件路径，replace_old_str 要替换的字符，replace_new_str 替换的字符</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">replace</span>(<span class="params">replace_file_name, replace_old_str, replace_new_str</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(replace_file_name, <span class="string">&quot;r&quot;</span>, encoding = <span class="string">&quot;UTF-8&quot;</span>) <span class="keyword">as</span> f1: </span><br><span class="line">        content = f1.read()</span><br><span class="line">        f1.close()</span><br><span class="line">        t = content.replace(replace_old_str, replace_new_str)</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(replace_file_name, <span class="string">&quot;w&quot;</span>, encoding = <span class="string">&quot;UTF-8&quot;</span>) <span class="keyword">as</span> f2:</span><br><span class="line">        f2.write(t)</span><br><span class="line">    f2.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 需要改的地方</span></span><br><span class="line"><span class="comment">#path = &#x27;E:/code_zone/.history/20220831_blog/source/_posts/&#x27;</span></span><br><span class="line">path_list = [</span><br><span class="line">    <span class="string">&#x27;E:/code_zone/hexo-source/source/_posts/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;E:/code_zone/hexo-source-butterfly/source/_posts/&#x27;</span>,</span><br><span class="line">]</span><br><span class="line">old_str = <span class="string">&#x27;https://cdn.jsdelivr.net/gh/mycpen/image_bed/image/&#x27;</span></span><br><span class="line">new_str = <span class="string">&#x27;https://image.cpen.top/image/&#x27;</span></span><br><span class="line"></span><br><span class="line">search_result = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    result = []                 <span class="comment"># 存放文件路径</span></span><br><span class="line">    <span class="comment"># 默认当前目录</span></span><br><span class="line">    <span class="comment"># path = os.getcwd()</span></span><br><span class="line">    <span class="keyword">for</span> path <span class="keyword">in</span> path_list:</span><br><span class="line">        search(path, result)    <span class="comment"># 获取文章路径</span></span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> file_name <span class="keyword">in</span> result:</span><br><span class="line">        replace(file_name, old_str, new_str)</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125; done  &#123;&#125;&quot;</span>.<span class="built_in">format</span>(file_name, count))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 命令</span></span><br><span class="line"><span class="comment"># python E:/code_zone/tools/python-replace/replace.py</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="3-参考文章-2">3. 参考文章</h2>
+<h2 id="3-参考文章">3. 参考文章</h2>
 <p>源码来自：<a href="https://blog.csdn.net/qq_38150250/article/details/118026219">批量修改文件内容（Python版）</a></p>
 ]]></content>
       <categories>
@@ -297,11 +614,11 @@
   <entry>
     <title>04_Other-使用 Python ftplib 模块同步又拍云云存储数据至本地</title>
     <url>/posts/4f5c6419.html</url>
-    <content><![CDATA[<h2 id="1-前言-2">1. 前言</h2>
+    <content><![CDATA[<h2 id="1-前言-4">1. 前言</h2>
 <p>在 <a href="https://www.jsdelivr.com/">jsd</a> 失效之后，博主将图床资源从 github 迁移至又拍云云存储上</p>
 <p><a href="https://github.com/willnewii/qiniuClient">qiniuClient</a> 是我所知的 云存储管理客户端，有需要的朋友可以下载使用</p>
 <p>目前的图床方案是写文章时利用 picgo 上传图片，再通过 Python 脚本同步又拍云上的图片至本地，再将本地图片 push 到 github，通过云服务器（CentOS）计划任务 每天凌晨1点执行以上备份操作</p>
-<h2 id="2-脚本内容">2. 脚本内容</h2>
+<h2 id="2-脚本内容-2">2. 脚本内容</h2>
 <p>源码来自：<a href="https://blog.csdn.net/ouyang_peng/article/details/79271113">https://blog.csdn.net/ouyang_peng/article/details/79271113</a></p>
 <p>又拍云官方教程：<a href="https://techs.upyun.com/videos/cdnpage/creating_storage.html">创建存储服务和使用 FTP 上传</a></p>
 <p>说明：</p>
@@ -316,7 +633,7 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> cmath <span class="keyword">import</span> log</span><br><span class="line"><span class="keyword">from</span> ftplib <span class="keyword">import</span> FTP</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyFTP</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        ftp自动下载、自动上传脚本，可以递归目录操作</span></span><br><span class="line"><span class="string">        作者：欧阳鹏</span></span><br><span class="line"><span class="string">        博客地址：http://blog.csdn.net/ouyang_peng/article/details/79271113</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, host, port=<span class="number">21</span></span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot; 初始化 FTP 客户端</span></span><br><span class="line"><span class="string">        参数:</span></span><br><span class="line"><span class="string">                 host:ip地址</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">                 port:端口号</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># print(&quot;__init__()---&gt; host = %s ,port = %s&quot; % (host, port))</span></span><br><span class="line"></span><br><span class="line">        self.host = host</span><br><span class="line">        self.port = port</span><br><span class="line">        self.ftp = FTP()</span><br><span class="line">        <span class="comment"># 重新设置下编码方式</span></span><br><span class="line">        <span class="comment">#self.ftp.encoding = &#x27;gbk&#x27;</span></span><br><span class="line">        self.ftp.encoding = <span class="string">&#x27;utf8&#x27;</span></span><br><span class="line">        <span class="comment"># 获取脚本路径</span></span><br><span class="line">        path = os.path.dirname(os.path.realpath(__file__))</span><br><span class="line">        self.log_file = <span class="built_in">open</span>(path + <span class="string">&quot;/log.txt&quot;</span>, <span class="string">&quot;a&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">        self.file_list = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">login</span>(<span class="params">self, username, password</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot; 初始化 FTP 客户端</span></span><br><span class="line"><span class="string">            参数:</span></span><br><span class="line"><span class="string">                  username: 用户名</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">                 password: 密码</span></span><br><span class="line"><span class="string">            &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            timeout = <span class="number">60</span></span><br><span class="line">            socket.setdefaulttimeout(timeout)</span><br><span class="line">            <span class="comment"># 0主动模式 1 #被动模式</span></span><br><span class="line">            self.ftp.set_pasv(<span class="literal">True</span>)</span><br><span class="line">            <span class="comment"># 打开调试级别2，显示详细信息</span></span><br><span class="line">            <span class="comment"># self.ftp.set_debuglevel(2)</span></span><br><span class="line"></span><br><span class="line">            self.debug_print(<span class="string">&#x27;开始尝试连接到 %s&#x27;</span> % self.host)</span><br><span class="line">            self.ftp.connect(self.host, self.port)</span><br><span class="line">            self.debug_print(<span class="string">&#x27;成功连接到 %s&#x27;</span> % self.host)</span><br><span class="line"></span><br><span class="line">            self.debug_print(<span class="string">&#x27;开始尝试登录到 %s&#x27;</span> % self.host)</span><br><span class="line">            self.ftp.login(username, password)</span><br><span class="line">            self.debug_print(<span class="string">&#x27;成功登录到 %s&#x27;</span> % self.host)</span><br><span class="line"></span><br><span class="line">            self.debug_print(self.ftp.welcome)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> err:</span><br><span class="line">            self.deal_error(<span class="string">&quot;FTP 连接或登录失败 ，错误描述为：%s&quot;</span> % err)</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">is_same_size</span>(<span class="params">self, local_file, remote_file</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;判断远程文件和本地文件大小是否一致</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">           参数:</span></span><br><span class="line"><span class="string">             local_file: 本地文件</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">             remote_file: 远程文件</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            remote_file_size = self.ftp.size(remote_file)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> err:</span><br><span class="line">            <span class="comment"># self.debug_print(&quot;is_same_size() 错误描述为：%s&quot; % err)</span></span><br><span class="line">            remote_file_size = -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            local_file_size = os.path.getsize(local_file)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> err:</span><br><span class="line">            <span class="comment"># self.debug_print(&quot;is_same_size() 错误描述为：%s&quot; % err)</span></span><br><span class="line">            local_file_size = -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">        self.debug_print(<span class="string">&#x27;local_file_size:%d  , remote_file_size:%d&#x27;</span> % (local_file_size, remote_file_size))</span><br><span class="line">        <span class="keyword">if</span> remote_file_size == local_file_size:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">download_file</span>(<span class="params">self, local_file, remote_file</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;从ftp下载文件</span></span><br><span class="line"><span class="string">            参数:</span></span><br><span class="line"><span class="string">                local_file: 本地文件</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">                remote_file: 远程文件</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        self.debug_print(<span class="string">&quot;download_file()---&gt; local_path = %s ,remote_path = %s&quot;</span> % (local_file, remote_file))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> self.is_same_size(local_file, remote_file):</span><br><span class="line">            self.debug_print(<span class="string">&#x27;%s 文件大小相同，无需下载&#x27;</span> % local_file)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                self.debug_print(<span class="string">&#x27;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;下载文件 %s ... ...&#x27;</span> % local_file)</span><br><span class="line">                buf_size = <span class="number">1024</span></span><br><span class="line">                file_handler = <span class="built_in">open</span>(local_file, <span class="string">&#x27;wb&#x27;</span>)</span><br><span class="line">                self.ftp.retrbinary(<span class="string">&#x27;RETR %s&#x27;</span> % remote_file, file_handler.write, buf_size)</span><br><span class="line">                file_handler.close()</span><br><span class="line">            <span class="keyword">except</span> Exception <span class="keyword">as</span> err:</span><br><span class="line">                self.debug_print(<span class="string">&#x27;下载文件出错，出现异常：%s &#x27;</span> % err)</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">download_file_tree</span>(<span class="params">self, local_path, remote_path</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;从远程目录下载多个文件到本地目录</span></span><br><span class="line"><span class="string">                       参数:</span></span><br><span class="line"><span class="string">                         local_path: 本地路径</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">                         remote_path: 远程路径</span></span><br><span class="line"><span class="string">                &quot;&quot;&quot;</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;download_file_tree()---&gt;  local_path = %s ,remote_path = %s&quot;</span> % (local_path, remote_path))</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self.ftp.cwd(remote_path)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> err:</span><br><span class="line">            self.debug_print(<span class="string">&#x27;远程目录%s不存在，继续...&#x27;</span> % remote_path + <span class="string">&quot; ,具体错误描述为：%s&quot;</span> % err)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.isdir(local_path):</span><br><span class="line">            self.debug_print(<span class="string">&#x27;本地目录%s不存在，先创建本地目录&#x27;</span> % local_path)</span><br><span class="line">            os.makedirs(local_path)</span><br><span class="line"></span><br><span class="line">        self.debug_print(<span class="string">&#x27;切换至目录: %s&#x27;</span> % self.ftp.pwd())</span><br><span class="line"></span><br><span class="line">        self.file_list = []</span><br><span class="line">        <span class="comment"># 方法回调</span></span><br><span class="line">        self.ftp.<span class="built_in">dir</span>(self.get_file_list)</span><br><span class="line"></span><br><span class="line">        remote_names = self.file_list</span><br><span class="line">        self.debug_print(<span class="string">&#x27;远程目录 列表: %s&#x27;</span> % remote_names)</span><br><span class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> remote_names:</span><br><span class="line">            file_type = item[<span class="number">0</span>]</span><br><span class="line">            file_name = item[<span class="number">1</span>]</span><br><span class="line">            local = os.path.join(local_path, file_name)</span><br><span class="line">            <span class="keyword">if</span> file_type == <span class="string">&#x27;d&#x27;</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;download_file_tree()---&gt; 下载目录： %s&quot;</span> % file_name)</span><br><span class="line">                self.download_file_tree(local, file_name)</span><br><span class="line">            <span class="keyword">elif</span> file_type == <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;download_file()---&gt; 下载文件： %s&quot;</span> % file_name)</span><br><span class="line">                self.download_file(local, file_name)</span><br><span class="line">        self.ftp.cwd(<span class="string">&quot;..&quot;</span>)</span><br><span class="line">        self.debug_print(<span class="string">&#x27;返回上层目录 %s&#x27;</span> % self.ftp.pwd())</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">upload_file</span>(<span class="params">self, local_file, remote_file</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;从本地上传文件到ftp</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">           参数:</span></span><br><span class="line"><span class="string">             local_path: 本地文件</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">             remote_path: 远程文件</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.isfile(local_file):</span><br><span class="line">            self.debug_print(<span class="string">&#x27;%s 不存在&#x27;</span> % local_file)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> self.is_same_size(local_file, remote_file):</span><br><span class="line">            self.debug_print(<span class="string">&#x27;跳过相等的文件: %s&#x27;</span> % local_file)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        buf_size = <span class="number">1024</span></span><br><span class="line">        file_handler = <span class="built_in">open</span>(local_file, <span class="string">&#x27;rb&#x27;</span>)</span><br><span class="line">        self.ftp.storbinary(<span class="string">&#x27;STOR %s&#x27;</span> % remote_file, file_handler, buf_size)</span><br><span class="line">        file_handler.close()</span><br><span class="line">        self.debug_print(<span class="string">&#x27;上传: %s&#x27;</span> % local_file + <span class="string">&quot;成功!&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">upload_file_tree</span>(<span class="params">self, local_path, remote_path</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;从本地上传目录下多个文件到ftp</span></span><br><span class="line"><span class="string">           参数:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">             local_path: 本地路径</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">             remote_path: 远程路径</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.isdir(local_path):</span><br><span class="line">            self.debug_print(<span class="string">&#x27;本地目录 %s 不存在&#x27;</span> % local_path)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        self.ftp.cwd(remote_path)</span><br><span class="line">        self.debug_print(<span class="string">&#x27;切换至远程目录: %s&#x27;</span> % self.ftp.pwd())</span><br><span class="line"></span><br><span class="line">        local_name_list = os.listdir(local_path)</span><br><span class="line">        <span class="keyword">for</span> local_name <span class="keyword">in</span> local_name_list:</span><br><span class="line">            src = os.path.join(local_path, local_name)</span><br><span class="line">            <span class="keyword">if</span> os.path.isdir(src):</span><br><span class="line">                <span class="keyword">try</span>:</span><br><span class="line">                    self.ftp.mkd(local_name)</span><br><span class="line">                <span class="keyword">except</span> Exception <span class="keyword">as</span> err:</span><br><span class="line">                    self.debug_print(<span class="string">&quot;目录已存在 %s ,具体错误描述为：%s&quot;</span> % (local_name, err))</span><br><span class="line">                self.debug_print(<span class="string">&quot;upload_file_tree()---&gt; 上传目录： %s&quot;</span> % local_name)</span><br><span class="line">                self.upload_file_tree(src, local_name)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                self.debug_print(<span class="string">&quot;upload_file_tree()---&gt; 上传文件： %s&quot;</span> % local_name)</span><br><span class="line">                self.upload_file(src, local_name)</span><br><span class="line">        self.ftp.cwd(<span class="string">&quot;..&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">close</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot; 退出ftp</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        self.debug_print(<span class="string">&quot;close()---&gt; FTP退出&quot;</span>)</span><br><span class="line">        self.ftp.quit()</span><br><span class="line">        self.log_file.close()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">debug_print</span>(<span class="params">self, s</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot; 打印日志</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        self.write_log(s)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">deal_error</span>(<span class="params">self, e</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot; 处理错误异常</span></span><br><span class="line"><span class="string">            参数：</span></span><br><span class="line"><span class="string">                e：异常</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        log_str = <span class="string">&#x27;发生错误: %s&#x27;</span> % e</span><br><span class="line">        self.write_log(log_str)</span><br><span class="line">        sys.exit()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">write_log</span>(<span class="params">self, log_str</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot; 记录日志</span></span><br><span class="line"><span class="string">            参数：</span></span><br><span class="line"><span class="string">                log_str：日志</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        time_now = time.localtime()</span><br><span class="line">        date_now = time.strftime(<span class="string">&#x27;%Y-%m-%d&#x27;</span>, time_now)</span><br><span class="line">        format_log_str = <span class="string">&quot;%s ---&gt; %s \n &quot;</span> % (date_now, log_str)</span><br><span class="line">        <span class="built_in">print</span>(format_log_str)</span><br><span class="line">        self.log_file.write(format_log_str)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_file_list</span>(<span class="params">self, line</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot; 获取文件列表</span></span><br><span class="line"><span class="string">            参数：</span></span><br><span class="line"><span class="string">                line：</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        file_arr = self.get_file_name(line)</span><br><span class="line">        <span class="comment"># 去除  . 和  ..</span></span><br><span class="line">        <span class="keyword">if</span> file_arr[<span class="number">1</span>] <span class="keyword">not</span> <span class="keyword">in</span> [<span class="string">&#x27;.&#x27;</span>, <span class="string">&#x27;..&#x27;</span>]:</span><br><span class="line">            self.file_list.append(file_arr)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_file_name</span>(<span class="params">self, line</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot; 获取文件名</span></span><br><span class="line"><span class="string">            参数：</span></span><br><span class="line"><span class="string">                line：</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        pos = line.rfind(<span class="string">&#x27;:&#x27;</span>)</span><br><span class="line">        <span class="keyword">while</span> (line[pos] != <span class="string">&#x27; &#x27;</span>):</span><br><span class="line">            pos += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> (line[pos] == <span class="string">&#x27; &#x27;</span>):</span><br><span class="line">            pos += <span class="number">1</span></span><br><span class="line">        file_arr = [line[<span class="number">0</span>], line[pos:]]</span><br><span class="line">        <span class="keyword">return</span> file_arr</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># 清除日志</span></span><br><span class="line">    path = os.path.dirname(os.path.realpath(__file__))      <span class="comment"># 脚本路径</span></span><br><span class="line">    <span class="keyword">if</span> os.path.exists(path + <span class="string">&#x27;/log.txt&#x27;</span>):</span><br><span class="line">        log_file = path + <span class="string">&#x27;/log.txt &#x27;</span><span class="keyword">if</span> os.sep == <span class="string">&quot;/&quot;</span> <span class="keyword">else</span> path + <span class="string">&#x27;\\&#x27;</span> + <span class="string">&#x27;log.txt&#x27;</span></span><br><span class="line">        subprocess.Popen(<span class="string">f&#x27;rm -rf <span class="subst">&#123;log_file&#125;</span>&#x27;</span>, shell=<span class="literal">True</span>)</span><br><span class="line">        time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    my_ftp = MyFTP(<span class="string">&quot;v0.ftp.upyun.com&quot;</span>)</span><br><span class="line">    my_ftp.login(<span class="string">&quot;xxx/xxx&quot;</span>, <span class="string">&quot;tokenxxxxxxxxx&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 下载单个文件</span></span><br><span class="line">    <span class="comment"># my_ftp.download_file(&quot;E:/code_zone/image_bed/image/wallpaper/1.jpg&quot;, &quot;/image/wallpaper/1.jpg&quot;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 上传单个文件</span></span><br><span class="line">    <span class="comment"># my_ftp.upload_file(&quot;G:/ftp_test/Release/XTCLauncher.apk&quot;, &quot;/App/AutoUpload/ouyangpeng/I12/Release/XTCLauncher.apk&quot;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 下载目录</span></span><br><span class="line">    <span class="comment"># image.cpen.top/image/ → 本地 E:/code_zone/image_bed/image/    (本地图床目录, 又拍云路径)</span></span><br><span class="line">    <span class="keyword">if</span> os.sep == <span class="string">&quot;\\&quot;</span>:</span><br><span class="line">        my_ftp.download_file_tree(<span class="string">&quot;E:/code_zone/image_bed/image/&quot;</span>, <span class="string">&quot;/image/&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> os.sep == <span class="string">&quot;/&quot;</span>:     <span class="comment"># aliyun</span></span><br><span class="line">        my_ftp.download_file_tree(<span class="string">&quot;/root/code_zone/image_bed/image/&quot;</span>, <span class="string">&quot;/image/&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 上传目录</span></span><br><span class="line">    <span class="comment"># 本地 E:/code_zone/image_bed/image/ → image.cpen.top/image/    (本地图床目录, 又拍云路径)</span></span><br><span class="line">    <span class="keyword">if</span> os.sep == <span class="string">&quot;\\&quot;</span>:      <span class="comment"># Windows</span></span><br><span class="line">        my_ftp.upload_file_tree(<span class="string">&quot;E:/code_zone/image_bed/image/&quot;</span>, <span class="string">&quot;/image/&quot;</span>)    </span><br><span class="line">        my_ftp.close()</span><br><span class="line">    <span class="keyword">elif</span> os.sep == <span class="string">&quot;/&quot;</span>:     <span class="comment"># aliyun</span></span><br><span class="line">        my_ftp.upload_file_tree(<span class="string">&quot;/root/code_zone/image_bed/image/&quot;</span>, <span class="string">&quot;/image/&quot;</span>)  </span><br><span class="line">        my_ftp.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 命令</span></span><br><span class="line"><span class="comment"># python E:/code_zone/tools/python-ftp/ftp.py</span></span><br><span class="line"><span class="comment"># python3 /root/code_zone/tools/python-ftp/ftp.py</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>执行命令</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Windows 终端</span></span><br><span class="line">python E:/code_zone/tools/python-ftp/ftp.py</span><br><span class="line"></span><br><span class="line"><span class="comment"># 类 Unix 终端</span></span><br><span class="line">python3 /root/code_zone/tools/python-ftp/ftp.py</span><br></pre></td></tr></table></figure>
-<h2 id="3-参考文章">3. 参考文章</h2>
+<h2 id="3-参考文章-2">3. 参考文章</h2>
 <p>源码来自：<a href="https://blog.csdn.net/ouyang_peng/article/details/79271113">Python实现的FTP上传和下载功能</a></p>
 <p>又拍云官方教程：<a href="https://techs.upyun.com/videos/cdnpage/creating_storage.html">创建存储服务和使用 FTP 上传</a></p>
 ]]></content>
@@ -461,7 +778,7 @@
   <entry>
     <title>06_Hexo-elemecdn加速Butterfly第三方js</title>
     <url>/posts/9b5a2768.html</url>
-    <content><![CDATA[<h1 id="前言-2">前言</h1>
+    <content><![CDATA[<h1 id="前言-3">前言</h1>
 <p>博客异常加载，f12发现 <a href="https://unpkg.com/swiper/swiper-bundle.min.js">https://unpkg.com/swiper/swiper-bundle.min.js</a> （主因）和 <a href="https://unpkg.com/@fancyapps/ui/dist/fancybox.umd.js">https://unpkg.com/@fancyapps/ui/dist/fancybox.umd.js</a> 报 520（520，当源站服务器向 <a href="https://baike.baidu.com/item/CDN/420951?fromModule=lemma_inlink">CDN</a> 返回空白、未知或意外响应时，会发生 520 错误），日常都返的 200</p>
 <p>基于此有了换 cdn 的想法。<a href="https://butterfly.js.org/posts/ceeb73f/#CDN">butterfly 官方教程</a> 介绍了 local/jsdelivr/unpkg/cdnjs/custom 这些选择，都不是想要的，看到别人用的 Element cdn，学习一下</p>
 <h1 id="步骤-2">步骤</h1>
@@ -1610,7 +1927,7 @@ ansible-playbook 基于YAML语法配置;可以对playbook文件进行测试,解�
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 相关命令</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装 supervisor</span></span><br><span class="line">yum install epel-release  <span class="comment">#安装yum源</span></span><br><span class="line">yum install -y supervisor</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动 supervisor</span></span><br><span class="line">$ supervisord -c /etc/supervisord.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># supervisor 命令</span></span><br><span class="line">supervisorctl status        <span class="comment"># 查看所有进程的状态</span></span><br><span class="line">supervisorctl stop tkserver       <span class="comment"># 停止tkserver</span></span><br><span class="line">supervisorctl start tkserver      <span class="comment"># 启动tkserver</span></span><br><span class="line">supervisorctl restart tkserver    <span class="comment"># 重启tkserver</span></span><br><span class="line">supervisorctl update        <span class="comment"># 配置文件修改后使用该命令加载新的配置</span></span><br><span class="line">supervisorctl reload        <span class="comment"># 重新启动配置中的所有程序</span></span><br><span class="line"><span class="comment"># 注：把es换成all可以管理配置中的所有进程。直接输入supervisorctl进入supervisorctl的shell交互界面，此时上面的命令不带supervisorctl可直接使用。</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <hr>
 <h1 id="2-Twikoo版本升级（私有部署）">2. Twikoo版本升级（私有部署）</h1>
-<h2 id="前言-3">前言</h2>
+<h2 id="前言-2">前言</h2>
 <p>乌龙事件，原本以为自己的 twikoo 版本过低，打算升级解决。后来发现是 butterfly 内置的 twikoo js 版本低，换个 js 就行。</p>
 <p>主题配置文件 _config.butterfly.yml 新增 twikoo cdn</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">CDN:</span></span><br><span class="line">  <span class="attr">option:</span></span><br><span class="line">    <span class="attr">twikoo:</span> <span class="string">https://npm.elemecdn.com/twikoo@1.6.7/dist/twikoo.all.min.js</span></span><br></pre></td></tr></table></figure>
@@ -2953,8 +3270,8 @@ https://www.runoob.com/w3cnote/radix-sort.html</a></p>
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Troubleshooting</tag>
         <tag>Git</tag>
+        <tag>Troubleshooting</tag>
         <tag>Hexo</tag>
       </tags>
   </entry>
@@ -3232,20 +3549,20 @@ Alternatively, Nunjucks tags can be disabled through the renderer’s option (if
 <li class="lvl-2">
 <p>语法 - 父模板中：</p>
 <ul class="lvl-2">
-<li class="lvl-4"><input type="checkbox" id="checkbox6" checked="true"><label for="checkbox6">定义父模板中的**块 block **标签</label></li>
-<li class="lvl-4"><input type="checkbox" id="checkbox7" checked="true"><label for="checkbox7">表时出哪些在</label><strong>子模块</strong>中是允许被<strong>修改</strong>的</li>
-<li class="lvl-4"><input type="checkbox" id="checkbox8" checked="true"><label for="checkbox8">block 标签：</label><strong>在父模板中定义，可以在子模板中覆盖</strong></li>
+<li class="lvl-4"><input type="checkbox" id="checkbox0" checked="true"><label for="checkbox0">定义父模板中的**块 block **标签</label></li>
+<li class="lvl-4"><input type="checkbox" id="checkbox1" checked="true"><label for="checkbox1">表时出哪些在</label><strong>子模块</strong>中是允许被<strong>修改</strong>的</li>
+<li class="lvl-4"><input type="checkbox" id="checkbox2" checked="true"><label for="checkbox2">block 标签：</label><strong>在父模板中定义，可以在子模板中覆盖</strong></li>
 </ul>
 </li>
 <li class="lvl-2">
 <p>语法 - 子模板中：</p>
 <ul class="lvl-2">
 <li class="lvl-4">
-<p><input type="checkbox" id="checkbox9" checked="true"><label for="checkbox9">继承模板 </label><code>extends</code> 标签（写在模板文件的第一行）</p>
+<p><input type="checkbox" id="checkbox3" checked="true"><label for="checkbox3">继承模板 </label><code>extends</code> 标签（写在模板文件的第一行）</p>
 <p>例如 <code>&#123;% extends 'base.html' %&#125;</code></p>
 </li>
 <li class="lvl-4">
-<p><input type="checkbox" id="checkbox10" checked="true"><label for="checkbox10">子模板 重写父模板中的内容块</label></p>
+<p><input type="checkbox" id="checkbox4" checked="true"><label for="checkbox4">子模板 重写父模板中的内容块</label></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% block block_name %&#125;</span><br><span class="line">子模板块用来覆盖父模板中 block_name 块的内容</span><br><span class="line">&#123;% endblock block_name %&#125;	- block_name 可写可不写</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -3253,14 +3570,14 @@ Alternatively, Nunjucks tags can be disabled through the renderer’s option (if
 <li class="lvl-2">
 <p>重写的覆盖规则</p>
 <ul class="lvl-2">
-<li class="lvl-4"><input type="checkbox" id="checkbox11" checked="true"><label for="checkbox11">不重写，将按照父模板中的效果显示</label></li>
-<li class="lvl-4"><input type="checkbox" id="checkbox12" checked="true"><label for="checkbox12">重写，则按照重写效果显示</label></li>
+<li class="lvl-4"><input type="checkbox" id="checkbox5" checked="true"><label for="checkbox5">不重写，将按照父模板中的效果显示</label></li>
+<li class="lvl-4"><input type="checkbox" id="checkbox6" checked="true"><label for="checkbox6">重写，则按照重写效果显示</label></li>
 </ul>
 </li>
 <li class="lvl-2">
 <p>注意</p>
 <ul class="lvl-2">
-<li class="lvl-4"><input type="checkbox" id="checkbox13" checked="true"><label for="checkbox13">模板继承时，服务器端的动态内容无法继承</label></li>
+<li class="lvl-4"><input type="checkbox" id="checkbox7" checked="true"><label for="checkbox7">模板继承时，服务器端的动态内容无法继承</label></li>
 </ul>
 </li>
 <li class="lvl-2">
@@ -3343,8 +3660,8 @@ Alternatively, Nunjucks tags can be disabled through the renderer’s option (if
 <li class="lvl-4">
 <p><strong>path 函数的语法</strong></p>
 <ul class="lvl-4">
-<li class="lvl-6"><input type="checkbox" id="checkbox14" checked="true"><label for="checkbox14">path(route, views, </label><mark>name</mark>=“别名”)</li>
-<li class="lvl-6"><input type="checkbox" id="checkbox15" checked="true"><label for="checkbox15">path(‘page’, views.page_view, name=“page_url”)</label></li>
+<li class="lvl-6"><input type="checkbox" id="checkbox8" checked="true"><label for="checkbox8">path(route, views, </label><mark>name</mark>=“别名”)</li>
+<li class="lvl-6"><input type="checkbox" id="checkbox9" checked="true"><label for="checkbox9">path(‘page’, views.page_view, name=“page_url”)</label></li>
 <li class="lvl-6">根据 path 中的 ‘name=’ 关键字传给 url 确定了个唯一确定的名字，在模板或视图中，可以通过这个名字反向推断出此 url 信息</li>
 </ul>
 </li>
@@ -3478,13 +3795,13 @@ Alternatively, Nunjucks tags can be disabled through the renderer’s option (if
 <p>MVC代表<code>Model-View-Controller</code>（模型-视图-控制器）模式。</p>
 <ul class="lvl-1">
 <li class="lvl-2">
-<p><input type="checkbox" id="checkbox0" checked="true"><label for="checkbox0"></label><code>M模型层（Model）</code>，主要用于对数据库层的封装</p>
+<p><input type="checkbox" id="checkbox10" checked="true"><label for="checkbox10"></label><code>M模型层（Model）</code>，主要用于对数据库层的封装</p>
 </li>
 <li class="lvl-2">
-<p><input type="checkbox" id="checkbox1" checked="true"><label for="checkbox1"></label><code>V视图层（View）</code>，用于向用户展示结果（WHAT + HOW）</p>
+<p><input type="checkbox" id="checkbox11" checked="true"><label for="checkbox11"></label><code>V视图层（View）</code>，用于向用户展示结果（WHAT + HOW）</p>
 </li>
 <li class="lvl-2">
-<p><input type="checkbox" id="checkbox2" checked="true"><label for="checkbox2"></label><code>C控制（Controller）</code>，用于处理请求、获取数据、返回结果（重要）</p>
+<p><input type="checkbox" id="checkbox12" checked="true"><label for="checkbox12"></label><code>C控制（Controller）</code>，用于处理请求、获取数据、返回结果（重要）</p>
 </li>
 </ul>
 <p>作用：<code>降低模块间的耦合度（解耦）</code></p>
@@ -3495,13 +3812,13 @@ Alternatively, Nunjucks tags can be disabled through the renderer’s option (if
 <p>MTV代表<code>Model-Template-View</code>（模型-模板-视图）模式。</p>
 <ul class="lvl-1">
 <li class="lvl-2">
-<p><input type="checkbox" id="checkbox3" checked="true"><label for="checkbox3"></label><code>M模型层（Model）</code>负责与数据库交互</p>
+<p><input type="checkbox" id="checkbox13" checked="true"><label for="checkbox13"></label><code>M模型层（Model）</code>负责与数据库交互</p>
 </li>
 <li class="lvl-2">
-<p><input type="checkbox" id="checkbox4" checked="true"><label for="checkbox4"></label><code>T模板层（Template）</code>负责呈现内容到浏览器（HOW）</p>
+<p><input type="checkbox" id="checkbox14" checked="true"><label for="checkbox14"></label><code>T模板层（Template）</code>负责呈现内容到浏览器（HOW）</p>
 </li>
 <li class="lvl-2">
-<p><input type="checkbox" id="checkbox5" checked="true"><label for="checkbox5"></label><code>V视图层（View）</code>是核心，负责接收请求、获取数据、返回结果（WHAT）</p>
+<p><input type="checkbox" id="checkbox15" checked="true"><label for="checkbox15"></label><code>V视图层（View）</code>是核心，负责接收请求、获取数据、返回结果（WHAT）</p>
 </li>
 </ul>
 <p>作用：<code>降低模块间的耦合度（解耦）</code></p>
@@ -3574,8 +3891,8 @@ return render(request, ‘xxx.html’, <code>dic</code>)</p>
       </categories>
       <tags>
         <tag>Django</tag>
-        <tag>MTV</tag>
         <tag>HTTP</tag>
+        <tag>MTV</tag>
         <tag>GET</tag>
         <tag>POST</tag>
         <tag>MVC</tag>
@@ -8118,7 +8435,7 @@ u属主、g属组、o其他用户、a所有用户</p>
   <entry>
     <title>15_Linux基础-用户与组2</title>
     <url>/posts/43746.html</url>
-    <content><![CDATA[<h2 id="一-练习-2">一. 练习</h2>
+    <content><![CDATA[<h2 id="一-练习">一. 练习</h2>
 <h3 id="1-1-如何知道一个用户是否在linux系统里存在？">1.1 如何知道一个用户是否在linux系统里存在？</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1、如何知道一个用户是否在linux系统里存在？</span><br><span class="line"><span class="built_in">cat</span> /etc/passwd</span><br><span class="line">或者 <span class="built_in">id</span>命令</span><br></pre></td></tr></table></figure>
 <h3 id="1-2-如何禁用一个用户登陆linux系统">1.2 如何禁用一个用户登陆linux系统</h3>
@@ -8387,7 +8704,7 @@ gid使用哪个组，哪个就是有效组</p>
   <entry>
     <title>14_Linux基础-用户与组1</title>
     <url>/posts/10588.html</url>
-    <content><![CDATA[<h2 id="一-练习">一. 练习</h2>
+    <content><![CDATA[<h2 id="一-练习-2">一. 练习</h2>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">示例1</span><br><span class="line">---------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line"><span class="function"><span class="title">menu</span></span>()&#123;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;1、监控内存使用情况,如果内存使用率大于百分之80，给予提醒&quot;</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;2、扫描局域网ip,检查哪些ip地址正在使用&quot;</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;3、监控文件/etc/passwd是否被修改，每隔5分钟监控一次&quot;</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;4、监控nginx进程是否存在，不存在就给予相应提醒&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">option_1</span></span>()&#123;</span><br><span class="line">    total=`free -m|grep -i mem|<span class="built_in">tr</span> -s <span class="string">&quot; &quot;</span>|<span class="built_in">cut</span> -d <span class="string">&quot; &quot;</span> -f2`</span><br><span class="line">    <span class="comment">#free=`free -m|grep -i mem|tr -s &quot; &quot;|cut -d &quot; &quot; -f4`</span></span><br><span class="line">    used=`free -m|grep -i mem|<span class="built_in">tr</span> -s <span class="string">&quot; &quot;</span>|<span class="built_in">cut</span> -d <span class="string">&quot; &quot;</span> -f3`</span><br><span class="line">    used_rate=`<span class="built_in">echo</span> <span class="string">&quot;scale=4;<span class="variable">$used</span>/<span class="variable">$total</span>&quot;</span> |bc`</span><br><span class="line">    <span class="comment">#used_1=`echo &quot;$total*0.8&quot;|bc `</span></span><br><span class="line">    result=` <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$used_rate</span>&gt;0.8&quot;</span>|bc `</span><br><span class="line">    <span class="comment">#echo $result</span></span><br><span class="line">    <span class="keyword">if</span> (( <span class="variable">$result</span>  == 1 ))</span><br><span class="line">    <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> -e <span class="string">&quot;\e[31m使用率超过80%，请及时对内存扩容，以免不必要的损失\e[0m&quot;</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">echo</span>  <span class="string">&quot; nothing to do&quot;</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">option_2</span></span>()&#123;</span><br><span class="line">        <span class="keyword">for</span> ip <span class="keyword">in</span> `<span class="built_in">seq</span> 255`</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">        ( ip_full=192.168.0.<span class="variable">$ip</span></span><br><span class="line">        ping -c 1 <span class="variable">$ip_full</span> &amp;&gt;/dev/null &amp;&amp; <span class="built_in">echo</span> <span class="variable">$ip_full</span> &gt;&gt;up.txt || <span class="built_in">echo</span> <span class="variable">$ip_full</span> &gt;&gt;down.txt</span><br><span class="line">        ) &amp;     <span class="comment"># 注：放到后台子进程执行</span></span><br><span class="line">    <span class="keyword">done</span></span><br><span class="line"><span class="built_in">wait</span> <span class="comment"># 父进程等待子进程执行完成之后再退出</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">option_3</span></span>()&#123;</span><br><span class="line">    check_num=`diff /etc/passwd /lianxi/passwd |<span class="built_in">wc</span> -l`</span><br><span class="line">    [[ check_num -eq 0 ]] &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;文件未被修改&quot;</span> || <span class="built_in">echo</span> <span class="string">&quot;文件已被修改&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">option_4</span></span>()&#123;</span><br><span class="line">    pidof nginx &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;nginx is running&quot;</span> || <span class="built_in">echo</span> <span class="string">&quot;nginx is down&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">menu</span><br><span class="line"><span class="built_in">read</span> -p <span class="string">&quot;请输入你的选择:&quot;</span> option</span><br><span class="line"><span class="keyword">case</span> <span class="variable">$option</span> <span class="keyword">in</span></span><br><span class="line">1)</span><br><span class="line">    option_1</span><br><span class="line">    ;;</span><br><span class="line">2)</span><br><span class="line">    option_2</span><br><span class="line">    ;;</span><br><span class="line">3)</span><br><span class="line">    option_3</span><br><span class="line">    ;;</span><br><span class="line">4)</span><br><span class="line">    option_4</span><br><span class="line">    ;;</span><br><span class="line">*)</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;请输入1-4&quot;</span></span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line">示例2：重复选择</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">重复选择</span><br><span class="line"><span class="keyword">while</span> : </span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;#########################&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1.查看内存使用率&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;2.扫描局域网ip&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;3.查看文件是否被修改&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;4.查看nginx进程&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;5.退出&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;#########################&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> : </span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">	<span class="built_in">read</span> -p <span class="string">&quot;请输入你的选择:&quot;</span> options</span><br><span class="line">	<span class="keyword">case</span> <span class="variable">$options</span> <span class="keyword">in</span></span><br><span class="line">	1)</span><br><span class="line">	/root/shell/mem.sh</span><br><span class="line">	;;</span><br><span class="line">	2)</span><br><span class="line">	/root/shell/scan_ip.sh</span><br><span class="line">	;;</span><br><span class="line">	3)</span><br><span class="line">	/root/shell/passwd_test.sh</span><br><span class="line">	;;</span><br><span class="line">	4)</span><br><span class="line">	/root/shell/ngnix_test.sh</span><br><span class="line">	;;</span><br><span class="line">	5)</span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;退出&quot;</span></span><br><span class="line">	<span class="built_in">exit</span></span><br><span class="line">	;;</span><br><span class="line">	*)</span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;1-4&quot;</span></span><br><span class="line">	<span class="keyword">esac</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">示例3：使用awk获取</span><br><span class="line"><span class="keyword">case</span> <span class="variable">$options</span> <span class="keyword">in</span></span><br><span class="line"></span><br><span class="line">1)</span><br><span class="line">	<span class="function"><span class="title">memory_monitor</span></span>()&#123;</span><br><span class="line">		total=`free -m |grep Mem |awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span>`</span><br><span class="line">		used=`free -m |grep Mem |awk <span class="string">&#x27;&#123;print $3&#125;&#x27;</span>`</span><br><span class="line">		use_rate=`<span class="built_in">echo</span> <span class="string">&quot;scale=2;<span class="variable">$used</span>/<span class="variable">$total</span>&quot;</span> |bc`</span><br><span class="line">		result=`<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$use_rate</span>&gt;0.8&quot;</span> |bc`</span><br><span class="line">		<span class="keyword">if</span>(( <span class="variable">$result</span> == 1 ))</span><br><span class="line">		<span class="keyword">then</span></span><br><span class="line">			<span class="built_in">echo</span> <span class="string">&quot;内存使用率大于80%！！！&quot;</span></span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="built_in">echo</span> <span class="string">&quot;内存使用状态良好！&quot;</span></span><br><span class="line">		<span class="keyword">fi</span></span><br><span class="line">	&#125;</span><br><span class="line">	memory_monitor</span><br><span class="line">	;;</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="二-user-group-用户与组">二. user group 用户与组</h2>
@@ -9318,7 +9635,7 @@ grep 过滤  通用的正则表达式分析程序<br>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">示例：<span class="built_in">seq</span>命令  创建失败 重试</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line">[root@sanchuang-linux ~]<span class="comment"># vim user_add.sh</span></span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"><span class="comment"># 增加								# 注：用户增加的部分</span></span><br><span class="line"><span class="function"><span class="title">add</span></span>()&#123;</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> `<span class="built_in">seq</span> 3 -1 1`				<span class="comment"># 注：seq 命令类似于pythonrange函数 3 2 1</span></span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;增加用户&quot;</span></span><br><span class="line">        <span class="built_in">read</span> -p <span class="string">&quot;请输入用户名：&quot;</span> username</span><br><span class="line">       <span class="built_in">id</span> <span class="variable">$username</span> &amp;&gt;/dev/null &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;用户已存在,还有<span class="subst">$(( $i - 1)</span>)次机会&quot;</span> &amp;&amp; <span class="built_in">continue</span></span><br><span class="line">       <span class="comment">#if id $username &amp;&gt;/dev/null </span></span><br><span class="line">       <span class="comment">#then</span></span><br><span class="line">       <span class="comment">#     echo &quot;用户已存在，还有$(( $i -1 ))次机会&quot;</span></span><br><span class="line">       <span class="comment">#     continue</span></span><br><span class="line">       <span class="comment">#fi  </span></span><br><span class="line">       <span class="comment">#useradd $username &amp;&gt;/dev/null &amp;&amp; echo &quot;创建成功！&quot; &amp;&amp; echo $password | passwd $username --stdin &amp;&gt;/dev/null &amp;&amp; break || echo -e &quot;\n创建失败！&quot;</span></span><br><span class="line">       <span class="keyword">if</span> useradd <span class="variable">$username</span> &amp;&gt;/dev/null</span><br><span class="line">       <span class="keyword">then</span></span><br><span class="line">           <span class="built_in">echo</span> <span class="string">&quot;创建<span class="variable">$&#123;username&#125;</span>成功！&quot;</span></span><br><span class="line">           <span class="built_in">read</span> -s -p <span class="string">&quot;请设置密码：&quot;</span> password</span><br><span class="line">           <span class="built_in">echo</span> <span class="variable">$password</span> | passwd <span class="variable">$username</span> --stdin &amp;&gt;/dev/null</span><br><span class="line">           <span class="built_in">break</span></span><br><span class="line">       <span class="keyword">else</span></span><br><span class="line">           <span class="built_in">echo</span> <span class="string">&quot;创建失败！,还有<span class="subst">$(($i-1)</span>)次机会！&quot;</span></span><br><span class="line">       <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">done</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 删除</span></span><br><span class="line"><span class="function"><span class="title">del</span></span>()&#123;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;删除用户&quot;</span></span><br><span class="line">    <span class="built_in">read</span> -p <span class="string">&quot;请输入用户名：&quot;</span> username</span><br><span class="line">    userdel -r <span class="variable">$username</span> &amp;&gt;/dev/null &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;删除成功！&quot;</span> || <span class="built_in">echo</span> <span class="string">&quot;用户不存在，删除失败！&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 查看</span></span><br><span class="line"><span class="function"><span class="title">seek</span></span>()&#123;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;查看用户&quot;</span></span><br><span class="line">    <span class="built_in">read</span> -p <span class="string">&quot;请输入用户名：&quot;</span> username</span><br><span class="line">    <span class="built_in">id</span> <span class="variable">$username</span> </span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;#############################&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;按1  增加用户，并且设置密码&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;按2  删除用户&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;按3  查看用户&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;按4  退出&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;#############################&quot;</span></span><br><span class="line"><span class="keyword">while</span> :</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">read</span> -p <span class="string">&quot;请输入你的选择：&quot;</span> options</span><br><span class="line">    <span class="keyword">case</span> <span class="variable">$options</span> <span class="keyword">in</span></span><br><span class="line">    1)</span><br><span class="line">        add</span><br><span class="line">        ;;</span><br><span class="line">    2)</span><br><span class="line">        del</span><br><span class="line">        ;;</span><br><span class="line">    3)</span><br><span class="line">        seek</span><br><span class="line">        ;;</span><br><span class="line">    4)</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;退出！&quot;</span></span><br><span class="line">        <span class="built_in">exit</span></span><br><span class="line">        ;;</span><br><span class="line">    *)</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;请输入指定内容 1-4！&quot;</span></span><br><span class="line">    <span class="keyword">esac</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="九-循环获取文件或者命令输出的内容-3种">九. 循环获取文件或者命令输出的内容(3种)</h2>
-<h3 id="重定向-3">重定向</h3>
+<h3 id="重定向-2">重定向</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">示例1：重定向  <span class="keyword">while</span> <span class="built_in">read</span> a b c	； &lt; a.txt</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"><span class="keyword">while</span> <span class="built_in">read</span> a b c</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="string">&quot;name is <span class="variable">$a</span>, sex is <span class="variable">$b</span>, age is <span class="variable">$c</span> &quot;</span></span><br><span class="line"><span class="keyword">done</span> &lt; a.txt					<span class="comment"># 注：当前路径下的文件。可以接绝对路径</span></span><br><span class="line">============================================================================================</span><br></pre></td></tr></table></figure>
 <h3 id="管道符号">管道符号</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">示例2：管道符号	<span class="built_in">cat</span> a.txt | <span class="keyword">while</span> <span class="built_in">read</span> a b c</span><br><span class="line">--------------------------------------------------------------------------------------------</span><br><span class="line"><span class="built_in">cat</span> a.txt | <span class="keyword">while</span> <span class="built_in">read</span> a b c</span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;name is <span class="variable">$a</span>, sex is <span class="variable">$b</span>, age is <span class="variable">$c</span> &quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line">============================================================================================</span><br></pre></td></tr></table></figure>
@@ -9919,7 +10236,7 @@ root   <code>tty6</code>   -         11:41  13.00s  0.01s  0.01s -bash</p>
 <p>--------------------------------------------</p>
 <p>注↑：标注错误输出 、正常输出</p>
 </blockquote>
-<h3 id="重定向-2">重定向</h3>
+<h3 id="重定向-3">重定向</h3>
 <blockquote>
 <p><strong>知识点3 重定向</strong></p>
 <p><code>重定向：改变标准输入、标准输出的方向就是重定向</code></p>
@@ -11686,7 +12003,7 @@ code_test1.txt: <mark>ISO-8859 text	（注：国标码）</mark><br>
   <entry>
     <title>05_Linux基础-NGINX编译安装^判断是否启动^修改端口^启动停止重启^相关路径^中文乱码</title>
     <url>/posts/43579.html</url>
-    <content><![CDATA[<h2 id="一-回顾">一. 回顾</h2>
+    <content><![CDATA[<h2 id="一-回顾-2">一. 回顾</h2>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//		service  sshd  restart  刷新sshd服务</span><br><span class="line">        信息会写到/var/log/messages里，<span class="built_in">tail</span>  -f  /var/log/messages动态监控</span><br><span class="line">        /var/log/messages 记录日志</span><br><span class="line">//		root用户有权限，可以更改普通用户密码，密码123也能成功</span><br><span class="line">		一个安全的密码有：大小写、数字、特殊符号、足够的长度 Sanchuang123<span class="comment">#</span></span><br><span class="line">//		1.显示ps aux查看进程命令输出信息，从第2行到9行，并且显示行号。</span><br><span class="line">        ps  aux|<span class="built_in">cat</span>  -n|<span class="built_in">head</span>  -9|<span class="built_in">tail</span>  -8</span><br><span class="line">        ps  aux|<span class="built_in">cat</span>  -n|sed  -n  ‘2,9p’</span><br><span class="line">        2.使用find命令查找出/find目录下大小大于1M并且名字里包含vmlinuz的文件</span><br><span class="line">        find  /find  -size  +1M  -iname  “*vmlinuz*”</span><br><span class="line">        find  /find  -size  +1M  -iname  “*vmlinuz*”  -<span class="built_in">exec</span>  <span class="built_in">ls</span>  -hl  &#123;&#125;  \;</span><br><span class="line">        （注1：<span class="built_in">ls</span>  -hl命令）</span><br><span class="line">		查找出daydayup的文件然后删除它</span><br><span class="line">        find  /  -name  “daydayup”  -<span class="built_in">exec</span>  <span class="built_in">rm</span>  -rf  &#123;&#125;  \;</span><br><span class="line">        （注2：字符串用””引号引起来）</span><br><span class="line">        3.将最近3小时内/lianxi目录下文件大小大于10K的文件 移动到/back目录下</span><br><span class="line">        find /lianxi  -mmin -180 -size +10k -<span class="built_in">type</span> f -<span class="built_in">exec</span> <span class="built_in">mv</span>  &#123;&#125;  /back \;</span><br><span class="line">        4.查找/home目录下用户是root，文件类型是f，这2个条件必须满足，然后再满足大小大于2k或者文件名包含cali的文件中的一个条件，查找出来后，复制到/lianxi目录下。</span><br><span class="line">	find /home  -user root  -<span class="built_in">type</span> f  \( -size +2k  -o  -name <span class="string">&quot;*cali*&quot;</span>  \)  -<span class="built_in">exec</span>  <span class="built_in">cp</span> &#123;&#125; /lianxi   \;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="二-NGINX">二. NGINX</h2>
@@ -11837,7 +12154,7 @@ code_test1.txt: <mark>ISO-8859 text	（注：国标码）</mark><br>
   <entry>
     <title>04_Linux基础-.&amp;..-cat-tac-重定向-EOF-基本命令</title>
     <url>/posts/62964.html</url>
-    <content><![CDATA[<h2 id="一-回顾-2">一. 回顾</h2>
+    <content><![CDATA[<h2 id="一-回顾">一. 回顾</h2>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">回顾</span><br><span class="line">//		将/home/目录下的所有文件和文件夹复制到/jindafu目录下</span><br><span class="line">		<span class="built_in">cp</span>  /home/*  .  -r</span><br><span class="line"><span class="comment">#注：复制文件夹 接-r		递归复制(因为提到了文件夹)</span></span><br><span class="line"><span class="comment">#注：所有	通配符*</span></span><br><span class="line">//		复制/etc/hosts文件到jindafu,不给予覆盖提醒</span><br><span class="line">		用<span class="built_in">cp</span>的绝对路径</span><br><span class="line">			<span class="built_in">which</span>  <span class="built_in">cp</span>	得到<span class="built_in">cp</span>的路径</span><br><span class="line">			/usr/bin/cp  /etc/hosts  .</span><br><span class="line"><span class="comment">#注：不给予提醒 输入cp命令的绝对路径	因为cp命令是别名 所有会有提醒</span></span><br><span class="line">//		将xiena目录改名为xienana</span><br><span class="line">		<span class="built_in">mv</span>  xiena/  xienana</span><br><span class="line">//		将singer目录下的所有文件复制到hejiong目录下</span><br><span class="line">		<span class="built_in">cp</span>  haiquan/singer/*  hejiong/</span><br><span class="line"><span class="comment">#注：所有	通配符*</span></span><br><span class="line"><span class="comment">#注：复制文件不接-r</span></span><br><span class="line">//		删除所有的xienana目录</span><br><span class="line">		find命令 或 tree查看xienana在哪  <span class="built_in">rm</span>  -rf  路径</span><br><span class="line">		find  /hunantv/  -name  “xienana”  -<span class="built_in">exec</span>  <span class="built_in">rm</span>  -rf  &#123;&#125; \;</span><br><span class="line">//		查看目录结构 tree  查看类型 file</span><br><span class="line">//		<span class="built_in">echo</span>  <span class="variable">$PS1</span>  <span class="variable">$PS2</span> 怎么看PS1 PS2</span><br><span class="line">//		hostname  查看主机名</span><br><span class="line">//		<span class="built_in">echo</span>  <span class="variable">$SHELL</span>  查看默认shell  （是bash）</span><br><span class="line">//		<span class="built_in">cat</span>  /ect/shells  查看机器里有哪些shell</span><br><span class="line">		sh  bash  <span class="built_in">exit</span></span><br><span class="line"><span class="comment">#/etc	存放配置文件</span></span><br><span class="line">//		d  目录</span><br><span class="line">		-  普通文件</span><br><span class="line">		l  链接文件</span><br><span class="line">		c  字符设备文件（显示）</span><br><span class="line">		b  块设备文件 （磁盘）</span><br><span class="line">//		reboot  重启机器</span><br><span class="line">//		clear  清屏</span><br><span class="line">//		别名 <span class="built_in">alias</span> , <span class="built_in">unalias</span> , vim  /root/.bashrc</span><br><span class="line">//		<span class="built_in">env</span>  环境变量  <span class="built_in">set</span>  所有变量</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="二-…-删不掉">二. . … 删不掉</h2>
