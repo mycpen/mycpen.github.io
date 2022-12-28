@@ -6,7 +6,7 @@
   <link href="https://blog.cpen.top/atom.xml" rel="self"/>
   
   <link href="https://blog.cpen.top/"/>
-  <updated>2022-12-26T18:00:01.000Z</updated>
+  <updated>2022-12-27T17:00:01.000Z</updated>
   <id>https://blog.cpen.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>08_Hexo-博客引用 B站鸿蒙字体</title>
+    <link href="https://blog.cpen.top/posts/df249111.html"/>
+    <id>https://blog.cpen.top/posts/df249111.html</id>
+    <published>2022-12-27T17:00:00.000Z</published>
+    <updated>2022-12-27T17:00:01.000Z</updated>
+    
+    
+    <summary type="html">Hexo</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://blog.cpen.top/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://blog.cpen.top/tags/Hexo/"/>
+    
+    <category term="字体" scheme="https://blog.cpen.top/tags/%E5%AD%97%E4%BD%93/"/>
+    
+  </entry>
   
   <entry>
     <title>07_Hexo-插件整理</title>
@@ -274,9 +295,9 @@
     
     <category term="Shell" scheme="https://blog.cpen.top/tags/Shell/"/>
     
-    <category term="awk" scheme="https://blog.cpen.top/tags/awk/"/>
-    
     <category term="sed" scheme="https://blog.cpen.top/tags/sed/"/>
+    
+    <category term="awk" scheme="https://blog.cpen.top/tags/awk/"/>
     
   </entry>
   
@@ -426,29 +447,6 @@
     <category term="Other" scheme="https://blog.cpen.top/tags/Other/"/>
     
     <category term="Supervisor" scheme="https://blog.cpen.top/tags/Supervisor/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>01_Error-Nginx 反代后端接口报错</title>
-    <link href="https://blog.cpen.top/posts/5552.html"/>
-    <id>https://blog.cpen.top/posts/5552.html</id>
-    <published>2022-09-18T10:00:00.000Z</published>
-    <updated>2022-09-18T10:00:01.000Z</updated>
-    
-    
-    <summary type="html">Troubleshooting</summary>
-    
-    
-    
-    <category term="Error" scheme="https://blog.cpen.top/categories/Error/"/>
-    
-    
-    <category term="Error" scheme="https://blog.cpen.top/tags/Error/"/>
-    
-    <category term="Nginx" scheme="https://blog.cpen.top/tags/Nginx/"/>
-    
-    <category term="Troubleshooting" scheme="https://blog.cpen.top/tags/Troubleshooting/"/>
     
   </entry>
   
