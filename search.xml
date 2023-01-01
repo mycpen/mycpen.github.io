@@ -3,7 +3,10 @@
   <entry>
     <title>08_Hexo-博客引用 B站鸿蒙字体</title>
     <url>/posts/df249111.html</url>
-    <content><![CDATA[<h2 id="1-前言">1. 前言</h2>
+    <content><![CDATA[<h2 id="2022-12-31-更新">2022/12/31 更新</h2>
+<p>在 <a href="https://butterfly.zhheo.com/docs/font.html">butterfly.zhheo.com</a> 上看到下面这篇文章，介绍了很多其他字体（包括本文B站鸿蒙字体），写的很好</p>
+<p><a href="https://www.thyuu.com/word/tips/62610">免费引入**黑体字体系列整理及 CSS 字体</a></p>
+<h2 id="1-前言">1. 前言</h2>
 <p>在 <a href="https://blog.eurkon.com/">Eurkon</a> 那发现了B站使用的 <code>harmonyOS_Regular</code> 字体，<a href="https://www.bilibili.com/">B站网页端</a> 打开开发者工具能看到字体由 <a href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css">regular.css</a> 引入</p>
 <p>计划用一段时间该字体，如有明显限速再停止使用</p>
 <h2 id="2-引用步骤">2. 引用步骤</h2>
@@ -53,7 +56,7 @@
 <h3 id="1-1-hexo-blog-encrypt">1.1 hexo-blog-encrypt</h3>
 <ul class="lvl-0">
 <li class="lvl-2">
-<p>博客文章加密，由 <a href="https://blog.justlovesmile.top/posts/86111745.html">Justlovesmile文章</a> 获知</p>
+<p>博客文章加密，由 <a href="https://blog.justlovesmile.top/posts/43010.html">Justlovesmile文章</a> 获知</p>
 </li>
 <li class="lvl-2">
 <p><a href="https://github.com/D0n9X1n/hexo-blog-encrypt">Github地址</a></p>
