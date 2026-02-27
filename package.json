@@ -1,0 +1,19 @@
+{
+  "name": "mycpen-blog1",
+  "version": "0.0.0-wmaffqundr",
+  "description": "mycpen blog1 static file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mycpen/mycpen.github.io.git"
+  },
+  "author": "mycpen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mycpen/mycpen.github.io/issues"
+  },
+  "homepage": "https://github.com/mycpen/mycpen.github.io#readme"
+}
